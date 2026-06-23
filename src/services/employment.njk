@@ -1,0 +1,95 @@
+---
+layout: page.njk
+title: Employment Opportunities
+subtitle: Join the City of Aberdeen team — competitive benefits, job security, and a chance to serve your community.
+description: View open positions and apply for employment with the City of Aberdeen, Maryland.
+breadcrumb:
+  - label: Services
+    url: /#services
+  - label: Employment
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-10">
+
+    <div>
+      <h2 class="text-2xl font-bold text-navy mb-4">Work for Aberdeen</h2>
+      <p class="text-slate-600 leading-relaxed mb-4">
+        Whether you're just beginning your journey or exploring a bold new career path, you will find that the City of Aberdeen is a prestigious, competitive organization to work for. A career with municipal government rewards you with <strong>greater job security and benefits</strong> than working in the private sector.
+      </p>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        Even more, by working for Aberdeen, you will have the opportunity to make a profound impact on the lives of your family, friends, and neighbors in the community you call home.
+      </p>
+      <a href="https://www.aberdeenmd.gov/home/pages/job-opportunities" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-6 py-3 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">
+        <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/></svg>
+        View Open Positions
+      </a>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-bold text-navy mb-6">Why Work for Aberdeen?</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {% set benefits = [
+          { title: "Job Security", desc: "Municipal employment offers greater stability than the private sector.", icon: "shield" },
+          { title: "Competitive Benefits", desc: "Health insurance, retirement plans, paid leave, and more.", icon: "heart" },
+          { title: "Community Impact", desc: "Make a difference in the lives of your neighbors every day.", icon: "home" },
+          { title: "Career Growth", desc: "Opportunities for advancement and professional development.", icon: "chart" }
+        ] %}
+        {% for b in benefits %}
+        <div class="bg-white border border-slate-200 rounded-xl p-5">
+          <div class="w-9 h-9 rounded-lg bg-gov-blue-light flex items-center justify-center mb-3" aria-hidden="true">
+            <svg class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20">
+              {% if b.icon == "shield" %}<path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              {% elif b.icon == "heart" %}<path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+              {% elif b.icon == "home" %}<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+              {% else %}<path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              {% endif %}
+            </svg>
+          </div>
+          <h3 class="text-sm font-bold text-navy mb-1">{{ b.title }}</h3>
+          <p class="text-xs text-slate-600">{{ b.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="bg-navy rounded-xl p-6 text-white">
+      <h2 class="text-xl font-bold mb-2">We Are Hiring</h2>
+      <p class="text-slate-300 text-sm mb-4">The City of Aberdeen regularly posts open positions across all departments. Check the official jobs page for current openings.</p>
+      <a href="https://www.aberdeenmd.gov/home/pages/job-opportunities" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">
+        See Current Openings
+      </a>
+    </div>
+
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-6">
+      <div>
+        <h2 class="text-base font-bold text-navy mb-3 pb-3 border-b border-slate-100">Human Resources</h2>
+        <dl class="space-y-3 text-sm">
+          <div>
+            <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt>
+            <dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600 ext. 207</a></dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Hours</dt>
+            <dd class="text-slate-700">Mon–Fri, 8:30 AM – 5:00 PM</dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Address</dt>
+            <dd class="text-slate-700">60 N. Parke Street<br/>Aberdeen, MD 21001</dd>
+          </div>
+        </dl>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold text-navy mb-3">Related</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/departments/human-resources/" class="text-gov-blue hover:underline">Human Resources Dept.</a></li>
+          <li><a href="/businesses/bids/" class="text-gov-blue hover:underline">Bids &amp; RFPs</a></li>
+          <li><a href="/contact/" class="text-gov-blue hover:underline">Contact Directory</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</div>

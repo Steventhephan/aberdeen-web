@@ -1,0 +1,97 @@
+---
+layout: page.njk
+title: Report an Issue
+subtitle: Use the Citizen Problem Reporter (Click-2-Fix) to report non-emergency concerns — potholes, streetlights, drainage, and more.
+description: Report non-emergency city issues in Aberdeen using the Citizen Problem Reporter — potholes, streetlight outages, drainage, and maintenance concerns.
+breadcrumb:
+  - label: Services
+    url: /#services
+  - label: Report an Issue
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-10">
+
+    <div>
+      <div class="inline-flex items-center gap-2 bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+        New — Launched June 2026
+      </div>
+      <h2 class="text-2xl font-bold text-navy mb-4">Citizen Problem Reporter (Click-2-Fix)</h2>
+      <p class="text-slate-600 leading-relaxed mb-4">
+        The City of Aberdeen is excited to announce the launch of the <strong>Citizen Problem Reporter</strong>, also known as <strong>"Click-2-Fix"</strong> — a new online tool designed to help residents quickly and easily report non-emergency concerns throughout the community.
+      </p>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        Whether it's a pothole, streetlight outage, drainage issue, or other maintenance concern, residents can now submit reports, track progress, and stay informed every step of the way. This new service reflects the City's ongoing commitment to transparent, responsive government.
+      </p>
+      <a href="https://www.aberdeenmd.gov/home/news/new-citizen-problem-reporter-makes-reporting-non-emergency-issues-easy" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-6 py-3 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">
+        <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+        Open Click-2-Fix Reporter
+      </a>
+    </div>
+
+    {# What can be reported #}
+    <div>
+      <h2 class="text-2xl font-bold text-navy mb-6">What Can Be Reported</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {% set issueTypes = [
+          { label: "Pothole", email: "dpw@aberdeenmd.gov?subject=Report%20Pothole", desc: "Road surface damage or hazards" },
+          { label: "Sewer Issue", email: "dpw@aberdeenmd.gov?subject=Report%20Sewer%20Issue", desc: "Backups, odors, or overflows" },
+          { label: "Street Light Out", email: "dpw@aberdeenmd.gov?subject=Report%20Street%20Light%20Out", desc: "Broken or non-functioning lights" },
+          { label: "Illicit Discharge", email: "dpw@aberdeenmd.gov?subject=Report%20Illicit%20Discharge", desc: "Illegal dumping or drainage issues" },
+          { label: "Drainage Problem", email: "dpw@aberdeenmd.gov?subject=Report%20Drainage%20Issue", desc: "Standing water or blocked drains" },
+          { label: "Other Maintenance", email: "dpw@aberdeenmd.gov?subject=Report%20Maintenance%20Issue", desc: "Any other city maintenance concern" }
+        ] %}
+        {% for issue in issueTypes %}
+        <a href="mailto:{{ issue.email }}" class="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 group">
+          <div class="w-8 h-8 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+            <svg class="w-4 h-4 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">{{ issue.label }}</div>
+            <div class="text-xs text-slate-500 mt-0.5">{{ issue.desc }}</div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    {# Emergency notice #}
+    <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+      <h3 class="text-base font-bold text-red-800 mb-2">For Emergencies, Call 911</h3>
+      <p class="text-sm text-red-700">The Citizen Problem Reporter is for <strong>non-emergency</strong> issues only. If there is an immediate threat to life or property, call <strong>911</strong> immediately.</p>
+      <p class="text-sm text-red-700 mt-2">Non-emergency police: <a href="tel:+14102722121" class="font-semibold hover:underline">(410) 272-2121</a></p>
+    </div>
+
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-6">
+      <div>
+        <h2 class="text-base font-bold text-navy mb-3 pb-3 border-b border-slate-100">Public Works</h2>
+        <dl class="space-y-3 text-sm">
+          <div>
+            <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt>
+            <dd><a href="tel:+14102971600" class="text-gov-blue hover:underline">(410) 272-1600</a></dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Email</dt>
+            <dd><a href="mailto:dpw@aberdeenmd.gov" class="text-gov-blue hover:underline break-all">dpw@aberdeenmd.gov</a></dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Hours</dt>
+            <dd class="text-slate-700">Mon–Fri, 8:30 AM – 5:00 PM</dd>
+          </div>
+        </dl>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold text-navy mb-3">Related</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/departments/public-works/" class="text-gov-blue hover:underline">Public Works Dept.</a></li>
+          <li><a href="/services/trash/" class="text-gov-blue hover:underline">Trash &amp; Bulk Pickup</a></li>
+          <li><a href="/emergency-alerts/" class="text-gov-blue hover:underline">Emergency Alerts</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</div>

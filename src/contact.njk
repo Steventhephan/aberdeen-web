@@ -1,0 +1,112 @@
+---
+layout: page.njk
+title: Contact Directory
+subtitle: Phone numbers, extensions, and addresses for all City of Aberdeen departments and offices.
+description: Contact the City of Aberdeen — full department directory with phone numbers, extensions, and addresses.
+breadcrumb:
+  - label: Contact
+---
+
+<div class="space-y-10">
+
+  {# Main City Hall info #}
+  <div class="grid sm:grid-cols-3 gap-6">
+    <div class="bg-navy text-white rounded-xl p-6">
+      <div class="w-10 h-10 rounded-lg bg-gov-blue flex items-center justify-center mb-4" aria-hidden="true">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+      </div>
+      <h2 class="text-base font-bold mb-1">Main Number</h2>
+      <a href="tel:+14102721600" class="text-2xl font-bold text-blue-300 hover:text-white transition-colors duration-200">(410) 272-1600</a>
+      <p class="text-slate-400 text-xs mt-2">Mon–Fri, 8:30 AM – 5:00 PM</p>
+    </div>
+    <div class="bg-white border border-slate-200 rounded-xl p-6">
+      <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center mb-4" aria-hidden="true">
+        <svg class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+      </div>
+      <h2 class="text-base font-bold text-navy mb-1">City Hall Address</h2>
+      <address class="not-italic text-sm text-slate-600 leading-relaxed">
+        60 N. Parke Street<br/>
+        Aberdeen, MD 21001
+      </address>
+    </div>
+    <div class="bg-white border border-slate-200 rounded-xl p-6">
+      <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center mb-4" aria-hidden="true">
+        <svg class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+      </div>
+      <h2 class="text-base font-bold text-navy mb-1">Office Hours</h2>
+      <p class="text-sm text-slate-600">Monday – Friday<br/>8:30 AM – 5:00 PM</p>
+      <p class="text-xs text-slate-500 mt-2">Closed on federal holidays</p>
+    </div>
+  </div>
+
+  {# Department Directory Table #}
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-6">Department Directory</h2>
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+      <table class="w-full text-sm" aria-label="City of Aberdeen department contacts">
+        <thead>
+          <tr class="bg-slate-50 border-b border-slate-200">
+            <th scope="col" class="text-left px-5 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Department</th>
+            <th scope="col" class="text-left px-5 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide">Phone / Extension</th>
+            <th scope="col" class="text-left px-5 py-3 text-xs font-semibold text-slate-500 uppercase tracking-wide hidden sm:table-cell">Address</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          {% set contacts = [
+            { dept: "City Clerk", phone: "410-272-1600", ext: "211", link: "/departments/city-clerk/" },
+            { dept: "City Manager", phone: "(410) 272-1600", ext: "", link: "/departments/city-manager/" },
+            { dept: "Code Enforcement", phone: "410-272-1600", ext: "137", link: "/contact/" },
+            { dept: "Community Events", phone: "410-272-1600", ext: "213", link: "/events/" },
+            { dept: "Department of Public Works", phone: "(410) 272-1600", ext: "", link: "/departments/public-works/" },
+            { dept: "Economic Development", phone: "410-272-1600", ext: "216", link: "/departments/economic-development/" },
+            { dept: "Finance", phone: "410-272-1600", ext: "200", link: "/departments/finance/" },
+            { dept: "Human Resources", phone: "410-272-1600", ext: "207", link: "/departments/human-resources/" },
+            { dept: "Mayor & City Council", phone: "(410) 272-1600", ext: "", link: "/departments/mayor-city-council/" },
+            { dept: "Planning & Community Development", phone: "410-272-1600", ext: "221", link: "/departments/planning/" },
+            { dept: "Police Department (non-emergency)", phone: "(410) 272-2121", ext: "", link: "/departments/police/" }
+          ] %}
+          {% for c in contacts %}
+          <tr class="hover:bg-slate-50 transition-colors duration-150">
+            <td class="px-5 py-4 font-semibold text-navy">
+              <a href="{{ c.link }}" class="hover:text-gov-blue transition-colors duration-200">{{ c.dept }}</a>
+            </td>
+            <td class="px-5 py-4 text-slate-600">
+              <a href="tel:+1{{ c.phone | replace('(','') | replace(')','') | replace(' ','') | replace('-','') }}" class="hover:text-gov-blue transition-colors duration-200">{{ c.phone }}{% if c.ext %} ext. {{ c.ext }}{% endif %}</a>
+            </td>
+            <td class="px-5 py-4 text-slate-500 hidden sm:table-cell">60 N. Parke Street, Aberdeen, MD 21001</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  {# Emergency contacts #}
+  <div class="bg-red-50 border border-red-200 rounded-xl p-6">
+    <h2 class="text-xl font-bold text-red-800 mb-4">Emergency Contacts</h2>
+    <div class="grid sm:grid-cols-3 gap-4 text-sm">
+      <div>
+        <div class="text-xs font-semibold text-red-600 uppercase tracking-wide mb-1">All Emergencies</div>
+        <a href="tel:911" class="text-2xl font-bold text-red-700 hover:underline">911</a>
+      </div>
+      <div>
+        <div class="text-xs font-semibold text-red-600 uppercase tracking-wide mb-1">Police Non-Emergency</div>
+        <a href="tel:+14102722121" class="text-xl font-bold text-red-700 hover:underline">(410) 272-2121</a>
+      </div>
+      <div>
+        <div class="text-xs font-semibold text-red-600 uppercase tracking-wide mb-1">Emergency Alerts</div>
+        <a href="/emergency-alerts/" class="text-gov-blue font-semibold hover:underline">Sign up for alerts →</a>
+      </div>
+    </div>
+  </div>
+
+  {# Send a comment #}
+  <div class="bg-gov-blue-light rounded-xl p-6">
+    <h2 class="text-xl font-bold text-navy mb-2">Send Us Your Comments</h2>
+    <p class="text-slate-600 text-sm mb-4">Have a question, comment, or concern not covered here? Contact us through the official city website.</p>
+    <a href="https://www.aberdeenmd.gov/department-contacts" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">
+      Contact Form on aberdeenmd.gov
+    </a>
+  </div>
+
+</div>
