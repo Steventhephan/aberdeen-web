@@ -59,14 +59,14 @@ description: Official website of the City of Aberdeen, Maryland. Pay bills, appl
         { href: "/services/report-issue/", label: "Report an Issue", sub: "Pothole, sewer, street light", aria: "Report a non-emergency city issue", icon: "alert" },
         { href: "/services/permits/", label: "Permits", sub: "Building & zoning", aria: "Apply for a building or zoning permit", icon: "document" },
         { href: "/services/meetings/", label: "Meetings", sub: "Agendas & minutes", aria: "View upcoming public meetings", icon: "calendar" },
-        { href: "/parks-and-recreation/", label: "Parks & Rec", sub: "Activity center & parks", aria: "Find parks and recreation programs", icon: "map-pin" },
+        { href: "/activity-center/", label: "Parks & Rec", sub: "Activity center & parks", aria: "Find parks and recreation programs", icon: "map-pin" },
         { href: "/services/public-records/", label: "Public Records", sub: "MPIA requests", aria: "Request public records", icon: "folder" },
         { href: "/services/employment/", label: "Employment", sub: "Open positions", aria: "View city employment opportunities", icon: "briefcase" },
         { href: "/contact/", label: "Contact Us", sub: "(410) 272-1600", aria: "Contact city hall and departments", icon: "phone" }
       ] %}
 
       {% for card in serviceCards %}
-      <a href="{{ card.href }}" class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center" aria-label="{{ card.aria }}">
+      <a href="{{ card.href | url }}" class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center" aria-label="{{ card.aria }}">
         <div class="w-10 h-10 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
           {% if card.icon == "credit-card" %}
           <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
@@ -216,7 +216,7 @@ description: Official website of the City of Aberdeen, Maryland. Pay bills, appl
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {% for dept in departments | first(6) %}
-      <a href="{{ dept.url }}" class="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group">
+      <a href="{{ dept.url | url }}" class="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group">
         <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
           <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
         </div>

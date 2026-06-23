@@ -1,40 +1,19 @@
 ---
-layout: department.njk
+layout: page.njk
 title: Planning & Community Development
 subtitle: Land use, zoning, building permits, and long-range planning for Aberdeen's growth.
 description: Aberdeen Planning and Community Development — building permits, zoning, land use, and long-range planning. Call (410) 272-1600 ext. 221.
-deptPhone: "(410) 272-1600 ext. 221"
-deptRealUrl: "https://www.aberdeenmd.gov/planning-and-community-development"
+breadcrumb:
+  - label: Departments
+    url: /departments/
+  - label: Planning & Community Development
 ---
 
-<div class="space-y-10">
-  <div>
+<div class="space-y-12">
+
+  <div class="max-w-3xl">
     <p class="text-slate-600 leading-relaxed mb-5">The Planning and Community Development Department manages land use, zoning administration, building permits, code enforcement, and long-range planning for the City of Aberdeen.</p>
     <p class="text-slate-600 leading-relaxed">Walk-ins are welcome during business hours. Use the phone in the City Hall lobby and dial <strong>extension 221</strong> to speak with a planner before visiting.</p>
-  </div>
-
-  <div>
-    <h2 class="text-2xl font-bold text-navy mb-5">Services</h2>
-    <div class="grid sm:grid-cols-2 gap-4">
-      {% for service in [
-        { title: "Building Permits", desc: "Review and approval of construction and renovation projects.", icon: "M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" },
-        { title: "Zoning Administration", desc: "Zoning map interpretations, variances, and code compliance.", icon: "M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" },
-        { title: "Site Plan Review", desc: "Review of development plans for commercial and residential projects.", icon: "M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" },
-        { title: "Long-Range Planning", desc: "Comprehensive plans and Transit-Oriented Development.", icon: "M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" },
-        { title: "Code Enforcement", desc: "Property maintenance and municipal code compliance.", icon: "M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0117.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" },
-        { title: "Historic Preservation", desc: "Review of changes in historic districts.", icon: "M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" }
-      ] %}
-      <div class="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-5">
-        <div class="w-9 h-9 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0">
-          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="{{ service.icon }}" clip-rule="evenodd"/></svg>
-        </div>
-        <div>
-          <h3 class="text-base font-semibold text-navy mb-1">{{ service.title }}</h3>
-          <p class="text-sm text-slate-600">{{ service.desc }}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
   </div>
 
   <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-800">
@@ -42,20 +21,44 @@ deptRealUrl: "https://www.aberdeenmd.gov/planning-and-community-development"
   </div>
 
   <div>
-    <h2 class="text-2xl font-bold text-navy mb-5">How to Submit a Permit</h2>
-    <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-navy mb-6">Services</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {% for service in [
+        { title: "Building Permits", desc: "Review and approval of construction and renovation projects.", icon: "M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" },
+        { title: "Zoning Administration", desc: "Zoning map interpretations, variances, and code compliance.", icon: "M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" },
+        { title: "Site Plan Review", desc: "Review of development plans for commercial and residential projects.", icon: "M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" },
+        { title: "Long-Range Planning", desc: "Comprehensive plans and Transit-Oriented Development.", icon: "M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" },
+        { title: "Code Enforcement", desc: "Property maintenance and municipal code compliance.", icon: "M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0117.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" },
+        { title: "Historic Preservation", desc: "Review of changes to structures in historic districts.", icon: "M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" }
+      ] %}
+      <div class="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-5">
+        <div class="w-9 h-9 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="{{ service.icon }}" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-navy mb-1">{{ service.title }}</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">{{ service.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-6">How to Submit a Permit</h2>
+    <div class="grid sm:grid-cols-2 gap-5">
       <div class="flex gap-4 bg-white border border-slate-200 rounded-xl p-5">
         <div class="w-10 h-10 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">1</div>
         <div>
-          <h3 class="text-base font-bold text-navy mb-1">In-Person Drop-Off</h3>
-          <p class="text-sm text-slate-600">City Hall lobby Dropbox, 60 N. Parke Street — available during business hours, Monday–Friday 8:30 AM–5:00 PM.</p>
+          <h3 class="text-base font-bold text-navy mb-2">In-Person Drop-Off</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">City Hall lobby Dropbox, 60 N. Parke Street — available Monday–Friday, 8:30 AM–5:00 PM.</p>
         </div>
       </div>
       <div class="flex gap-4 bg-white border border-slate-200 rounded-xl p-5">
         <div class="w-10 h-10 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">2</div>
         <div>
-          <h3 class="text-base font-bold text-navy mb-1">Electronic Submission</h3>
-          <p class="text-sm text-slate-600">Submit permits electronically — call <strong>ext. 221</strong> or stop by the lobby phone to get the current submission email address.</p>
+          <h3 class="text-base font-bold text-navy mb-2">Electronic Submission</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Submit permits electronically — call <strong>ext. 221</strong> or stop by the lobby phone to get the current submission email address.</p>
         </div>
       </div>
     </div>
@@ -63,7 +66,7 @@ deptRealUrl: "https://www.aberdeenmd.gov/planning-and-community-development"
 
   <div>
     <h2 class="text-2xl font-bold text-navy mb-5">Quick Links</h2>
-    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+    <div class="grid sm:grid-cols-2 gap-3">
       {% for link in [
         { label: "Building Permits & Forms", url: "/services/permits/" },
         { label: "Building Permit Brochure (PDF)", url: "https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/uploads/building_permit_brochure_-_2.pdf" },
@@ -72,11 +75,27 @@ deptRealUrl: "https://www.aberdeenmd.gov/planning-and-community-development"
         { label: "TOD Plan", url: "https://www.aberdeenmd.gov/planning-and-community-development/files/tod" },
         { label: "Business Incentives", url: "/businesses/incentives/" }
       ] %}
-      <a href="{{ link.url | url }}" class="flex items-center justify-between gap-3 text-sm text-slate-700 font-medium px-5 py-3 hover:text-gov-blue hover:bg-slate-50 transition-colors duration-150 group border-b border-slate-100 last:border-b-0">
+      <a href="{{ link.url | url }}" class="flex items-center justify-between gap-3 text-sm text-slate-700 font-medium bg-white border border-slate-200 rounded-xl px-5 py-3 hover:text-gov-blue hover:border-gov-blue hover:shadow-sm transition-all duration-150 group">
         {{ link.label }}
         <svg aria-hidden="true" class="w-4 h-4 text-slate-400 group-hover:text-gov-blue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </a>
       {% endfor %}
     </div>
   </div>
+
+  <div class="grid sm:grid-cols-2 gap-6 bg-slate-50 rounded-xl p-6">
+    <div>
+      <h2 class="text-base font-bold text-navy mb-3">Contact Planning &amp; Community Development</h2>
+      <dl class="space-y-2 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-0.5">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600 ext. 221</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-0.5">Hours</dt><dd class="text-slate-700">Mon–Fri, 8:30 AM – 5:00 PM</dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-0.5">Location</dt><dd class="text-slate-700">City Hall, 60 N. Parke Street<br/>Aberdeen, MD 21001</dd></div>
+      </dl>
+    </div>
+    <div class="flex flex-col gap-3 justify-center">
+      <a href="{{ '/contact/' | url }}" class="inline-flex items-center justify-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Full Contact Directory</a>
+      <a href="https://www.aberdeenmd.gov/planning-and-community-development" class="inline-flex items-center justify-center gap-2 border border-slate-300 text-slate-700 font-semibold px-5 py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200 text-sm">Official City Page</a>
+    </div>
+  </div>
+
 </div>
