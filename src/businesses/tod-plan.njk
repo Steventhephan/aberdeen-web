@@ -1,0 +1,63 @@
+---
+layout: page.njk
+title: Transit-Oriented Development Plan
+subtitle: Aberdeen's vision for vibrant, walkable mixed-use development around the MARC commuter rail station.
+description: Aberdeen Maryland Transit-Oriented Development (TOD) Plan — mixed-use development vision for the MARC station area.
+breadcrumb:
+  - label: Businesses
+    url: /businesses/
+  - label: TOD Plan
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+    <p class="text-slate-600 leading-relaxed">Aberdeen's Transit-Oriented Development (TOD) Plan establishes a long-range vision for walkable, mixed-use development in the area surrounding the Aberdeen MARC commuter rail station. The plan aims to leverage the station's connectivity to Baltimore and Washington DC to attract investment, housing, and commercial activity to downtown Aberdeen.</p>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">TOD Vision</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {% for item in [
+          { title: "Mixed-Use Development", desc: "A blend of residential, retail, office, and civic uses within walking distance of the MARC station." },
+          { title: "Walkability", desc: "Pedestrian-friendly streets, connections, and public spaces linking the station to downtown." },
+          { title: "Housing Diversity", desc: "A range of housing types to serve Aberdeen's growing and diverse population." },
+          { title: "Economic Growth", desc: "New commercial investment and job creation anchored by transit access." },
+          { title: "Placemaking", desc: "High-quality public spaces and streetscapes that create a vibrant downtown identity." },
+          { title: "Sustainable Design", desc: "Green building practices, stormwater management, and reduced car dependency." }
+        ] %}
+        <div class="bg-white border border-slate-200 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-navy mb-1">{{ item.title }}</h3>
+          <p class="text-xs text-slate-600">{{ item.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="bg-gov-blue-light rounded-xl p-6">
+      <h2 class="text-lg font-bold text-navy mb-3">Aberdeen MARC Station</h2>
+      <p class="text-sm text-slate-700 mb-4">Aberdeen is served by the MARC Penn Line, providing direct commuter rail service to Baltimore Penn Station and Washington Union Station. This connectivity is a key asset for attracting residents and businesses to the TOD area.</p>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div><span class="text-xs font-semibold text-slate-500 uppercase tracking-wide block mb-1">Service</span><span class="text-slate-700">MARC Penn Line</span></div>
+        <div><span class="text-xs font-semibold text-slate-500 uppercase tracking-wide block mb-1">Destinations</span><span class="text-slate-700">Baltimore → Washington DC</span></div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3">
+      <a href="https://www.aberdeenmd.gov/planning-and-community-development/files/tod" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">View TOD Plan Document</a>
+      <a href="{{ '/departments/planning/' | url }}" class="inline-flex items-center gap-2 border border-slate-300 text-slate-700 font-semibold px-5 py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200 text-sm">Planning Department</a>
+    </div>
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Planning Department</h2>
+      <dl class="space-y-3 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600 ext. 221</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Hours</dt><dd class="text-slate-700">Mon–Fri, 8:30 AM – 5:00 PM</dd></div>
+      </dl>
+      <div class="pt-2 space-y-2">
+        <a href="{{ '/departments/planning/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Planning Department</a>
+        <a href="{{ '/businesses/incentives/' | url }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">Business Incentives</a>
+      </div>
+    </div>
+  </aside>
+</div>

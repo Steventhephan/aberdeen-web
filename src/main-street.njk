@@ -1,0 +1,82 @@
+---
+layout: page.njk
+title: Aberdeen Main Street
+subtitle: Revitalizing Aberdeen's historic downtown through economic development, design, promotion, and organization.
+description: Aberdeen Main Street program — downtown revitalization, events, business support, and historic preservation for Aberdeen, Maryland.
+breadcrumb:
+  - label: Main Street
+---
+
+<div class="space-y-10">
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <div>
+      <p class="text-slate-600 leading-relaxed mb-4">Aberdeen Main Street is a comprehensive downtown revitalization program dedicated to preserving and enhancing the historic character of Aberdeen's downtown commercial district, while supporting economic vitality and community pride.</p>
+      <p class="text-slate-600 leading-relaxed">The program focuses on four pillars: <strong>Economic Vitality</strong>, <strong>Design</strong>, <strong>Promotion</strong>, and <strong>Organization</strong> — working together to create a thriving, welcoming downtown for businesses, residents, and visitors.</p>
+    </div>
+    <div class="bg-navy rounded-xl p-6 text-white">
+      <h2 class="text-lg font-bold mb-4">Four Pillars</h2>
+      <ul class="space-y-3 text-sm">
+        {% for pillar in [
+          { name: "Economic Vitality", desc: "Business recruitment, retention, and gap analysis." },
+          { name: "Design", desc: "Façade improvements, signage, and historic preservation." },
+          { name: "Promotion", desc: "Events, marketing, and branding for downtown Aberdeen." },
+          { name: "Organization", desc: "Volunteer coordination, partnerships, and advocacy." }
+        ] %}
+        <li class="flex items-start gap-3">
+          <svg aria-hidden="true" class="w-4 h-4 text-gov-blue flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <div><strong>{{ pillar.name }}</strong> — {{ pillar.desc }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-6">Annual Events</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {% for event in [
+        { title: "Mermaid 5K & Under the Sea Bash", month: "Jul", day: "19", url: "https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41361" },
+        { title: "Oktoberfest", month: "Oct", day: "4", url: "https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41371" },
+        { title: "Public Safety Appreciation & Trunk or Treat", month: "Oct", day: "25", url: "https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41376" },
+        { title: "49th Annual Christmas Street Celebration", month: "Dec", day: "6", url: "https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41381" }
+      ] %}
+      <a href="{{ event.url }}" class="flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-5 hover:border-amber-400 hover:shadow-md transition-all duration-200 group text-center">
+        <div class="w-14 h-14 bg-amber-500 text-white rounded-xl flex flex-col items-center justify-center text-center leading-none">
+          <span class="text-xs font-semibold opacity-80 uppercase">{{ event.month }}</span>
+          <span class="text-2xl font-bold">{{ event.day }}</span>
+        </div>
+        <span class="text-sm font-bold text-navy group-hover:text-amber-600 transition-colors duration-200 leading-snug">{{ event.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="mt-4">
+      <a href="{{ '/events/' | url }}" class="text-gov-blue font-semibold hover:underline text-sm">View all city events →</a>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-6">
+    <div class="bg-white border border-slate-200 rounded-xl p-6">
+      <h2 class="text-lg font-bold text-navy mb-3">Business in Downtown Aberdeen</h2>
+      <p class="text-sm text-slate-600 mb-4">Interested in opening or growing a business in Aberdeen's historic downtown? The Main Street program can connect you with resources, incentives, and technical assistance.</p>
+      <a href="{{ '/businesses/incentives/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Business Incentives</a>
+    </div>
+    <div class="bg-white border border-slate-200 rounded-xl p-6">
+      <h2 class="text-lg font-bold text-navy mb-3">Visit Aberdeen</h2>
+      <p class="text-sm text-slate-600 mb-4">Aberdeen's downtown offers dining, shops, and community events in a historic small-city setting, with easy access to I-95 and MARC rail.</p>
+      <a href="{{ '/visitors/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Visitor Information</a>
+    </div>
+  </div>
+
+  <div class="bg-gov-blue-light rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div>
+      <h2 class="text-lg font-bold text-navy mb-1">Aberdeen Main Street on aberdeenmd.gov</h2>
+      <p class="text-sm text-slate-600">Full program details, business resources, and event listings on the official city website.</p>
+    </div>
+    <a href="https://www.aberdeenmd.gov/aberdeen-main-street" class="flex-shrink-0 inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm whitespace-nowrap">
+      Official Main Street Page
+      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+    </a>
+  </div>
+
+</div>

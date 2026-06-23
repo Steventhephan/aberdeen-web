@@ -1,0 +1,72 @@
+---
+layout: page.njk
+title: Schools in Aberdeen
+subtitle: Aberdeen is served by Harford County Public Schools — one of Maryland's top-rated school systems.
+description: Schools in Aberdeen, Maryland — Harford County Public Schools serving Aberdeen with elementary, middle, and high schools.
+breadcrumb:
+  - label: Schools
+---
+
+<div class="space-y-10">
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <div>
+      <p class="text-slate-600 leading-relaxed mb-4">Aberdeen is served by <strong>Harford County Public Schools (HCPS)</strong>, consistently ranked among Maryland's highest-performing school systems. With a strong commitment to academic excellence, the arts, athletics, and community, HCPS schools provide Aberdeen's children with a world-class education.</p>
+      <p class="text-slate-600 leading-relaxed">Aberdeen's excellent schools are one of the key reasons families and businesses choose to put down roots here.</p>
+    </div>
+    <div class="bg-gov-blue-light rounded-xl p-6">
+      <h2 class="text-lg font-bold text-navy mb-3">Harford County Public Schools</h2>
+      <dl class="space-y-2 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Website</dt><dd><a href="https://www.hcps.org" class="text-gov-blue hover:underline font-semibold">www.hcps.org</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">General Info</dt><dd><a href="tel:+14104381000" class="text-gov-blue hover:underline">(410) 838-7300</a></dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-6">Aberdeen-Area Schools</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% for school in [
+        { name: "Bakerfield Elementary School", level: "Elementary (PreK–5)", url: "https://www.hcps.org/schools/bakerfield" },
+        { name: "Halls Cross Roads Elementary", level: "Elementary (PreK–5)", url: "https://www.hcps.org/schools/hallscrossroads" },
+        { name: "William Paca/Old Post Road Elementary", level: "Elementary (PreK–5)", url: "https://www.hcps.org/schools/williampacaoldpostroad" },
+        { name: "Aberdeen Middle School", level: "Middle School (6–8)", url: "https://www.hcps.org/schools/aberdeenmiddle" },
+        { name: "Aberdeen High School", level: "High School (9–12)", url: "https://www.hcps.org/schools/aberdeenhigh" },
+        { name: "Harford Technical High School", level: "Career & Technical (9–12)", url: "https://www.hcps.org/schools/harfordtech" }
+      ] %}
+      <a href="{{ school.url }}" class="bg-white border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:shadow-md transition-all duration-200 group block">
+        <div class="text-xs font-semibold text-gov-blue uppercase tracking-wide mb-2">{{ school.level }}</div>
+        <h3 class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">{{ school.name }}</h3>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-4">Higher Education Nearby</h2>
+    <div class="grid sm:grid-cols-3 gap-4">
+      {% for school in [
+        { name: "Harford Community College", desc: "Located in Bel Air, MD — 2-year degrees, workforce programs, and transfer pathways.", url: "https://www.harford.edu" },
+        { name: "University of Maryland, Baltimore County (UMBC)", desc: "Major research university approximately 30 miles from Aberdeen.", url: "https://www.umbc.edu" },
+        { name: "Towson University", desc: "Comprehensive university in Towson, MD — approximately 25 miles from Aberdeen.", url: "https://www.towson.edu" }
+      ] %}
+      <a href="{{ school.url }}" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 group block">
+        <h3 class="text-sm font-bold text-navy mb-1 group-hover:text-gov-blue transition-colors duration-200">{{ school.name }}</h3>
+        <p class="text-xs text-slate-600">{{ school.desc }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="bg-gov-blue-light rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div>
+      <h2 class="text-lg font-bold text-navy mb-1">Harford County Public Schools</h2>
+      <p class="text-sm text-slate-600">For enrollment, transportation, calendars, and school information.</p>
+    </div>
+    <a href="https://www.hcps.org" class="flex-shrink-0 inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm whitespace-nowrap">
+      Visit HCPS Website
+      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+    </a>
+  </div>
+
+</div>

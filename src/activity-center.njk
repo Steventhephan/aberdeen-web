@@ -1,0 +1,62 @@
+---
+layout: page.njk
+title: Aberdeen Activity Center
+subtitle: Your community hub for fitness, recreation programs, and events at 7 Franklin Street.
+description: Aberdeen Activity Center — fitness, recreation programs, and community events at 7 Franklin Street, Aberdeen, MD 21001.
+breadcrumb:
+  - label: Activity Center
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+    <p class="text-slate-600 leading-relaxed">The Aberdeen Activity Center is the community's hub for recreation, fitness, and events. Located at 7 Franklin Street in the heart of Aberdeen, the center serves residents of all ages with programs, facilities, and a welcoming environment for the whole community.</p>
+
+    <div class="bg-gov-blue-light rounded-xl p-6">
+      <h2 class="text-lg font-bold text-navy mb-4">Center Information</h2>
+      <dl class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Address</dt><dd class="text-slate-700">7 Franklin Street<br/>Aberdeen, MD 21001</dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Also Used For</dt><dd class="text-slate-700">Municipal Elections polling location</dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Managed By</dt><dd class="text-slate-700">Aberdeen Parks &amp; Recreation Board</dd></div>
+      </dl>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">Programs &amp; Activities</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {% for item in [
+          { title: "Fitness Programs", desc: "Group exercise classes, fitness instruction, and personal wellness programs." },
+          { title: "Youth Sports", desc: "Organized leagues and recreational sports programs for children and teens." },
+          { title: "Senior Programs", desc: "Activities, social programs, and fitness classes designed for older adults." },
+          { title: "Community Events", desc: "The center hosts City events, public meetings, and community gatherings." },
+          { title: "After-School Activities", desc: "Programs for school-age children during afternoons and school breaks." },
+          { title: "Special Events", desc: "Seasonal programs, holiday events, and community celebrations." }
+        ] %}
+        <div class="bg-white border border-slate-200 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-navy mb-1">{{ item.title }}</h3>
+          <p class="text-xs text-slate-600">{{ item.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3">
+      <a href="https://www.aberdeenmd.gov/parks-and-recreation/pages/activity-center" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Full Program Schedule</a>
+      <a href="{{ '/boards/parks-recreation/' | url }}" class="inline-flex items-center gap-2 border border-slate-300 text-slate-700 font-semibold px-5 py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200 text-sm">Parks &amp; Recreation Board</a>
+    </div>
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Activity Center</h2>
+      <dl class="space-y-3 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Address</dt><dd class="text-slate-700">7 Franklin Street<br/>Aberdeen, MD 21001</dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600</a></dd></div>
+      </dl>
+      <div class="pt-2 space-y-2">
+        <a href="{{ '/events/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Upcoming Events</a>
+        <a href="{{ '/boards/parks-recreation/' | url }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">Parks &amp; Rec Board</a>
+      </div>
+    </div>
+  </aside>
+</div>

@@ -1,0 +1,81 @@
+---
+layout: page.njk
+title: City Newsletter — The Aberdeen Echo
+subtitle: Subscribe to The Aberdeen Echo for city news, service updates, and community information.
+description: Subscribe to The Aberdeen Echo, the official City of Aberdeen newsletter with city news, events, and service updates.
+breadcrumb:
+  - label: Newsletter
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+
+    <div class="bg-navy rounded-xl p-8 text-white text-center">
+      <div class="w-16 h-16 rounded-full bg-gov-blue flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+      </div>
+      <h2 class="text-2xl font-bold mb-3">The Aberdeen Echo</h2>
+      <p class="text-slate-300 text-sm mb-6 max-w-md mx-auto">The official City of Aberdeen newsletter keeps residents informed about city services, upcoming events, local news, and important announcements.</p>
+      <a href="https://www.aberdeenmd.gov/home/pages/city-newsletter" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-6 py-3 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">
+        Subscribe to The Aberdeen Echo
+        <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      </a>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">What You'll Receive</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {% for item in [
+          { title: "City News", desc: "The latest announcements, projects, and initiatives from City Hall." },
+          { title: "Service Updates", desc: "Changes to city services, schedules, and important deadlines." },
+          { title: "Community Events", desc: "Upcoming events, festivals, and public meetings." },
+          { title: "Emergency Notices", desc: "Important safety information and emergency advisories." }
+        ] %}
+        <div class="bg-white border border-slate-200 rounded-xl p-4 flex items-start gap-3">
+          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+          <div>
+            <h3 class="text-sm font-bold text-navy mb-0.5">{{ item.title }}</h3>
+            <p class="text-xs text-slate-600">{{ item.desc }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="bg-gov-blue-light rounded-xl p-5">
+      <h2 class="text-base font-bold text-navy mb-2">Also Sign Up for Emergency Alerts</h2>
+      <p class="text-sm text-slate-600 mb-3">For time-sensitive notices — road closures, weather emergencies, and public safety alerts — sign up for mass notification calls and texts.</p>
+      <a href="{{ '/emergency-alerts/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Sign Up for Emergency Alerts</a>
+    </div>
+
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Stay Connected</h2>
+      <ul class="space-y-3 text-sm">
+        <li>
+          <a href="https://www.aberdeenmd.gov/home/pages/city-newsletter" class="flex items-center gap-3 text-gov-blue hover:underline font-semibold">
+            <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            Subscribe to Newsletter
+          </a>
+        </li>
+        <li>
+          <a href="{{ '/emergency-alerts/' | url }}" class="flex items-center gap-3 text-gov-blue hover:underline font-semibold">
+            <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zm0 16a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
+            Emergency Alerts
+          </a>
+        </li>
+        <li>
+          <a href="{{ site.facebook }}" class="flex items-center gap-3 text-gov-blue hover:underline font-semibold">
+            <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Follow on Facebook
+          </a>
+        </li>
+      </ul>
+      <div class="pt-2">
+        <a href="{{ '/news/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Latest City News</a>
+      </div>
+    </div>
+  </aside>
+</div>

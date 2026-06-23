@@ -1,0 +1,63 @@
+---
+layout: page.njk
+title: Business Incentives & Funding
+subtitle: State and local financial programs to help Aberdeen businesses start, grow, and thrive.
+description: Business incentives, grants, tax credits, and funding programs available for Aberdeen, Maryland businesses.
+breadcrumb:
+  - label: Businesses
+    url: /businesses/
+  - label: Incentives & Funding
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+    <p class="text-slate-600 leading-relaxed">Aberdeen and the State of Maryland offer a range of financial incentives, tax credits, and funding programs designed to attract new businesses and support the growth of existing ones. Contact the Economic Development Department to find out which programs apply to your business.</p>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">Available Programs</h2>
+      <div class="space-y-4">
+        {% for prog in [
+          { title: "Maryland Enterprise Zone Tax Credit", desc: "Properties and businesses within designated Enterprise Zones may qualify for real property and income tax credits to offset the costs of hiring and improving property.", tag: "State" },
+          { title: "Maryland Economic Development Assistance Authority (MEDAAF)", desc: "Provides loans and grants for economic development projects that create or retain jobs in Maryland.", tag: "State" },
+          { title: "Small Business Development Center (SBDC)", desc: "Free consulting and low-cost training for small business owners and entrepreneurs through the Maryland SBDC network.", tag: "Federal/State" },
+          { title: "Community Development Block Grant (CDBG)", desc: "Federal funding used for economic development, infrastructure, and community projects in eligible areas.", tag: "Federal" },
+          { title: "Historic Tax Credits", desc: "Federal and state tax credits for qualifying rehabilitation of historic structures, which may benefit businesses in Aberdeen's historic districts.", tag: "Federal/State" },
+          { title: "Aberdeen Economic Development Commission", desc: "The City's own Economic Development Commission advises on local incentives and can connect businesses with available programs.", tag: "Local" }
+        ] %}
+        <div class="bg-white border border-slate-200 rounded-xl p-5">
+          <div class="flex items-start gap-3">
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <h3 class="text-sm font-bold text-navy">{{ prog.title }}</h3>
+                <span class="text-xs font-semibold bg-gov-blue-light text-gov-blue px-2 py-0.5 rounded-full flex-shrink-0">{{ prog.tag }}</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">{{ prog.desc }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="bg-navy rounded-xl p-6 text-white">
+      <h2 class="text-lg font-bold mb-2">Not Sure Where to Start?</h2>
+      <p class="text-slate-300 text-sm mb-4">Contact Aberdeen's Economic Development Department. We'll help identify the right programs for your business and connect you with state and federal resources.</p>
+      <a href="{{ '/departments/economic-development/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Contact Economic Development</a>
+    </div>
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Economic Development</h2>
+      <dl class="space-y-3 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600 ext. 216</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Hours</dt><dd class="text-slate-700">Mon–Fri, 8:30 AM – 5:00 PM</dd></div>
+      </dl>
+      <div class="pt-2 space-y-2">
+        <a href="{{ '/departments/economic-development/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Econ. Dev. Department</a>
+        <a href="{{ '/businesses/permits/' | url }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">Business Permits</a>
+        <a href="{{ '/businesses/bids/' | url }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">City Bids &amp; RFPs</a>
+      </div>
+    </div>
+  </aside>
+</div>

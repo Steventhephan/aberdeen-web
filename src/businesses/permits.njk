@@ -1,0 +1,78 @@
+---
+layout: page.njk
+title: Business Permits & Licenses
+subtitle: Building permits, business licenses, and zoning approvals for Aberdeen businesses.
+description: Apply for business permits and licenses in Aberdeen, Maryland. Building permits, zoning approvals, and business licensing.
+breadcrumb:
+  - label: Businesses
+    url: /businesses/
+  - label: Permits & Licenses
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+    <p class="text-slate-600 leading-relaxed">Whether you're opening a new business, renovating a space, or constructing a new building, Aberdeen's Planning & Community Development Department will guide you through the permitting process.</p>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">Common Business Permits</h2>
+      <div class="space-y-3">
+        {% for item in [
+          { title: "Building Permit", desc: "Required for construction, additions, renovations, or structural changes to any building.", link: "/services/permits/" },
+          { title: "Zoning Approval / Use Permit", desc: "Confirms your intended business use is permitted in the applicable zoning district.", link: "/boards/board-of-appeals/" },
+          { title: "Sign Permit", desc: "Required for new or replacement exterior signs visible from a public right-of-way.", link: "/services/permits/" },
+          { title: "Special Exception", desc: "Required for certain uses listed in the zoning code that need Planning Commission review.", link: "/boards/planning-commission/" }
+        ] %}
+        <div class="bg-white border border-slate-200 rounded-xl p-5">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-sm font-bold text-navy mb-1">{{ item.title }}</h3>
+              <p class="text-xs text-slate-600">{{ item.desc }}</p>
+            </div>
+            <a href="{{ item.link | url }}" class="flex-shrink-0 text-xs text-gov-blue font-semibold hover:underline whitespace-nowrap">Learn more →</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">How to Submit</h2>
+      <div class="space-y-3">
+        {% for step in [
+          { n: "1", title: "Contact Planning", desc: "Call (410) 272-1600 ext. 221 or use the lobby phone at City Hall to speak with a planner about your project." },
+          { n: "2", title: "Prepare Your Application", desc: "Gather drawings, site plans, and supporting documents. Download forms at aberdeenmd.gov." },
+          { n: "3", title: "Submit", desc: "Drop off in the City Hall lobby Dropbox or submit electronically — ask Planning for the current submission email." },
+          { n: "4", title: "Review & Approval", desc: "Staff will review your application and contact you. Approval timelines vary by project complexity." }
+        ] %}
+        <div class="flex gap-4 bg-white border border-slate-200 rounded-xl p-4">
+          <div class="w-8 h-8 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0">{{ step.n }}</div>
+          <div>
+            <div class="text-sm font-bold text-navy mb-0.5">{{ step.title }}</div>
+            <p class="text-xs text-slate-600">{{ step.desc }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3">
+      <a href="https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/uploads/building_permit_brochure_-_2.pdf" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Permit Brochure (PDF)</a>
+      <a href="{{ '/departments/planning/' | url }}" class="inline-flex items-center gap-2 border border-slate-300 text-slate-700 font-semibold px-5 py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200 text-sm">Planning Department</a>
+    </div>
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Planning Department</h2>
+      <dl class="space-y-3 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600 ext. 221</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Hours</dt><dd class="text-slate-700">Mon–Fri, 8:30 AM – 5:00 PM</dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Drop-off</dt><dd class="text-slate-700">City Hall Lobby Dropbox<br/>60 N. Parke Street</dd></div>
+      </dl>
+      <div class="pt-2 space-y-2">
+        <a href="{{ '/services/permits/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Resident Permits Info</a>
+        <a href="{{ '/businesses/incentives/' | url }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">Business Incentives</a>
+      </div>
+    </div>
+  </aside>
+</div>

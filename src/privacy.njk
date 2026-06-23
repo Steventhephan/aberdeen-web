@@ -1,0 +1,51 @@
+---
+layout: page.njk
+title: Privacy Policy & Website Disclaimer
+subtitle: The City of Aberdeen's policies regarding website use, privacy, and the accuracy of information.
+description: City of Aberdeen website disclaimer and privacy policy — terms of use, accuracy of information, and data practices.
+breadcrumb:
+  - label: Privacy Policy
+---
+
+<div class="max-w-3xl space-y-8">
+
+  <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+    <p class="text-sm text-amber-800">This page summarizes key points of Aberdeen's website disclaimer and privacy policy. For the full official text, visit <a href="https://www.aberdeenmd.gov/website-disclaimer-and-privacy-policy" class="font-semibold underline hover:no-underline">aberdeenmd.gov</a>.</p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-4">Website Disclaimer</h2>
+    <div class="space-y-4 text-slate-600 text-sm leading-relaxed">
+      <p>The City of Aberdeen provides this website as a public service. While we strive to keep information accurate and up-to-date, we make no warranties, express or implied, about the completeness, accuracy, reliability, or suitability of any information, products, services, or graphics contained on the site.</p>
+      <p>Any reliance you place on information from this website is strictly at your own risk. The City of Aberdeen shall not be liable for any loss or damage arising from the use of this website.</p>
+      <p>Links to external websites are provided for convenience only. The City of Aberdeen does not endorse, control, or guarantee the accuracy of content on third-party sites.</p>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-4">Privacy Policy</h2>
+    <div class="space-y-6">
+      {% for section in [
+        { title: "Information We Collect", body: "When you visit aberdeenmd.gov, we may collect non-personally identifiable information such as browser type, pages visited, and time on site. This information is used to improve the website experience. We do not sell or share personal information with third parties for commercial purposes." },
+        { title: "Email & Form Submissions", body: "If you contact us via email or an online form, your information is used solely to respond to your inquiry and is not retained for other purposes without your consent." },
+        { title: "Cookies", body: "This website may use cookies to improve functionality and user experience. You may configure your browser to decline cookies, though some features may not function properly." },
+        { title: "Security", body: "The City of Aberdeen takes reasonable precautions to protect information submitted through this website. However, no internet transmission is completely secure, and we cannot guarantee the security of data transmitted to us online." },
+        { title: "Children's Privacy", body: "This website is not directed at children under 13. We do not knowingly collect personal information from children under 13." },
+        { title: "Changes to This Policy", body: "The City of Aberdeen reserves the right to update this policy at any time. Changes will be posted on this page." }
+      ] %}
+      <div class="bg-white border border-slate-200 rounded-xl p-5">
+        <h3 class="text-base font-bold text-navy mb-2">{{ section.title }}</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">{{ section.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="bg-gov-blue-light rounded-xl p-5">
+    <h2 class="text-base font-bold text-navy mb-2">Questions About This Policy?</h2>
+    <p class="text-sm text-slate-600 mb-3">Contact the City of Aberdeen with any questions or concerns about our privacy practices.</p>
+    <a href="{{ '/contact/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Contact City Hall</a>
+  </div>
+
+  <p class="text-xs text-slate-400">For the official complete policy, see <a href="https://www.aberdeenmd.gov/website-disclaimer-and-privacy-policy" class="hover:underline">aberdeenmd.gov/website-disclaimer-and-privacy-policy</a></p>
+</div>

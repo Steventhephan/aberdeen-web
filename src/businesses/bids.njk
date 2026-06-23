@@ -1,0 +1,76 @@
+---
+layout: page.njk
+title: Bids & RFPs
+subtitle: Current City of Aberdeen procurement opportunities, requests for proposals, and vendor information.
+description: City of Aberdeen bids, requests for proposals (RFPs), and procurement opportunities for contractors and vendors.
+breadcrumb:
+  - label: Businesses
+    url: /businesses/
+  - label: Bids & RFPs
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+    <p class="text-slate-600 leading-relaxed">The City of Aberdeen regularly issues Invitations for Bids (IFBs) and Requests for Proposals (RFPs) for goods, services, and construction projects. All current opportunities are posted on the official city website.</p>
+
+    <div class="bg-gov-blue rounded-xl p-6 text-white">
+      <h2 class="text-xl font-bold mb-2">View Current Bids &amp; RFPs</h2>
+      <p class="text-blue-100 text-sm mb-4">All active procurement opportunities are listed on aberdeenmd.gov. Check regularly for new postings.</p>
+      <a href="https://www.aberdeenmd.gov/bids" class="inline-flex items-center gap-2 bg-white text-gov-blue font-semibold px-5 py-2.5 rounded hover:bg-slate-100 transition-colors duration-200 text-sm">
+        View Active Bids on aberdeenmd.gov
+        <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      </a>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">How the Bidding Process Works</h2>
+      <div class="space-y-3">
+        {% for step in [
+          { n: "1", title: "Monitor Postings", desc: "Check aberdeenmd.gov/bids regularly for new Invitations for Bids and Requests for Proposals." },
+          { n: "2", title: "Register Your Business", desc: "Ensure your business is properly registered and licensed before submitting a bid." },
+          { n: "3", title: "Submit Your Bid", desc: "Follow the instructions in the bid documents carefully. Late or incomplete submissions may be disqualified." },
+          { n: "4", title: "Award & Contract", desc: "The City evaluates submissions and awards contracts based on criteria specified in the bid documents." }
+        ] %}
+        <div class="flex gap-4 bg-white border border-slate-200 rounded-xl p-4">
+          <div class="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm flex-shrink-0">{{ step.n }}</div>
+          <div>
+            <div class="text-sm font-bold text-navy mb-0.5">{{ step.title }}</div>
+            <p class="text-xs text-slate-600">{{ step.desc }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">Bid Types</h2>
+      <div class="grid sm:grid-cols-3 gap-4">
+        {% for t in [
+          { title: "Invitation for Bids (IFB)", desc: "Competitive sealed bids for goods and construction. Awarded to lowest responsive, responsible bidder." },
+          { title: "Request for Proposals (RFP)", desc: "Used for services where factors beyond price — such as experience and approach — are evaluated." },
+          { title: "Request for Qualifications (RFQ)", desc: "Used to prequalify vendors or consultants before a project is fully scoped." }
+        ] %}
+        <div class="bg-white border border-slate-200 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-navy mb-1">{{ t.title }}</h3>
+          <p class="text-xs text-slate-600">{{ t.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Procurement Contact</h2>
+      <dl class="space-y-3 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">City Manager's Office</dt><dd class="text-slate-700">Procurement oversight</dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Hours</dt><dd class="text-slate-700">Mon–Fri, 8:30 AM – 5:00 PM</dd></div>
+      </dl>
+      <div class="pt-2 space-y-2">
+        <a href="https://www.aberdeenmd.gov/bids" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Active Bids Portal</a>
+        <a href="{{ '/services/employment/' | url }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">City Employment</a>
+      </div>
+    </div>
+  </aside>
+</div>

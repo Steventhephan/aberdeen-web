@@ -1,0 +1,88 @@
+---
+layout: page.njk
+title: Emergency Alerts
+subtitle: Sign up to receive mass notification calls and texts for emergencies and important city notices.
+description: Sign up for Aberdeen emergency alerts — mass notification calls and texts for weather emergencies, road closures, and public safety notices.
+breadcrumb:
+  - label: Emergency Alerts
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+
+    <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+      <div class="flex items-start gap-3">
+        <svg aria-hidden="true" class="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+        <div>
+          <p class="text-sm font-bold text-red-800 mb-1">For life-threatening emergencies, always call 911.</p>
+          <p class="text-sm text-red-700">Non-emergency police: <a href="tel:+14102722121" class="font-semibold hover:underline">(410) 272-2121</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">Sign Up for Mass Notifications</h2>
+      <p class="text-slate-600 leading-relaxed mb-4">The City of Aberdeen uses a mass notification system to alert residents about emergencies and important public information. Sign up to receive calls and/or texts directly to your phone.</p>
+      <p class="text-slate-600 leading-relaxed mb-6">Registration is free and takes only a few minutes. Your information is used solely for emergency and public safety notifications.</p>
+      <a href="https://www.aberdeenmd.gov/environmental-division/pages/4-sign-up-to-receive-mass-notification-callstexts" class="inline-flex items-center gap-2 bg-red-600 text-white font-semibold px-6 py-3 rounded hover:bg-red-700 transition-colors duration-200 text-sm">
+        <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zm0 16a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
+        Sign Up for Emergency Alerts
+      </a>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">What You'll Be Notified About</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {% for item in [
+          { title: "Weather Emergencies", desc: "Severe storms, flooding, snow emergencies, and evacuation orders." },
+          { title: "Road Closures", desc: "Unplanned road closures due to accidents, hazards, or emergencies." },
+          { title: "Public Safety Notices", desc: "Boil-water advisories, hazmat incidents, and public health alerts." },
+          { title: "City Service Changes", desc: "Emergency changes to trash pickup, City Hall hours, or other services." }
+        ] %}
+        <div class="bg-white border border-slate-200 rounded-xl p-4 flex items-start gap-3">
+          <svg aria-hidden="true" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zm0 16a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
+          <div>
+            <h3 class="text-sm font-bold text-navy mb-0.5">{{ item.title }}</h3>
+            <p class="text-xs text-slate-600">{{ item.desc }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="bg-gov-blue-light rounded-xl p-5">
+      <h2 class="text-base font-bold text-navy mb-2">Also Subscribe to the City Newsletter</h2>
+      <p class="text-sm text-slate-600 mb-3">For non-emergency updates, event announcements, and city news, subscribe to The Aberdeen Echo — the official City newsletter.</p>
+      <a href="{{ '/newsletter/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Subscribe to The Aberdeen Echo</a>
+    </div>
+
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Emergency Contacts</h2>
+      <dl class="space-y-3 text-sm">
+        <div>
+          <dt class="text-xs font-semibold text-red-600 uppercase tracking-wide mb-1">All Emergencies</dt>
+          <dd class="text-2xl font-bold text-red-700"><a href="tel:911">911</a></dd>
+        </div>
+        <div>
+          <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Police Non-Emergency</dt>
+          <dd><a href="tel:+14102722121" class="text-gov-blue hover:underline font-semibold">(410) 272-2121</a></dd>
+        </div>
+        <div>
+          <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">City Hall</dt>
+          <dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600</a></dd>
+        </div>
+        <div>
+          <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Report Issue (DPW)</dt>
+          <dd><a href="mailto:dpw@aberdeenmd.gov" class="text-gov-blue hover:underline text-xs">dpw@aberdeenmd.gov</a></dd>
+        </div>
+      </dl>
+      <div class="pt-2 space-y-2">
+        <a href="{{ '/services/report-issue/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Report an Issue</a>
+        <a href="{{ '/newsletter/' | url }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">City Newsletter</a>
+      </div>
+    </div>
+  </aside>
+</div>
