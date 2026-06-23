@@ -1,0 +1,31 @@
+{
+  "name": "aberdeen-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i src/assets/input.css -o _site/assets/style.css --minify",
+    "build:11ty": "eleventy",
+    "build": "mkdir -p _site/assets && npm run build:css && npm run build:11ty",
+    "dev:css": "tailwindcss -i src/assets/input.css -o _site/assets/style.css --watch",
+    "dev:11ty": "eleventy --serve",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:11ty\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steventhephan/aberdeen-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Steventhephan/aberdeen-web/issues"
+  },
+  "homepage": "https://github.com/Steventhephan/aberdeen-web#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "City of Aberdeen, Maryland",
+  "shortName": "Aberdeen, MD",
+  "url": "https://steventhephan.github.io/aberdeen-web",
+  "address": "60 N. Parke Street, Aberdeen, MD 21001",
+  "phone": "(410) 272-1600",
+  "fax": "(410) 273-7402",
+  "email": "info@aberdeenmd.gov",
+  "hours": "Mon–Fri, 8:30 AM – 5:00 PM",
+  "facebook": "https://www.facebook.com/cityofaberdeenmd/",
+  "logo": "https://www.aberdeenmd.gov/sites/all/themes/custom/sites/aberdeenmd/vts_aberdeenmd/logo.png",
+  "alert": {
+    "active": true,
+    "text": "Saturday, June 27 — Washington-Rochambeau Route March & \"Rails, Cans & Community\" Family Fun Day at Festival Park.",
+    "linkText": "Details",
+    "linkUrl": "https://www.aberdeenmd.gov/calendar-by-event-type/1367%2B1368%2B1369"
+  }
+}

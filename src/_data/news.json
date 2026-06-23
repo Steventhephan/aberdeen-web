@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Washington-Rochambeau Revolutionary Route March & \"Rails, Cans & Community\" Family Fun Day at Festival Park",
+    "date": "2026-06-27",
+    "dateDisplay": "June 27, 2026",
+    "category": "Community Events",
+    "url": "https://www.aberdeenmd.gov/calendar-by-event-type/1367%2B1368%2B1369",
+    "image": "https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/styles/news_image_teaser/public/news/june_27th.png?itok=F4DJ9QDd",
+    "imageAlt": "Washington-Rochambeau Revolutionary Route March event poster",
+    "excerpt": "See the march that commemorates Revolutionary War troop movement as American and French troops were led by General Washington. Followed by a Family Fun Day at Festival Park.",
+    "featured": true
+  },
+  {
+    "title": "New Citizen Problem Reporter Makes Reporting Non-Emergency Issues Easy",
+    "date": "2026-06-15",
+    "dateDisplay": "June 2026",
+    "category": "City Services",
+    "url": "https://www.aberdeenmd.gov/home/news/new-citizen-problem-reporter-makes-reporting-non-emergency-issues-easy",
+    "image": "https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/imce/copy_of_cofa_alerts_icon_3.png",
+    "imageAlt": "Aberdeen alerts notification icon",
+    "excerpt": "The City of Aberdeen is excited to announce the launch of a new online tool for reporting non-emergency issues like potholes, sewer problems, and street light outages.",
+    "featured": false
+  },
+  {
+    "title": "IronBirds Tickets Now Available for Aberdeen Residents",
+    "date": "2026-06-10",
+    "dateDisplay": "June 2026",
+    "category": "Community",
+    "url": "https://www.aberdeenmd.gov/home/news/ironbirds-tickets-now-available-for-aberdeen-residents",
+    "image": "https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/styles/news_image_teaser/public/news/iron_birds.png?itok=mlYLmj2n",
+    "imageAlt": "Aberdeen IronBirds baseball logo",
+    "excerpt": "The 2026 IronBirds season is here, and the City of Aberdeen is excited to offer free tickets to residents. Find out how to get yours.",
+    "featured": false
+  },
+  {
+    "title": "Aberdeen 250: The Forces That Shaped Us — (Part 2)",
+    "date": "2026-06-01",
+    "dateDisplay": "June 2026",
+    "category": "History",
+    "url": "https://www.aberdeenmd.gov/home/news/aberdeen-250-the-forces-that-shaped-us-part-2",
+    "image": "https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/styles/news_image_teaser/public/news/forces_that_shaped_us_ruthpeters_part2_5-28-26speakerseries.png?itok=XZVGhy50",
+    "imageAlt": "Aberdeen 250 speaker series event flyer",
+    "excerpt": "Ruth Peters presents the history of Aberdeen from the Civil War through the 20th Century. This event is part of the Aberdeen 250 speaker series.",
+    "featured": false
+  }
+]

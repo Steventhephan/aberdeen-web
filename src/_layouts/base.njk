@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }} — {{ site.name }}</title>
+  <meta name="description" content="{{ description or 'Official website of the City of Aberdeen, Maryland.' }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;600;700&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <style>
+    body { font-family: 'Public Sans', system-ui, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Libre Bodoni', Georgia, serif; }
+    .skip-link {
+      position: absolute; top: -999px; left: 0;
+      background: #0369A1; color: #fff;
+      padding: 0.5rem 1rem; z-index: 9999;
+      font-size: 0.875rem; font-weight: 600; text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+    *:focus-visible { outline: 3px solid #0369A1; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 text-base antialiased leading-relaxed">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  {# ── ALERT BANNER ── #}
+  {% if site.alert.active %}
+  <div role="alert" aria-live="polite" class="bg-amber-600 text-white text-sm font-semibold text-center py-2 px-4">
+    <svg aria-hidden="true" class="inline w-4 h-4 mr-1 mb-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+    {{ site.alert.text }}
+    <a href="{{ site.alert.linkUrl }}" class="underline ml-2 hover:text-amber-200 transition-colors duration-200">{{ site.alert.linkText }}</a>
+  </div>
+  {% endif %}
+
+  {# ── UTILITY BAR ── #}
+  <div class="bg-navy text-slate-300 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2">
+      <span class="hidden sm:block">Official website of the City of Aberdeen, Maryland</span>
+      <nav aria-label="Utility navigation">
+        <ul class="flex items-center gap-4">
+          <li><a href="/contact/" class="hover:text-white transition-colors duration-200">Contact Directory</a></li>
+          <li><a href="/services/meetings/" class="hover:text-white transition-colors duration-200">Watch Live Meetings</a></li>
+          <li>
+            <a href="tel:+14102721600" class="flex items-center gap-1 hover:text-white transition-colors duration-200">
+              <svg aria-hidden="true" class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+              (410) 272-1600
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  {# ── HEADER / NAV ── #}
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <a href="/" class="flex items-center gap-3 group flex-shrink-0" aria-label="City of Aberdeen Maryland — home">
+          <img
+            src="{{ site.logo }}"
+            alt="City of Aberdeen Maryland seal"
+            class="h-10 w-auto"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="hidden w-10 h-10 rounded-full bg-navy items-center justify-center flex-shrink-0" aria-hidden="true">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+          </div>
+          <div class="leading-tight">
+            <div class="text-xs text-slate-500 font-medium uppercase tracking-widest">City of</div>
+            <div class="text-lg font-bold text-navy leading-none" style="font-family:'Libre Bodoni',serif;">Aberdeen, MD</div>
+          </div>
+        </a>
+
+        <nav aria-label="Main navigation" class="hidden lg:block">
+          <ul class="flex items-center gap-1">
+            <li><a href="/#services" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">Services</a></li>
+            <li><a href="/departments/" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">Departments</a></li>
+            <li><a href="/news/" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">News</a></li>
+            <li><a href="/events/" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">Events</a></li>
+            <li class="ml-2">
+              <a href="/services/pay-bills/" class="inline-flex items-center gap-2 bg-gov-blue text-white text-sm font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200">
+                <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
+                Pay Bills
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="lg:hidden p-2 rounded text-slate-700 hover:bg-slate-100 transition-colors duration-200 cursor-pointer"
+          onclick="toggleMenu(this)"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a href="/#services" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Services</a>
+        <a href="/departments/" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Departments</a>
+        <a href="/news/" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">News</a>
+        <a href="/events/" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Events</a>
+        <a href="/services/pay-bills/" class="mt-2 bg-gov-blue text-white text-sm font-semibold px-4 py-3 rounded text-center hover:bg-gov-blue-dark transition-colors duration-200">Pay Bills Online</a>
+      </nav>
+    </div>
+  </header>
+
+  {# ── PAGE CONTENT ── #}
+  <main id="main-content" tabindex="-1">
+    {{ content | safe }}
+  </main>
+
+  {# ── FOOTER ── #}
+  <footer class="bg-navy text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-3 mb-5">
+            <img src="{{ site.logo }}" alt="City of Aberdeen Maryland seal" class="h-12 w-auto" onerror="this.style.display='none'" />
+            <div>
+              <div class="text-xs text-slate-400 uppercase tracking-widest">City of</div>
+              <div class="text-white font-bold text-lg leading-none" style="font-family:'Libre Bodoni',serif;">Aberdeen, MD</div>
+            </div>
+          </div>
+          <address class="not-italic text-sm leading-loose text-slate-400">
+            60 N. Parke Street<br/>
+            Aberdeen, MD 21001<br/>
+            <a href="tel:+14102721600" class="hover:text-white transition-colors duration-200">(410) 272-1600</a><br/>
+            Fax: (410) 273-7402
+          </address>
+          <p class="text-xs text-slate-500 mt-3">Mon–Fri, 8:30 AM – 5:00 PM</p>
+        </div>
+
+        <nav aria-label="Services footer links">
+          <h3 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/services/pay-bills/" class="hover:text-white transition-colors duration-200">Pay Bills Online</a></li>
+            <li><a href="/services/permits/" class="hover:text-white transition-colors duration-200">Building Permits</a></li>
+            <li><a href="/services/report-issue/" class="hover:text-white transition-colors duration-200">Report an Issue</a></li>
+            <li><a href="/services/trash/" class="hover:text-white transition-colors duration-200">Trash Collection</a></li>
+            <li><a href="/services/employment/" class="hover:text-white transition-colors duration-200">Employment</a></li>
+            <li><a href="/services/taxes/" class="hover:text-white transition-colors duration-200">Property Taxes</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Government footer links">
+          <h3 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Government</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/departments/mayor-city-council/" class="hover:text-white transition-colors duration-200">Mayor &amp; City Council</a></li>
+            <li><a href="/services/meetings/" class="hover:text-white transition-colors duration-200">Meetings &amp; Legislation</a></li>
+            <li><a href="/departments/" class="hover:text-white transition-colors duration-200">All Departments</a></li>
+            <li><a href="/budget/" class="hover:text-white transition-colors duration-200">City Budget</a></li>
+            <li><a href="/businesses/bids/" class="hover:text-white transition-colors duration-200">Bids &amp; RFPs</a></li>
+            <li><a href="/services/elections/" class="hover:text-white transition-colors duration-200">Elections</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Connect footer links">
+          <h3 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Connect</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/contact/" class="hover:text-white transition-colors duration-200">Contact Directory</a></li>
+            <li><a href="/newsletter/" class="hover:text-white transition-colors duration-200">City Newsletter</a></li>
+            <li><a href="{{ site.facebook }}" class="hover:text-white transition-colors duration-200">Facebook</a></li>
+            <li><a href="/services/public-records/" class="hover:text-white transition-colors duration-200">Public Records Request</a></li>
+            <li><a href="/emergency-alerts/" class="hover:text-white transition-colors duration-200">Emergency Alerts</a></li>
+            <li><a href="https://www.aberdeenmd.gov/home/pages/2026-weekly-activity-reports" class="hover:text-white transition-colors duration-200">Weekly Activity Reports</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; {% year %} City of Aberdeen, Maryland. All rights reserved.</p>
+        <nav aria-label="Legal links">
+          <ul class="flex flex-wrap gap-4 justify-center">
+            <li><a href="/privacy/" class="hover:text-slate-300 transition-colors duration-200">Privacy Policy &amp; Disclaimer</a></li>
+            <li><a href="https://www.aberdeenmd.gov/sitemap" class="hover:text-slate-300 transition-colors duration-200">Site Map</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(btn) {
+      const menu = document.getElementById('mobile-menu');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('hidden');
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobile-menu').classList.add('hidden');
+      const btn = document.querySelector('[aria-controls="mobile-menu"]');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+  </script>
+</body>
+</html>

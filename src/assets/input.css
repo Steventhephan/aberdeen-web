@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy:             #0F172A;
+  --color-navy-800:         #1E293B;
+  --color-navy-700:         #334155;
+  --color-gov-blue:         #0369A1;
+  --color-gov-blue-dark:    #075985;
+  --color-gov-blue-light:   #E0F2FE;
+
+  --font-family-heading: "Libre Bodoni", Georgia, serif;
+  --font-family-body:    "Public Sans", system-ui, sans-serif;
+}

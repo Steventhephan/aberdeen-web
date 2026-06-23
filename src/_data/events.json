@@ -1,0 +1,66 @@
+{
+  "meetings": [
+    {
+      "title": "City Council Meeting",
+      "month": "Jun", "day": "24",
+      "url": "https://www.aberdeenmd.gov/city-clerk/events/41126",
+      "location": "Council Chambers"
+    },
+    {
+      "title": "Planning Commission Meeting",
+      "month": "Jun", "day": "25",
+      "url": "https://www.aberdeenmd.gov/city-clerk/events/41491",
+      "location": "Council Chambers"
+    },
+    {
+      "title": "Economic Development Commission",
+      "month": "Jun", "day": "26",
+      "url": "https://www.aberdeenmd.gov/city-clerk/events/41611",
+      "location": "Council Chambers"
+    },
+    {
+      "title": "Dept. of Public Works Meeting",
+      "month": "Jun", "day": "30",
+      "url": "https://www.aberdeenmd.gov/city-clerk/events/41741",
+      "location": "2nd Floor Admin Conference Room"
+    },
+    {
+      "title": "City Council Work Session",
+      "month": "Jul", "day": "8",
+      "url": "https://www.aberdeenmd.gov/home/events/42901",
+      "location": "Council Chambers"
+    }
+  ],
+  "community": [
+    {
+      "title": "Tower Rocks",
+      "month": "Jul", "day": "12",
+      "url": "https://www.aberdeenmd.gov/community-events/events/41356",
+      "location": "Aberdeen"
+    },
+    {
+      "title": "Aberdeen 250 — Freedom 5K Run & Walk",
+      "month": "Jul", "day": "4",
+      "url": "https://www.aberdeenmd.gov/home/events/42636",
+      "location": "Aberdeen Proving Ground area"
+    },
+    {
+      "title": "Mermaid 5K & Under the Sea Bash",
+      "month": "Jul", "day": "19",
+      "url": "https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41361",
+      "location": "Aberdeen Main Street"
+    },
+    {
+      "title": "Oktoberfest",
+      "month": "Oct", "day": "4",
+      "url": "https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41371",
+      "location": "Aberdeen Main Street"
+    },
+    {
+      "title": "49th Annual Christmas Street Celebration",
+      "month": "Dec", "day": "6",
+      "url": "https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41381",
+      "location": "Aberdeen Main Street"
+    }
+  ]
+}

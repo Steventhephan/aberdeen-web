@@ -1,0 +1,40 @@
+---
+layout: base.njk
+---
+
+{# ── PAGE HERO ── #}
+<section class="bg-navy" aria-label="{{ title }}">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+    {# Breadcrumb #}
+    {% if breadcrumb %}
+    <nav aria-label="Breadcrumb" class="mb-4">
+      <ol class="flex items-center gap-2 text-sm text-slate-400">
+        <li><a href="/" class="hover:text-white transition-colors duration-200">Home</a></li>
+        {% for crumb in breadcrumb %}
+        <li aria-hidden="true" class="text-slate-600">/</li>
+        {% if loop.last %}
+        <li class="text-slate-300" aria-current="page">{{ crumb.label }}</li>
+        {% else %}
+        <li><a href="{{ crumb.url }}" class="hover:text-white transition-colors duration-200">{{ crumb.label }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ol>
+    </nav>
+    {% endif %}
+
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">{{ title }}</h1>
+    {% if subtitle %}
+    <p class="text-slate-300 text-lg max-w-2xl">{{ subtitle }}</p>
+    {% endif %}
+  </div>
+  <div aria-hidden="true">
+    <svg viewBox="0 0 1440 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full text-slate-50" preserveAspectRatio="none">
+      <path d="M0 32L720 0L1440 32H0Z" fill="currentColor"/>
+    </svg>
+  </div>
+</section>
+
+{# ── PAGE BODY ── #}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  {{ content | safe }}
+</div>

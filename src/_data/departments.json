@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Mayor & City Council",
+    "slug": "mayor-city-council",
+    "phone": "(410) 272-1600",
+    "email": "",
+    "url": "/departments/mayor-city-council/",
+    "realUrl": "https://www.aberdeenmd.gov/mayor-city-council",
+    "icon": "home",
+    "description": "The Mayor and City Council are the elected governing body of the City of Aberdeen, responsible for setting policy, approving the budget, and representing the interests of residents."
+  },
+  {
+    "name": "Police Department",
+    "slug": "police",
+    "phone": "(410) 272-2121",
+    "email": "",
+    "url": "/departments/police/",
+    "realUrl": "https://www.aberdeenmd.gov/police-department",
+    "icon": "shield",
+    "description": "The Aberdeen Police Department is dedicated to protecting and serving the residents and visitors of Aberdeen through professional, community-oriented policing."
+  },
+  {
+    "name": "Public Works",
+    "slug": "public-works",
+    "phone": "(410) 272-1600",
+    "email": "dpw@aberdeenmd.gov",
+    "url": "/departments/public-works/",
+    "realUrl": "https://www.aberdeenmd.gov/department-of-public-works",
+    "icon": "cog",
+    "description": "The Department of Public Works maintains city infrastructure including roads, water and sewer systems, and public facilities."
+  },
+  {
+    "name": "Finance & Treasury",
+    "slug": "finance",
+    "phone": "(410) 272-1600",
+    "email": "",
+    "url": "/departments/finance/",
+    "realUrl": "https://www.aberdeenmd.gov/finance",
+    "icon": "credit-card",
+    "description": "The Finance Department manages the city's budget, financial reporting, tax collection, and online payment services."
+  },
+  {
+    "name": "Planning & Community Development",
+    "slug": "planning",
+    "phone": "(410) 272-1600",
+    "email": "",
+    "url": "/departments/planning/",
+    "realUrl": "https://www.aberdeenmd.gov/planning-and-community-development",
+    "icon": "map",
+    "description": "Planning & Community Development oversees land use, zoning, building permits, and long-range planning for the city's growth and development."
+  },
+  {
+    "name": "City Clerk",
+    "slug": "city-clerk",
+    "phone": "(410) 272-1600",
+    "email": "",
+    "url": "/departments/city-clerk/",
+    "realUrl": "https://www.aberdeenmd.gov/city-clerk",
+    "icon": "document",
+    "description": "The City Clerk's office manages official city records, meeting agendas and minutes, elections, and public information requests."
+  },
+  {
+    "name": "City Manager",
+    "slug": "city-manager",
+    "phone": "(410) 272-1600",
+    "email": "",
+    "url": "/departments/city-manager/",
+    "realUrl": "https://www.aberdeenmd.gov/city-manager",
+    "icon": "office",
+    "description": "The City Manager oversees the day-to-day operations of all city departments and implements policies set by the Mayor and City Council."
+  },
+  {
+    "name": "Economic Development",
+    "slug": "economic-development",
+    "phone": "(410) 272-1600",
+    "email": "",
+    "url": "/departments/economic-development/",
+    "realUrl": "https://www.aberdeenmd.gov/economic-development",
+    "icon": "chart",
+    "description": "Economic Development promotes business growth, attraction, and retention in Aberdeen, supporting a vibrant local economy."
+  },
+  {
+    "name": "Human Resources",
+    "slug": "human-resources",
+    "phone": "(410) 272-1600",
+    "email": "",
+    "url": "/departments/human-resources/",
+    "realUrl": "https://www.aberdeenmd.gov/human-resources",
+    "icon": "users",
+    "description": "Human Resources manages city employee recruitment, benefits, training, and personnel policies."
+  }
+]

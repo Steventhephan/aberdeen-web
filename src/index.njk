@@ -1,0 +1,259 @@
+---
+layout: base.njk
+title: Home
+description: Official website of the City of Aberdeen, Maryland. Pay bills, apply for permits, report issues, and stay informed about local news and events.
+---
+
+{# ── HERO ── #}
+<section
+  aria-label="Welcome to the City of Aberdeen"
+  style="background-image: linear-gradient(to right, rgba(15,23,42,0.88) 50%, rgba(15,23,42,0.5) 100%), url('https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/styles/slideshow_background_breakpoints_theme_vts_mobile_1x/public/galleries/new_gray_slideshow_march_2026_page_3.jpg?itok=e6x18UYM&timestamp=1772822105'); background-size: cover; background-position: center;"
+  class="relative overflow-hidden"
+>
+  <div class="absolute left-0 top-0 bottom-0 w-1 bg-gov-blue" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <div class="max-w-2xl">
+      <p class="text-blue-300 text-sm font-semibold uppercase tracking-widest mb-3">Aberdeen, Maryland</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+        Aberdeen is your<br/>
+        <span class="text-blue-300">Home of Opportunity</span>
+      </h1>
+      <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-lg">
+        Minutes from Baltimore, Washington DC, Wilmington, and Philadelphia — with world-class schools, fast rail and highway access, and home of Aberdeen Proving Ground.
+      </p>
+      <form role="search" action="https://www.aberdeenmd.gov/search" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl">
+        <label for="site-search" class="sr-only">Search Aberdeen city services</label>
+        <div class="relative flex-1">
+          <svg aria-hidden="true" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>
+          <input id="site-search" name="query" type="search" placeholder="Search services, departments, news…" class="w-full pl-10 pr-4 py-3 rounded bg-white text-slate-900 text-sm placeholder-slate-500 border-2 border-transparent focus:border-gov-blue focus:outline-none transition-colors duration-200" />
+        </div>
+        <button type="submit" class="bg-gov-blue hover:bg-gov-blue-dark text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer whitespace-nowrap text-sm">Search</button>
+      </form>
+      <div class="mt-4 flex flex-wrap gap-2 items-center">
+        <span class="text-slate-400 text-xs">Popular:</span>
+        <a href="/services/pay-bills/" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Pay water bill</a>
+        <a href="/services/permits/" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Building permit</a>
+        <a href="/services/employment/" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">City jobs</a>
+        <a href="/services/trash/" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Trash pickup</a>
+      </div>
+    </div>
+  </div>
+  <div aria-hidden="true">
+    <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full text-slate-50" preserveAspectRatio="none">
+      <path d="M0 48L720 0L1440 48H0Z" fill="currentColor"/>
+    </svg>
+  </div>
+</section>
+
+{# ── QUICK SERVICES ── #}
+<section id="services" aria-labelledby="services-heading" class="py-16 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 id="services-heading" class="text-3xl md:text-4xl font-bold text-navy mb-3">How Can We Help?</h2>
+      <p class="text-slate-600 text-lg max-w-xl mx-auto">The most common city services — available online 24/7.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+
+      {% set serviceCards = [
+        { href: "/services/pay-bills/", label: "Pay Bills", sub: "Water, sewer & taxes", aria: "Pay your city bills online", icon: "credit-card" },
+        { href: "/services/report-issue/", label: "Report an Issue", sub: "Pothole, sewer, street light", aria: "Report a non-emergency city issue", icon: "alert" },
+        { href: "/services/permits/", label: "Permits", sub: "Building & zoning", aria: "Apply for a building or zoning permit", icon: "document" },
+        { href: "/services/meetings/", label: "Meetings", sub: "Agendas & minutes", aria: "View upcoming public meetings", icon: "calendar" },
+        { href: "/parks-and-recreation/", label: "Parks & Rec", sub: "Activity center & parks", aria: "Find parks and recreation programs", icon: "map-pin" },
+        { href: "/services/public-records/", label: "Public Records", sub: "MPIA requests", aria: "Request public records", icon: "folder" },
+        { href: "/services/employment/", label: "Employment", sub: "Open positions", aria: "View city employment opportunities", icon: "briefcase" },
+        { href: "/contact/", label: "Contact Us", sub: "(410) 272-1600", aria: "Contact city hall and departments", icon: "phone" }
+      ] %}
+
+      {% for card in serviceCards %}
+      <a href="{{ card.href }}" class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center" aria-label="{{ card.aria }}">
+        <div class="w-12 h-12 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+          {% if card.icon == "credit-card" %}
+          <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
+          {% elif card.icon == "alert" %}
+          <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+          {% elif card.icon == "document" %}
+          <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+          {% elif card.icon == "calendar" %}
+          <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+          {% elif card.icon == "map-pin" %}
+          <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          {% elif card.icon == "folder" %}
+          <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"/><path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+          {% elif card.icon == "briefcase" %}
+          <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/></svg>
+          {% else %}
+          <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          {% endif %}
+        </div>
+        <span class="text-sm font-semibold text-navy group-hover:text-gov-blue transition-colors duration-200">{{ card.label }}</span>
+        <span class="text-xs text-slate-500">{{ card.sub }}</span>
+      </a>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+{# ── NEWS ── #}
+<section id="news" aria-labelledby="news-heading" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+      <div>
+        <h2 id="news-heading" class="text-3xl md:text-4xl font-bold text-navy">News &amp; Announcements</h2>
+        <p class="text-slate-600 mt-2">Stay informed about what's happening in Aberdeen.</p>
+      </div>
+      <a href="/news/" class="text-gov-blue font-semibold hover:underline whitespace-nowrap">View all news →</a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      {% set featured = news | selectattr("featured") | first %}
+      <article class="md:col-span-2 bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-gov-blue hover:shadow-md transition-all duration-200 group cursor-pointer">
+        <div class="relative h-52 bg-slate-200 overflow-hidden">
+          <img src="{{ featured.image }}" alt="{{ featured.imageAlt }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <span class="absolute top-3 left-3 text-xs font-semibold bg-gov-blue text-white px-2 py-1 rounded">Featured</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 text-xs text-slate-500 mb-3">
+            <time datetime="{{ featured.date }}">{{ featured.dateDisplay }}</time>
+            <span aria-hidden="true">·</span>
+            <span>{{ featured.category }}</span>
+          </div>
+          <h3 class="text-xl font-bold text-navy mb-2 group-hover:text-gov-blue transition-colors duration-200">
+            <a href="{{ featured.url }}" class="hover:underline">{{ featured.title }}</a>
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed">{{ featured.excerpt }}</p>
+        </div>
+      </article>
+      <div class="flex flex-col gap-4">
+        {% for item in news %}
+        {% if not item.featured %}
+        <article class="bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-gov-blue hover:shadow-md transition-all duration-200 group cursor-pointer flex gap-4 p-4">
+          <div class="w-20 h-20 flex-shrink-0 bg-slate-200 rounded-lg overflow-hidden">
+            <img src="{{ item.image }}" alt="{{ item.imageAlt }}" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="min-w-0">
+            <div class="text-xs text-slate-500 mb-1"><time datetime="{{ item.date }}">{{ item.dateDisplay }}</time> · {{ item.category }}</div>
+            <h3 class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200 leading-snug">
+              <a href="{{ item.url }}" class="hover:underline">{{ item.title }}</a>
+            </h3>
+          </div>
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── EVENTS ── #}
+<section id="events" aria-labelledby="events-heading" class="py-16 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 id="events-heading" class="text-3xl md:text-4xl font-bold text-navy mb-10">Events &amp; Meetings</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div>
+        <div class="flex items-center justify-between mb-5">
+          <h3 class="text-lg font-bold text-navy flex items-center gap-2">
+            <span class="w-2 h-6 bg-gov-blue rounded-full inline-block" aria-hidden="true"></span>
+            Upcoming Meetings
+          </h3>
+          <a href="/services/meetings/" class="text-sm text-gov-blue font-semibold hover:underline">All meetings →</a>
+        </div>
+        <ul class="space-y-3" aria-label="Upcoming public meetings">
+          {% for meeting in events.meetings %}
+          <li>
+            <a href="{{ meeting.url }}" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 cursor-pointer group">
+              <div class="w-12 h-12 {{ 'bg-gov-blue' if loop.last else 'bg-navy' }} text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                <span class="text-xs font-semibold opacity-70 uppercase">{{ meeting.month }}</span>
+                <span class="text-lg font-bold">{{ meeting.day }}</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">{{ meeting.title }}</div>
+                <div class="text-xs text-slate-500 mt-0.5">{{ meeting.location }}</div>
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <div class="flex items-center justify-between mb-5">
+          <h3 class="text-lg font-bold text-navy flex items-center gap-2">
+            <span class="w-2 h-6 bg-amber-500 rounded-full inline-block" aria-hidden="true"></span>
+            Community Events
+          </h3>
+          <a href="/events/" class="text-sm text-gov-blue font-semibold hover:underline">All events →</a>
+        </div>
+        <ul class="space-y-3" aria-label="Upcoming community events">
+          {% for event in events.community %}
+          <li>
+            <a href="{{ event.url }}" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-sm transition-all duration-200 cursor-pointer group">
+              <div class="w-12 h-12 bg-amber-500 text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                <span class="text-xs font-semibold opacity-80 uppercase">{{ event.month }}</span>
+                <span class="text-lg font-bold">{{ event.day }}</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-navy group-hover:text-amber-600 transition-colors duration-200">{{ event.title }}</div>
+                <div class="text-xs text-slate-500 mt-0.5">{{ event.location }}</div>
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# ── DEPARTMENTS ── #}
+<section id="departments" aria-labelledby="dept-heading" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 id="dept-heading" class="text-3xl md:text-4xl font-bold text-navy mb-3">City Departments</h2>
+      <p class="text-slate-600 text-lg max-w-xl mx-auto">Connect directly with the department that can help you.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% for dept in departments | slice(0, 6) %}
+      <a href="{{ dept.url }}" class="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group">
+        <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+          <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">{{ dept.name }}</div>
+          <div class="text-xs text-slate-500">{{ dept.phone }}</div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="mt-8 text-center">
+      <a href="/departments/" class="inline-flex items-center gap-2 text-gov-blue font-semibold hover:underline cursor-pointer">
+        All departments &amp; boards
+        <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+{# ── STAY CONNECTED ── #}
+<section aria-labelledby="connect-heading" class="py-16 bg-gov-blue-light">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 id="connect-heading" class="text-3xl md:text-4xl font-bold text-navy mb-4">Stay Connected with Aberdeen</h2>
+    <p class="text-slate-600 text-lg mb-8">Get city news, service alerts, and event updates — sign up for the City Newsletter.</p>
+    <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-10">
+      <a href="/newsletter/" class="flex-1 bg-navy hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded text-sm transition-colors duration-200 text-center">Subscribe to City Newsletter</a>
+      <a href="/emergency-alerts/" class="flex-1 border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold px-6 py-3 rounded text-sm transition-colors duration-200 text-center">Sign Up for Emergency Alerts</a>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="{{ site.facebook }}" class="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200" aria-label="City of Aberdeen on Facebook">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Follow on Facebook
+      </a>
+      <span aria-hidden="true" class="text-slate-300">|</span>
+      <a href="/services/meetings/" class="text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200">Watch Live Council Meetings</a>
+      <span aria-hidden="true" class="text-slate-300">|</span>
+      <a href="https://www.aberdeenmd.gov/finance/files/where-does-your-money-go-fy2026-0" class="text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200">Where Does Your Money Go?</a>
+    </div>
+  </div>
+</section>
