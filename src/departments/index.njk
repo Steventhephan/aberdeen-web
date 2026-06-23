@@ -1,0 +1,74 @@
+---
+layout: page.njk
+title: Departments & Boards
+subtitle: Find the right City of Aberdeen department or board to help you.
+description: Directory of all City of Aberdeen, Maryland departments, boards, and committees.
+breadcrumb:
+  - label: Departments
+---
+
+<div class="space-y-12">
+
+  {# Departments grid #}
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-6">City Departments</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% for dept in departments %}
+      <a href="{{ dept.url | url }}" class="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer group">
+        <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+          <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="min-w-0">
+          <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200 leading-snug">{{ dept.name }}</div>
+          <div class="text-xs text-slate-500 mt-1">{{ dept.phone }}</div>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed line-clamp-2">{{ dept.description }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="mt-6">
+      <a href="https://www.aberdeenmd.gov/departments" class="text-gov-blue font-semibold hover:underline text-sm">View all departments on aberdeenmd.gov →</a>
+    </div>
+  </div>
+
+  {# Boards & Committees #}
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-6">Boards &amp; Committees</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% set boards = [
+        { name: "Aberdeen Parks & Recreation", url: "/boards/parks-recreation/", desc: "Manages parks, recreation programs, and the Aberdeen Activity Center." },
+        { name: "Architectural Review Committee", url: "/boards/architectural-review/", desc: "Reviews proposed exterior changes to structures in historic districts." },
+        { name: "Board of Appeals", url: "/boards/board-of-appeals/", desc: "Hears zoning variances and appeals of administrative decisions." },
+        { name: "Board of Elections", url: "/boards/board-of-elections/", desc: "Administers Aberdeen municipal elections and voter registration." },
+        { name: "Economic Development Commission", url: "/boards/economic-development-commission/", desc: "Promotes business growth and economic vitality in Aberdeen." },
+        { name: "Ethics Commission", url: "/boards/ethics-commission/", desc: "Oversees compliance with the City's Ethics ordinance." },
+        { name: "Planning Commission", url: "/boards/planning-commission/", desc: "Reviews development applications and land use decisions." },
+        { name: "Heritage Trust Committee", url: "/boards/heritage-trust/", desc: "Preserves Aberdeen's historic resources and cultural heritage." }
+      ] %}
+      {% for board in boards %}
+      <a href="{{ board.url | url }}" class="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer group">
+        <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+          <svg class="w-5 h-5 text-slate-500 group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg>
+        </div>
+        <div class="min-w-0">
+          <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200 leading-snug">{{ board.name }}</div>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">{{ board.desc }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="mt-6">
+      <a href="https://www.aberdeenmd.gov/boards" class="text-gov-blue font-semibold hover:underline text-sm">View all boards on aberdeenmd.gov →</a>
+    </div>
+  </div>
+
+  {# Contact CTA #}
+  <div class="bg-gov-blue-light rounded-xl p-8 text-center">
+    <h2 class="text-2xl font-bold text-navy mb-3">Not Sure Who to Contact?</h2>
+    <p class="text-slate-600 mb-6">Call City Hall at <a href="tel:+14102721600" class="text-gov-blue font-semibold hover:underline">(410) 272-1600</a> Mon–Fri, 8:30 AM – 5:00 PM, or browse the full contact directory.</p>
+    <a href="{{ '/contact/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-6 py-3 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">
+      View Full Contact Directory
+    </a>
+  </div>
+
+</div>

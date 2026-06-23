@@ -1,0 +1,64 @@
+---
+layout: department.njk
+title: City Manager
+subtitle: Overseeing day-to-day city operations and implementing policy set by the Mayor and City Council.
+description: Aberdeen City Manager — oversees all city department operations and implements City Council policy.
+deptPhone: "(410) 272-1600"
+deptRealUrl: "https://www.aberdeenmd.gov/city-manager"
+---
+
+<div class="space-y-8">
+  <div>
+    <p class="text-slate-600 leading-relaxed mb-4">The City Manager is the chief administrative officer of the City of Aberdeen, appointed by the Mayor and City Council. The City Manager is responsible for the overall management of City departments and implements the policies, programs, and priorities established by the elected City Council.</p>
+    <p class="text-slate-600 leading-relaxed">The City Manager's office serves as the administrative hub connecting all City departments and ensuring efficient, effective delivery of services to Aberdeen residents.</p>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Responsibilities</h2>
+    <ul class="space-y-3">
+      {% for item in [
+        "Oversee the day-to-day operations of all City departments",
+        "Implement policies and programs adopted by the City Council",
+        "Prepare and manage the annual City budget",
+        "Hire, supervise, and evaluate department directors",
+        "Coordinate intergovernmental relations with County, State, and Federal agencies",
+        "Advise the Mayor and City Council on administrative matters",
+        "Oversee City contracts, procurement, and capital projects"
+      ] %}
+      <li class="flex items-start gap-3 text-sm text-slate-600">
+        <svg aria-hidden="true" class="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        {{ item }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      {% for link in [
+        { label: "Mayor & City Council", url: "/departments/mayor-city-council/" },
+        { label: "All Departments", url: "/departments/" },
+        { label: "City Budget", url: "/budget/" },
+        { label: "Weekly Activity Reports", url: "https://www.aberdeenmd.gov/home/pages/2026-weekly-activity-reports" },
+        { label: "Bids & RFPs", url: "/businesses/bids/" },
+        { label: "Contact City Hall", url: "/contact/" }
+      ] %}
+      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
+        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        {{ link.label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="bg-gov-blue-light rounded-xl p-5">
+    <h2 class="text-base font-bold text-navy mb-2">Weekly Activity Reports</h2>
+    <p class="text-sm text-slate-600 mb-3">The City Manager's office publishes weekly activity reports summarizing City operations. View archives going back to 2024.</p>
+    <div class="flex flex-wrap gap-3">
+      <a href="https://www.aberdeenmd.gov/home/pages/2026-weekly-activity-reports" class="text-sm text-gov-blue font-semibold hover:underline">2026 Reports</a>
+      <a href="https://www.aberdeenmd.gov/home/pages/2025-weekly-activity-reports" class="text-sm text-gov-blue font-semibold hover:underline">2025 Reports</a>
+      <a href="https://www.aberdeenmd.gov/home/pages/2024-city-hall-weekly-activity-reports" class="text-sm text-gov-blue font-semibold hover:underline">2024 Reports</a>
+    </div>
+  </div>
+</div>

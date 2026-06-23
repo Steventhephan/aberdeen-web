@@ -1,0 +1,72 @@
+---
+layout: department.njk
+title: City Clerk
+subtitle: Official city records, meeting agendas and minutes, elections, and public information requests.
+description: Aberdeen City Clerk — meeting agendas, council minutes, elections, MPIA requests, and official city records. Call (410) 272-1600 ext. 211.
+deptPhone: "(410) 272-1600 ext. 211"
+deptRealUrl: "https://www.aberdeenmd.gov/city-clerk"
+---
+
+<div class="space-y-8">
+  <div>
+    <p class="text-slate-600 leading-relaxed">The City Clerk serves as the official keeper of City records, manages City Council meeting logistics including agendas and minutes, administers municipal elections, and processes Maryland Public Information Act requests.</p>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Services</h2>
+    <div class="grid sm:grid-cols-2 gap-4">
+      {% for service in [
+        { title: "Meeting Agendas & Minutes", desc: "All Council and board meeting documents, past and present." },
+        { title: "Live Meeting Stream", desc: "Watch City Council meetings live online." },
+        { title: "Municipal Elections", desc: "Voter registration, candidate packets, and election results." },
+        { title: "Public Records (MPIA)", desc: "Maryland Public Information Act request processing." },
+        { title: "Proclamation Requests", desc: "Requests for City proclamations and official recognitions." },
+        { title: "City Charter & Code", desc: "Official City of Aberdeen Charter and Code of Ordinances." }
+      ] %}
+      <div class="bg-white border border-slate-200 rounded-xl p-4">
+        <h3 class="text-sm font-bold text-navy mb-1">{{ service.title }}</h3>
+        <p class="text-xs text-slate-600">{{ service.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Upcoming Meetings</h2>
+    <ul class="space-y-3">
+      {% for meeting in events.meetings %}
+      <li>
+        <a href="{{ meeting.url }}" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 group">
+          <div class="w-12 h-12 bg-navy text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+            <span class="text-xs font-semibold opacity-70 uppercase">{{ meeting.month }}</span>
+            <span class="text-lg font-bold">{{ meeting.day }}</span>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">{{ meeting.title }}</div>
+            <div class="text-xs text-slate-500 mt-0.5">{{ meeting.location }}</div>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      {% for link in [
+        { label: "Meetings & Agendas", url: "/services/meetings/" },
+        { label: "Public Records Request", url: "/services/public-records/" },
+        { label: "Elections", url: "/services/elections/" },
+        { label: "Council Minutes Archive", url: "https://www.aberdeenmd.gov/node/2090/minutes" },
+        { label: "Frequently Requested Docs", url: "https://www.aberdeenmd.gov/city-clerk/pages/meetings" },
+        { label: "Watch Live Meetings", url: "https://www.aberdeenmd.gov/city-clerk/pages/meetings" }
+      ] %}
+      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
+        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        {{ link.label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

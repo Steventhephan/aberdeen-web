@@ -1,0 +1,71 @@
+---
+layout: department.njk
+title: Planning & Community Development
+subtitle: Land use, zoning, building permits, and long-range planning for Aberdeen's growth.
+description: Aberdeen Planning and Community Development — building permits, zoning, land use, and long-range planning. Call (410) 272-1600 ext. 221.
+deptPhone: "(410) 272-1600 ext. 221"
+deptRealUrl: "https://www.aberdeenmd.gov/planning-and-community-development"
+---
+
+<div class="space-y-8">
+  <div>
+    <p class="text-slate-600 leading-relaxed mb-4">The Planning and Community Development Department manages land use, zoning administration, building permits, code enforcement, and long-range planning for the City of Aberdeen.</p>
+    <p class="text-slate-600 leading-relaxed">Walk-ins are welcome during business hours. Use the phone in the City Hall lobby and dial <strong>extension 221</strong> to speak with a planner before visiting.</p>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Services</h2>
+    <div class="grid sm:grid-cols-2 gap-4">
+      {% for service in [
+        { title: "Building Permits", desc: "Review and approval of construction and renovation projects." },
+        { title: "Zoning Administration", desc: "Zoning map interpretations, variances, and code compliance." },
+        { title: "Site Plan Review", desc: "Review of development plans for commercial and residential projects." },
+        { title: "Long-Range Planning", desc: "Comprehensive plans and Transit-Oriented Development." },
+        { title: "Code Enforcement", desc: "Property maintenance and municipal code compliance." },
+        { title: "Historic Preservation", desc: "Review of changes in historic districts." }
+      ] %}
+      <div class="bg-white border border-slate-200 rounded-xl p-4">
+        <h3 class="text-sm font-bold text-navy mb-1">{{ service.title }}</h3>
+        <p class="text-xs text-slate-600">{{ service.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-800">
+    <strong>Fee Update:</strong> New fee schedule effective January 1, 2025. <a href="https://www.harfordcountymd.gov/3806/Fee-Changes-Effective-112025" class="underline hover:no-underline font-semibold">View Harford County fee changes.</a>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">How to Submit a Permit</h2>
+    <div class="space-y-3">
+      <div class="flex gap-3 bg-white border border-slate-200 rounded-xl p-4">
+        <div class="w-8 h-8 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0 text-xs">1</div>
+        <div class="text-sm text-slate-600"><strong class="text-navy">Drop-off:</strong> City Hall lobby Dropbox, 60 N. Parke Street.</div>
+      </div>
+      <div class="flex gap-3 bg-white border border-slate-200 rounded-xl p-4">
+        <div class="w-8 h-8 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0 text-xs">2</div>
+        <div class="text-sm text-slate-600"><strong class="text-navy">Electronic:</strong> Submit permits electronically — call ext. 221 for current submission email.</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      {% for link in [
+        { label: "Building Permits & Forms", url: "/services/permits/" },
+        { label: "Building Permit Brochure (PDF)", url: "https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/uploads/building_permit_brochure_-_2.pdf" },
+        { label: "Zoning Appeals", url: "/boards/board-of-appeals/" },
+        { label: "Planning Commission", url: "/boards/planning-commission/" },
+        { label: "TOD Plan", url: "https://www.aberdeenmd.gov/planning-and-community-development/files/tod" },
+        { label: "Business Incentives", url: "/businesses/incentives/" }
+      ] %}
+      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
+        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        {{ link.label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+---
+layout: department.njk
+title: Mayor & City Council
+subtitle: Aberdeen's elected governing body — setting policy, approving the budget, and serving residents.
+description: The Mayor and City Council are the elected governing body of Aberdeen, Maryland, responsible for policy, budget, and representing residents.
+deptPhone: "(410) 272-1600"
+deptRealUrl: "https://www.aberdeenmd.gov/mayor-city-council"
+---
+
+<div class="space-y-8">
+  <div>
+    <p class="text-slate-600 leading-relaxed mb-4">The Mayor and City Council serve as the elected governing body of the City of Aberdeen. Together they are responsible for setting City policy, approving the annual budget, passing ordinances, and representing the interests of all Aberdeen residents.</p>
+    <p class="text-slate-600 leading-relaxed">The City Council holds regular public meetings where residents are encouraged to attend and participate. All meetings are open to the public.</p>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Roles &amp; Responsibilities</h2>
+    <ul class="space-y-3">
+      {% for item in [
+        "Set City policy and strategic direction",
+        "Adopt the annual City budget",
+        "Pass and amend City ordinances and resolutions",
+        "Appoint the City Manager and key officials",
+        "Represent the interests of Aberdeen residents",
+        "Approve major contracts and expenditures"
+      ] %}
+      <li class="flex items-start gap-3 text-sm text-slate-600">
+        <svg aria-hidden="true" class="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        {{ item }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Council Meetings</h2>
+    <div class="bg-gov-blue-light rounded-xl p-5">
+      <p class="text-sm text-slate-700 mb-3">The City Council meets regularly in the Council Chambers at City Hall. Meetings are open to the public and streamed live online.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="{{ '/services/meetings/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Agendas &amp; Minutes</a>
+        <a href="https://www.aberdeenmd.gov/city-clerk/pages/meetings" class="inline-flex items-center gap-2 border border-navy text-navy font-semibold px-4 py-2 rounded hover:bg-navy hover:text-white transition-colors duration-200 text-sm">Watch Live</a>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      {% for link in [
+        { label: "Council Meeting Agendas", url: "https://www.aberdeenmd.gov/node/2090/agenda" },
+        { label: "Council Meeting Minutes", url: "https://www.aberdeenmd.gov/node/2090/minutes" },
+        { label: "City Budget", url: "/budget/" },
+        { label: "City Charter & Code", url: "https://www.aberdeenmd.gov/city-clerk/pages/charter-and-code" },
+        { label: "Bids & RFPs", url: "/businesses/bids/" },
+        { label: "Elections", url: "/services/elections/" }
+      ] %}
+      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
+        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        {{ link.label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

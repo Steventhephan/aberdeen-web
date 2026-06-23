@@ -1,0 +1,65 @@
+---
+layout: department.njk
+title: Public Works
+subtitle: Maintaining Aberdeen's roads, water and sewer systems, and public infrastructure.
+description: Aberdeen Department of Public Works — roads, water, sewer, environmental services, and trash collection. Contact dpw@aberdeenmd.gov.
+deptPhone: "(410) 272-1600"
+deptEmail: "dpw@aberdeenmd.gov"
+deptRealUrl: "https://www.aberdeenmd.gov/department-of-public-works"
+---
+
+<div class="space-y-8">
+  <div>
+    <p class="text-slate-600 leading-relaxed mb-4">The Department of Public Works is responsible for maintaining and improving the City's physical infrastructure — including roads, water and sewer systems, stormwater management, and public facilities.</p>
+    <p class="text-slate-600 leading-relaxed">For non-emergency maintenance issues like potholes, sewer problems, or street light outages, use the <a href="{{ '/services/report-issue/' | url }}" class="text-gov-blue hover:underline font-semibold">Citizen Problem Reporter (Click-2-Fix)</a> or email <a href="mailto:dpw@aberdeenmd.gov" class="text-gov-blue hover:underline font-semibold">dpw@aberdeenmd.gov</a>.</p>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Services</h2>
+    <div class="grid sm:grid-cols-2 gap-4">
+      {% for service in [
+        { title: "Road Maintenance", desc: "Pothole repair, resurfacing, and street sweeping.", icon: "road" },
+        { title: "Water & Sewer", desc: "Water distribution, sewer collection, and utility repairs.", icon: "water" },
+        { title: "Trash & Bulk Pickup", desc: "Curbside collection and scheduled bulk pickup service.", icon: "trash" },
+        { title: "Stormwater Management", desc: "Drainage maintenance and illicit discharge prevention.", icon: "storm" },
+        { title: "Street Lights", desc: "Installation and repair of city street lighting.", icon: "light" },
+        { title: "Environmental Division", desc: "Recycling, environmental compliance, and sustainability.", icon: "env" }
+      ] %}
+      <div class="bg-white border border-slate-200 rounded-xl p-4">
+        <h3 class="text-sm font-bold text-navy mb-1">{{ service.title }}</h3>
+        <p class="text-xs text-slate-600">{{ service.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Report an Issue</h2>
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+      <p class="text-sm text-amber-800 mb-4">Use our new <strong>Click-2-Fix</strong> tool to report non-emergency issues and track their resolution.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="{{ '/services/report-issue/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Open Click-2-Fix</a>
+        <a href="mailto:dpw@aberdeenmd.gov?subject=Report%20Pothole" class="inline-flex items-center gap-2 border border-amber-400 text-amber-800 font-semibold px-4 py-2 rounded hover:bg-amber-100 transition-colors duration-200 text-sm">Email DPW</a>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      {% for link in [
+        { label: "Trash & Bulk Pickup", url: "/services/trash/" },
+        { label: "Report a Pothole", url: "mailto:dpw@aberdeenmd.gov?subject=Report%20Pothole" },
+        { label: "Report Sewer Issue", url: "mailto:dpw@aberdeenmd.gov?subject=Report%20Sewer%20Issue" },
+        { label: "Report Illicit Discharge", url: "mailto:dpw@aberdeenmd.gov?subject=Report%20Illicit%20Discharge" },
+        { label: "Trash Collection Schedule", url: "https://www.aberdeenmd.gov/home/files/trash-collection-information" },
+        { label: "Bids & RFPs", url: "/businesses/bids/" }
+      ] %}
+      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
+        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        {{ link.label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

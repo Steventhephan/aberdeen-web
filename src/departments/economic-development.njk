@@ -1,0 +1,59 @@
+---
+layout: department.njk
+title: Economic Development
+subtitle: Promoting business growth, attraction, and retention in Aberdeen — your Home of Opportunity.
+description: Aberdeen Economic Development Department — business incentives, site selection, permitting guidance, and Chamber of Commerce partnerships.
+deptPhone: "(410) 272-1600 ext. 216"
+deptRealUrl: "https://www.aberdeenmd.gov/economic-development"
+---
+
+<div class="space-y-8">
+  <div>
+    <p class="text-slate-600 leading-relaxed mb-4">Aberdeen is your <strong>Home of Opportunity</strong> — located in the prime Mid-Atlantic region, minutes from Baltimore, Washington DC, Wilmington, and Philadelphia. With world-class schools, fast rail and highway access, and home of Aberdeen Proving Ground, the City actively works to attract and retain businesses that strengthen our local economy.</p>
+    <p class="text-slate-600 leading-relaxed">The Economic Development Department works with businesses, developers, and community partners to promote a thriving business environment in Aberdeen.</p>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Why Aberdeen?</h2>
+    <div class="grid sm:grid-cols-2 gap-4">
+      {% for fact in [
+        { title: "Prime Location", desc: "Minutes from Baltimore, DC, Wilmington, and Philadelphia via I-95 and MARC Rail." },
+        { title: "Aberdeen Proving Ground", desc: "Home of the US Army's foremost technology and research center." },
+        { title: "World-Class Schools", desc: "Harford County Public Schools ranked among Maryland's best." },
+        { title: "Business Incentives", desc: "State and local programs available for qualifying businesses." },
+        { title: "Transit Access", desc: "MARC commuter rail station in downtown Aberdeen." },
+        { title: "Growing Community", desc: "Largest municipality in Harford County with a growing population." }
+      ] %}
+      <div class="bg-white border border-slate-200 rounded-xl p-4">
+        <h3 class="text-sm font-bold text-navy mb-1">{{ fact.title }}</h3>
+        <p class="text-xs text-slate-600">{{ fact.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      {% for link in [
+        { label: "Business Incentives & Funding", url: "/businesses/incentives/" },
+        { label: "How to Apply for a Permit", url: "/services/permits/" },
+        { label: "Aberdeen Chamber of Commerce", url: "https://www.aberdeenchamber.org" },
+        { label: "Bids & RFPs", url: "/businesses/bids/" },
+        { label: "Transit-Oriented Development Plan", url: "/businesses/tod-plan/" },
+        { label: "Economic Development Commission", url: "/boards/economic-development-commission/" }
+      ] %}
+      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
+        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        {{ link.label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="bg-navy rounded-xl p-6 text-white">
+    <h2 class="text-lg font-bold mb-2">Ready to Do Business in Aberdeen?</h2>
+    <p class="text-slate-300 text-sm mb-4">Contact our Economic Development office to learn about incentives, site selection assistance, and how Aberdeen can work with your business.</p>
+    <a href="{{ '/contact/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Contact Economic Development</a>
+  </div>
+</div>
