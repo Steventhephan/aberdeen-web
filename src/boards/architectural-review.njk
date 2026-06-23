@@ -1,0 +1,68 @@
+---
+layout: page.njk
+title: Architectural Review Committee
+subtitle: Reviewing proposed exterior changes to structures within Aberdeen's historic areas.
+description: Aberdeen Architectural Review Committee — historic district design review and exterior change approvals.
+breadcrumb:
+  - label: Boards
+    url: /boards/
+  - label: Architectural Review Committee
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+
+    <p class="text-slate-600 leading-relaxed">The Architectural Review Committee reviews proposed exterior changes to structures within Aberdeen's designated historic districts and areas subject to architectural review. The committee works to preserve the historic character and visual integrity of Aberdeen's built environment while allowing appropriate new development.</p>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">What Requires Review</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {% for item in [
+          { title: "Exterior Alterations", desc: "Changes to facades, windows, doors, rooflines, and materials on existing structures." },
+          { title: "New Construction", desc: "New buildings within historic districts must be compatible with the surrounding character." },
+          { title: "Demolition", desc: "Demolition of contributing structures in historic districts requires committee review." },
+          { title: "Signage", desc: "Signs visible from public rights-of-way in reviewed areas." }
+        ] %}
+        <div class="bg-white border border-slate-200 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-navy mb-1">{{ item.title }}</h3>
+          <p class="text-xs text-slate-600">{{ item.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">Review Process</h2>
+      <div class="space-y-3">
+        {% for step in ["Contact the Planning Department to determine if your property is in a review area.", "Submit your application with drawings, photos, and materials samples before the deadline.", "Attend the committee meeting to present your project.", "Receive a Certificate of Appropriateness before obtaining a building permit."] %}
+        <div class="flex gap-3 bg-white border border-slate-200 rounded-xl p-4">
+          <div class="w-7 h-7 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-xs flex-shrink-0">{{ loop.index }}</div>
+          <p class="text-sm text-slate-600">{{ step }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="bg-gov-blue-light rounded-xl p-5">
+      <h2 class="text-base font-bold text-navy mb-2">Is Your Property in a Review Area?</h2>
+      <p class="text-sm text-slate-600 mb-3">Contact Planning & Community Development to determine if your project requires Architectural Review Committee approval.</p>
+      <a href="{{ '/departments/planning/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Contact Planning Dept.</a>
+    </div>
+
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Contact</h2>
+      <dl class="space-y-3 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Staff Contact</dt><dd class="text-slate-700">Planning &amp; Community Development</dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600 ext. 221</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Address</dt><dd class="text-slate-700">60 N. Parke Street<br/>Aberdeen, MD 21001</dd></div>
+      </dl>
+      <div class="pt-2 space-y-2">
+        <a href="{{ '/departments/planning/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Planning Department</a>
+        <a href="{{ '/boards/heritage-trust/' | url }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">Heritage Trust</a>
+      </div>
+    </div>
+  </aside>
+</div>

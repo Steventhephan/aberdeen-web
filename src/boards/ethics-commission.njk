@@ -1,0 +1,55 @@
+---
+layout: page.njk
+title: Ethics Commission
+subtitle: Overseeing compliance with the City's Ethics ordinance and reviewing conflicts of interest.
+description: Aberdeen Ethics Commission — Ethics ordinance compliance, conflict of interest reviews, and financial disclosure.
+breadcrumb:
+  - label: Boards
+    url: /boards/
+  - label: Ethics Commission
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+
+    <p class="text-slate-600 leading-relaxed">The Aberdeen Ethics Commission is responsible for administering and enforcing the City's Ethics ordinance. The Commission promotes ethical conduct by City officials and employees, reviews financial disclosure statements, and provides advisory opinions on ethics questions.</p>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">Commission Responsibilities</h2>
+      <ul class="space-y-2">
+        {% for item in [
+          "Administer the City's Ethics ordinance",
+          "Review financial disclosure statements from public officials",
+          "Issue advisory opinions on conflicts of interest",
+          "Receive and investigate ethics complaints",
+          "Educate officials and employees on ethics requirements",
+          "Recommend updates to ethics laws and policies"
+        ] %}
+        <li class="flex items-start gap-3 text-sm text-slate-600">
+          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          {{ item }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="bg-gov-blue-light rounded-xl p-5">
+      <h2 class="text-base font-bold text-navy mb-2">Questions About Ethics?</h2>
+      <p class="text-sm text-slate-600 mb-3">City officials, employees, or residents with ethics questions or complaints may contact City Hall. Advisory opinions are available to all public officials.</p>
+      <a href="{{ '/contact/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Contact City Hall</a>
+    </div>
+
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Contact</h2>
+      <dl class="space-y-3 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Address</dt><dd class="text-slate-700">60 N. Parke Street<br/>Aberdeen, MD 21001</dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Hours</dt><dd class="text-slate-700">Mon–Fri, 8:30 AM – 5:00 PM</dd></div>
+      </dl>
+      <a href="{{ '/contact/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Contact Directory</a>
+    </div>
+  </aside>
+</div>

@@ -1,0 +1,66 @@
+---
+layout: page.njk
+title: Board of Appeals
+subtitle: Hears zoning variances, special exceptions, and appeals of administrative decisions.
+description: Aberdeen Board of Appeals — zoning variances, special exceptions, and administrative appeals.
+breadcrumb:
+  - label: Boards
+    url: /boards/
+  - label: Board of Appeals
+---
+
+<div class="grid lg:grid-cols-3 gap-10">
+  <div class="lg:col-span-2 space-y-8">
+
+    <p class="text-slate-600 leading-relaxed">The Board of Appeals is a quasi-judicial body that hears and decides appeals from decisions of the Zoning Administrator, requests for variances from the zoning code, and applications for special exceptions.</p>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">Types of Cases Heard</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {% for item in [
+          { title: "Variances", desc: "Relief from specific zoning requirements where strict compliance would create undue hardship." },
+          { title: "Special Exceptions", desc: "Land uses permitted in a zone under conditions set by the zoning code." },
+          { title: "Administrative Appeals", desc: "Appeals of decisions made by the Zoning Administrator or other city officials." },
+          { title: "Interpretations", desc: "Formal interpretations of the zoning ordinance's provisions." }
+        ] %}
+        <div class="bg-white border border-slate-200 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-navy mb-1">{{ item.title }}</h3>
+          <p class="text-xs text-slate-600">{{ item.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-navy mb-4">How to File an Appeal</h2>
+      <div class="space-y-3">
+        {% for step in ["Contact the Planning & Community Development Department to obtain an application.", "Complete and submit the application with the required fee before the filing deadline.", "A public hearing will be scheduled — applicants and interested parties may testify.", "The Board will issue a written decision, which may be appealed to Circuit Court."] %}
+        <div class="flex gap-3 bg-white border border-slate-200 rounded-xl p-4">
+          <div class="w-7 h-7 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-xs flex-shrink-0">{{ loop.index }}</div>
+          <p class="text-sm text-slate-600">{{ step }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="bg-gov-blue-light rounded-xl p-5">
+      <p class="text-sm text-slate-700">For applications and filing deadlines, contact the <strong>Planning & Community Development Department</strong> at <a href="tel:+14102721600" class="text-gov-blue font-semibold hover:underline">(410) 272-1600 ext. 221</a>.</p>
+    </div>
+
+  </div>
+
+  <aside>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24 space-y-5">
+      <h2 class="text-base font-bold text-navy pb-3 border-b border-slate-100">Contact</h2>
+      <dl class="space-y-3 text-sm">
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Staff Contact</dt><dd class="text-slate-700">Planning &amp; Community Development</dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Phone</dt><dd><a href="tel:+14102721600" class="text-gov-blue hover:underline">(410) 272-1600 ext. 221</a></dd></div>
+        <div><dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Address</dt><dd class="text-slate-700">60 N. Parke Street<br/>Aberdeen, MD 21001</dd></div>
+      </dl>
+      <div class="pt-2 space-y-2">
+        <a href="{{ '/departments/planning/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Planning Department</a>
+        <a href="{{ '/services/permits/' | url }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">Permits &amp; Zoning</a>
+      </div>
+    </div>
+  </aside>
+</div>

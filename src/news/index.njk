@@ -1,0 +1,86 @@
+---
+layout: page.njk
+title: News & Announcements
+subtitle: The latest news, press releases, and announcements from the City of Aberdeen.
+description: Official news and announcements from the City of Aberdeen, Maryland.
+breadcrumb:
+  - label: News
+---
+
+<div class="space-y-10">
+
+  {# Featured article #}
+  {% set featured = news | selectattr("featured") | first %}
+  <article class="grid md:grid-cols-2 gap-8 bg-white border border-slate-200 rounded-xl overflow-hidden hover:border-gov-blue hover:shadow-md transition-all duration-200 group">
+    <div class="relative bg-slate-200 min-h-56 overflow-hidden">
+      <img src="{{ featured.image }}" alt="{{ featured.imageAlt }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="eager" />
+      <span class="absolute top-3 left-3 text-xs font-semibold bg-gov-blue text-white px-2 py-1 rounded">Featured</span>
+    </div>
+    <div class="p-6 flex flex-col justify-center">
+      <div class="flex items-center gap-3 text-xs text-slate-500 mb-3">
+        <time datetime="{{ featured.date }}">{{ featured.dateDisplay }}</time>
+        <span aria-hidden="true">·</span>
+        <span class="bg-gov-blue-light text-gov-blue font-semibold px-2 py-0.5 rounded-full">{{ featured.category }}</span>
+      </div>
+      <h2 class="text-2xl font-bold text-navy mb-3 group-hover:text-gov-blue transition-colors duration-200">
+        <a href="{{ featured.url }}" class="hover:underline">{{ featured.title }}</a>
+      </h2>
+      <p class="text-slate-600 text-sm leading-relaxed mb-5">{{ featured.excerpt }}</p>
+      <a href="{{ featured.url }}" class="self-start inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">
+        Read more
+        <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </article>
+
+  {# All articles grid #}
+  <div>
+    <h2 class="text-2xl font-bold text-navy mb-6">All Articles</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for item in news %}
+      <article class="bg-white border border-slate-200 rounded-xl overflow-hidden hover:border-gov-blue hover:shadow-md transition-all duration-200 group cursor-pointer flex flex-col">
+        <div class="relative h-44 bg-slate-200 overflow-hidden flex-shrink-0">
+          <img src="{{ item.image }}" alt="{{ item.imageAlt }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          {% if item.featured %}
+          <span class="absolute top-2 left-2 text-xs font-semibold bg-gov-blue text-white px-2 py-0.5 rounded">Featured</span>
+          {% endif %}
+        </div>
+        <div class="p-5 flex flex-col flex-1">
+          <div class="flex items-center gap-2 text-xs text-slate-500 mb-2">
+            <time datetime="{{ item.date }}">{{ item.dateDisplay }}</time>
+            <span aria-hidden="true">·</span>
+            <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">{{ item.category }}</span>
+          </div>
+          <h3 class="text-base font-bold text-navy mb-2 group-hover:text-gov-blue transition-colors duration-200 leading-snug flex-1">
+            <a href="{{ item.url }}" class="hover:underline">{{ item.title }}</a>
+          </h3>
+          <p class="text-xs text-slate-600 leading-relaxed mt-auto pt-2">{{ item.excerpt | truncate(120) }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  {# View all on real site #}
+  <div class="bg-gov-blue-light rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div>
+      <h2 class="text-lg font-bold text-navy mb-1">See All City News</h2>
+      <p class="text-sm text-slate-600">Additional news and press releases are available on the official city website.</p>
+    </div>
+    <a href="https://www.aberdeenmd.gov/node/111/news" class="flex-shrink-0 inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm whitespace-nowrap">
+      View all on aberdeenmd.gov
+      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+    </a>
+  </div>
+
+  {# Newsletter signup #}
+  <div class="bg-navy rounded-xl p-8 text-center text-white">
+    <h2 class="text-2xl font-bold mb-3">Never Miss an Update</h2>
+    <p class="text-slate-300 text-sm mb-6 max-w-md mx-auto">Subscribe to the City Newsletter and get news, service alerts, and event updates delivered to your inbox.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="{{ '/newsletter/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-6 py-3 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Subscribe to Newsletter</a>
+      <a href="{{ '/emergency-alerts/' | url }}" class="inline-flex items-center gap-2 border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded hover:border-white hover:text-white transition-colors duration-200 text-sm">Sign Up for Alerts</a>
+    </div>
+  </div>
+
+</div>
