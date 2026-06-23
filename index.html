@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City of Aberdeen, Maryland — Official Website</title>
+  <meta name="description" content="Official website of the City of Aberdeen, Maryland. Pay bills, apply for permits, report issues, find city services and stay informed about local news and events." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;600;700&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  '#0F172A',
+            'navy-800': '#1E293B',
+            'navy-700': '#334155',
+            'gov-blue': '#0369A1',
+            'gov-blue-dark': '#075985',
+            'gov-blue-light': '#E0F2FE',
+          },
+          fontFamily: {
+            heading: ['"Libre Bodoni"', 'Georgia', 'serif'],
+            body:    ['"Public Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Public Sans', system-ui, sans-serif; }
+    h1, h2, h3 { font-family: 'Libre Bodoni', Georgia, serif; }
+
+    .skip-link {
+      position: absolute; top: -999px; left: 0;
+      background: #0369A1; color: #fff;
+      padding: 0.5rem 1rem; z-index: 9999;
+      font-size: 0.875rem; font-weight: 600; text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+
+    *:focus-visible { outline: 3px solid #0369A1; outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    .hero-bg {
+      background-image:
+        linear-gradient(to right, rgba(15,23,42,0.88) 50%, rgba(15,23,42,0.5) 100%),
+        url('https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/styles/slideshow_background_breakpoints_theme_vts_mobile_1x/public/galleries/new_gray_slideshow_march_2026_page_3.jpg?itok=e6x18UYM&timestamp=1772822105');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 text-base antialiased leading-relaxed">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── ALERT BANNER ─────────────────────────── -->
+  <div role="alert" aria-live="polite" class="bg-amber-600 text-white text-sm font-semibold text-center py-2 px-4">
+    <svg aria-hidden="true" class="inline w-4 h-4 mr-1 mb-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+    Saturday, June 27 — Washington-Rochambeau Route March &amp; "Rails, Cans &amp; Community" Family Fun Day at Festival Park.
+    <a href="https://www.aberdeenmd.gov/calendar-by-event-type/1367%2B1368%2B1369" class="underline ml-2 hover:text-amber-200 transition-colors duration-200">Details</a>
+  </div>
+
+  <!-- ── UTILITY BAR ──────────────────────────── -->
+  <div class="bg-navy text-slate-300 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2">
+      <span class="hidden sm:block">Official website of the City of Aberdeen, Maryland</span>
+      <nav aria-label="Utility navigation">
+        <ul class="flex items-center gap-4">
+          <li><a href="https://www.aberdeenmd.gov/department-contacts" class="hover:text-white transition-colors duration-200">Contact Directory</a></li>
+          <li><a href="https://www.aberdeenmd.gov/city-clerk/pages/meetings" class="hover:text-white transition-colors duration-200">Watch Live Meetings</a></li>
+          <li>
+            <a href="tel:+14102721600" class="flex items-center gap-1 hover:text-white transition-colors duration-200">
+              <svg aria-hidden="true" class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+              (410) 272-1600
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ── HEADER / NAV ─────────────────────────── -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="https://www.aberdeenmd.gov/" class="flex items-center gap-3 group flex-shrink-0" aria-label="City of Aberdeen Maryland — home">
+          <img
+            src="https://www.aberdeenmd.gov/sites/all/themes/custom/sites/aberdeenmd/vts_aberdeenmd/logo.png"
+            alt="City of Aberdeen Maryland seal"
+            class="h-10 w-auto"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <!-- Fallback seal if img fails -->
+          <div class="hidden w-10 h-10 rounded-full bg-navy items-center justify-center flex-shrink-0" aria-hidden="true">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+          </div>
+          <div class="leading-tight">
+            <div class="text-xs text-slate-500 font-medium uppercase tracking-widest">City of</div>
+            <div class="text-lg font-bold text-navy leading-none" style="font-family:'Libre Bodoni',serif;">Aberdeen, MD</div>
+          </div>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav aria-label="Main navigation" class="hidden lg:block">
+          <ul class="flex items-center gap-1">
+            <li><a href="#services" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200 cursor-pointer">Services</a></li>
+            <li><a href="#departments" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200 cursor-pointer">Departments</a></li>
+            <li><a href="#news" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200 cursor-pointer">News</a></li>
+            <li><a href="#events" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200 cursor-pointer">Events</a></li>
+            <li class="ml-2">
+              <a href="https://www.aberdeenmd.gov/finance/pages/online-payments-0" class="inline-flex items-center gap-2 bg-gov-blue text-white text-sm font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 cursor-pointer">
+                <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
+                Pay Bills
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="lg:hidden p-2 rounded text-slate-700 hover:bg-slate-100 transition-colors duration-200 cursor-pointer"
+          onclick="toggleMenu(this)"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a href="#services" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Services</a>
+        <a href="#departments" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Departments</a>
+        <a href="#news" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">News</a>
+        <a href="#events" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Events</a>
+        <a href="https://www.aberdeenmd.gov/finance/pages/online-payments-0" class="mt-2 bg-gov-blue text-white text-sm font-semibold px-4 py-3 rounded text-center hover:bg-gov-blue-dark transition-colors duration-200">Pay Bills Online</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       MAIN
+  ══════════════════════════════════════════ -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- ── HERO ──────────────────────────────── -->
+    <section class="hero-bg relative overflow-hidden" aria-label="Welcome to the City of Aberdeen">
+      <div class="absolute left-0 top-0 bottom-0 w-1 bg-gov-blue" aria-hidden="true"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div class="max-w-2xl">
+          <p class="text-blue-300 text-sm font-semibold uppercase tracking-widest mb-3">Aberdeen, Maryland</p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+            Aberdeen is your<br/>
+            <span class="text-blue-300">Home of Opportunity</span>
+          </h1>
+          <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-lg">
+            Minutes from Baltimore, Washington DC, Wilmington, and Philadelphia — with world-class schools, fast rail and highway access, and home of Aberdeen Proving Ground.
+          </p>
+
+          <!-- Search -->
+          <form role="search" action="https://www.aberdeenmd.gov/search" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl">
+            <label for="site-search" class="sr-only">Search Aberdeen city services</label>
+            <div class="relative flex-1">
+              <svg aria-hidden="true" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>
+              <input
+                id="site-search" name="query" type="search"
+                placeholder="Search services, departments, news…"
+                class="w-full pl-10 pr-4 py-3 rounded bg-white text-slate-900 text-sm placeholder-slate-500 border-2 border-transparent focus:border-gov-blue focus:outline-none transition-colors duration-200"
+              />
+            </div>
+            <button type="submit" class="bg-gov-blue hover:bg-gov-blue-dark text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer whitespace-nowrap text-sm">
+              Search
+            </button>
+          </form>
+
+          <!-- Popular -->
+          <div class="mt-4 flex flex-wrap gap-2 items-center">
+            <span class="text-slate-400 text-xs">Popular:</span>
+            <a href="https://www.aberdeenmd.gov/finance/pages/online-payments-0" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Pay water bill</a>
+            <a href="https://www.aberdeenmd.gov/planning-and-community-development/building-permit-procedure-and-documents" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Building permit</a>
+            <a href="https://www.aberdeenmd.gov/home/pages/job-opportunities" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">City jobs</a>
+            <a href="https://www.aberdeenmd.gov/home/pages/trash-collection-information" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Trash pickup</a>
+          </div>
+        </div>
+      </div>
+      <!-- Wave -->
+      <div aria-hidden="true">
+        <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full text-slate-50" preserveAspectRatio="none">
+          <path d="M0 48L720 0L1440 48H0Z" fill="currentColor"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ── QUICK SERVICES ─────────────────────── -->
+    <section id="services" aria-labelledby="services-heading" class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="services-heading" class="text-3xl md:text-4xl font-bold text-navy mb-3">How Can We Help?</h2>
+          <p class="text-slate-600 text-lg max-w-xl mx-auto">The most common city services — available online 24/7.</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+
+          <a href="https://www.aberdeenmd.gov/finance/pages/online-payments-0"
+             class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center"
+             aria-label="Pay your city bills online">
+            <div class="w-12 h-12 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
+            </div>
+            <span class="text-sm font-semibold text-navy group-hover:text-gov-blue transition-colors duration-200">Pay Bills</span>
+            <span class="text-xs text-slate-500">Water, sewer &amp; taxes</span>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/home/news/new-citizen-problem-reporter-makes-reporting-non-emergency-issues-easy"
+             class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center"
+             aria-label="Report a pothole, sewer issue, or street light outage">
+            <div class="w-12 h-12 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+            </div>
+            <span class="text-sm font-semibold text-navy group-hover:text-gov-blue transition-colors duration-200">Report an Issue</span>
+            <span class="text-xs text-slate-500">Pothole, sewer, street light</span>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/planning-and-community-development/building-permit-procedure-and-documents"
+             class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center"
+             aria-label="Apply for a building or construction permit">
+            <div class="w-12 h-12 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+            </div>
+            <span class="text-sm font-semibold text-navy group-hover:text-gov-blue transition-colors duration-200">Permits</span>
+            <span class="text-xs text-slate-500">Building &amp; zoning</span>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/city-clerk/pages/meetings"
+             class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center"
+             aria-label="View upcoming city council and public meetings">
+            <div class="w-12 h-12 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+            </div>
+            <span class="text-sm font-semibold text-navy group-hover:text-gov-blue transition-colors duration-200">Meetings</span>
+            <span class="text-xs text-slate-500">Agendas &amp; minutes</span>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/parks-and-recreation"
+             class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center"
+             aria-label="Find parks, recreation programs, and the activity center">
+            <div class="w-12 h-12 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            </div>
+            <span class="text-sm font-semibold text-navy group-hover:text-gov-blue transition-colors duration-200">Parks &amp; Rec</span>
+            <span class="text-xs text-slate-500">Activity center &amp; parks</span>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/city-clerk/files/public-information-request-form"
+             class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center"
+             aria-label="Request public records and city documents">
+            <div class="w-12 h-12 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"/><path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+            </div>
+            <span class="text-sm font-semibold text-navy group-hover:text-gov-blue transition-colors duration-200">Public Records</span>
+            <span class="text-xs text-slate-500">MPIA requests</span>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/home/pages/job-opportunities"
+             class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center"
+             aria-label="View open positions and apply for city employment">
+            <div class="w-12 h-12 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/></svg>
+            </div>
+            <span class="text-sm font-semibold text-navy group-hover:text-gov-blue transition-colors duration-200">Employment</span>
+            <span class="text-xs text-slate-500">Open positions</span>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/department-contacts"
+             class="group flex flex-col items-center gap-3 bg-white border border-slate-200 rounded-xl p-6 hover:border-gov-blue hover:shadow-md transition-all duration-200 cursor-pointer text-center"
+             aria-label="Contact city hall and find department phone numbers">
+            <div class="w-12 h-12 rounded-full bg-gov-blue-light flex items-center justify-center group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-6 h-6 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            </div>
+            <span class="text-sm font-semibold text-navy group-hover:text-gov-blue transition-colors duration-200">Contact Us</span>
+            <span class="text-xs text-slate-500">(410) 272-1600</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── NEWS ──────────────────────────────── -->
+    <section id="news" aria-labelledby="news-heading" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+          <div>
+            <h2 id="news-heading" class="text-3xl md:text-4xl font-bold text-navy">News &amp; Announcements</h2>
+            <p class="text-slate-600 mt-2">Stay informed about what's happening in Aberdeen.</p>
+          </div>
+          <a href="https://www.aberdeenmd.gov/node/111/news" class="text-gov-blue font-semibold hover:underline whitespace-nowrap cursor-pointer">View all news →</a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <!-- Featured -->
+          <article class="md:col-span-2 bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-gov-blue hover:shadow-md transition-all duration-200 group cursor-pointer">
+            <div class="relative h-52 bg-slate-200 overflow-hidden">
+              <img
+                src="https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/styles/news_image_teaser/public/news/june_27th.png?itok=F4DJ9QDd"
+                alt="Washington-Rochambeau Revolutionary Route March poster"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+              <span class="absolute top-3 left-3 text-xs font-semibold bg-gov-blue text-white px-2 py-1 rounded">Featured</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-slate-500 mb-3">
+                <time datetime="2026-06-27">June 27, 2026</time>
+                <span aria-hidden="true">·</span>
+                <span>Community Events</span>
+              </div>
+              <h3 class="text-xl font-bold text-navy mb-2 group-hover:text-gov-blue transition-colors duration-200">
+                <a href="https://www.aberdeenmd.gov/calendar-by-event-type/1367%2B1368%2B1369" class="hover:underline">
+                  Washington-Rochambeau Revolutionary Route March &amp; "Rails, Cans &amp; Community" Family Fun Day at Festival Park
+                </a>
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                See the march that commemorates Revolutionary War troop movement as American and French troops were led by General Washington. Followed by a Family Fun Day at Festival Park.
+              </p>
+            </div>
+          </article>
+
+          <!-- Side articles -->
+          <div class="flex flex-col gap-4">
+
+            <article class="bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-gov-blue hover:shadow-md transition-all duration-200 group cursor-pointer flex gap-4 p-4">
+              <div class="w-20 h-20 flex-shrink-0 bg-slate-200 rounded-lg overflow-hidden">
+                <img
+                  src="https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/imce/copy_of_cofa_alerts_icon_3.png"
+                  alt="Aberdeen alerts notification icon"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="min-w-0">
+                <div class="text-xs text-slate-500 mb-1"><time datetime="2026-06">June 2026</time> · City Services</div>
+                <h3 class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200 leading-snug">
+                  <a href="https://www.aberdeenmd.gov/home/news/new-citizen-problem-reporter-makes-reporting-non-emergency-issues-easy" class="hover:underline">
+                    New Citizen Problem Reporter Makes Reporting Non-Emergency Issues Easy
+                  </a>
+                </h3>
+              </div>
+            </article>
+
+            <article class="bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-gov-blue hover:shadow-md transition-all duration-200 group cursor-pointer flex gap-4 p-4">
+              <div class="w-20 h-20 flex-shrink-0 bg-slate-200 rounded-lg overflow-hidden">
+                <img
+                  src="https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/styles/news_image_teaser/public/news/iron_birds.png?itok=mlYLmj2n"
+                  alt="Aberdeen IronBirds baseball logo"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="min-w-0">
+                <div class="text-xs text-slate-500 mb-1"><time datetime="2026-06">June 2026</time> · Community</div>
+                <h3 class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200 leading-snug">
+                  <a href="https://www.aberdeenmd.gov/home/news/ironbirds-tickets-now-available-for-aberdeen-residents" class="hover:underline">
+                    IronBirds Tickets Now Available for Aberdeen Residents
+                  </a>
+                </h3>
+              </div>
+            </article>
+
+            <article class="bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-gov-blue hover:shadow-md transition-all duration-200 group cursor-pointer flex gap-4 p-4">
+              <div class="w-20 h-20 flex-shrink-0 bg-slate-200 rounded-lg overflow-hidden">
+                <img
+                  src="https://www.aberdeenmd.gov/sites/g/files/vyhlif4101/f/styles/news_image_teaser/public/news/forces_that_shaped_us_ruthpeters_part2_5-28-26speakerseries.png?itok=XZVGhy50"
+                  alt="Aberdeen 250 speaker series event flyer"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="min-w-0">
+                <div class="text-xs text-slate-500 mb-1"><time datetime="2026-06">June 2026</time> · History</div>
+                <h3 class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200 leading-snug">
+                  <a href="https://www.aberdeenmd.gov/home/news/aberdeen-250-the-forces-that-shaped-us-part-2" class="hover:underline">
+                    Aberdeen 250: The Forces That Shaped Us — (Part 2)
+                  </a>
+                </h3>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EVENTS (2-col) ─────────────────────── -->
+    <section id="events" aria-labelledby="events-heading" class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="events-heading" class="text-3xl md:text-4xl font-bold text-navy mb-10">Events &amp; Meetings</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+          <!-- Upcoming Meetings -->
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="text-lg font-bold text-navy flex items-center gap-2">
+                <span class="w-2 h-6 bg-gov-blue rounded-full inline-block" aria-hidden="true"></span>
+                Upcoming Meetings
+              </h3>
+              <a href="https://www.aberdeenmd.gov/calendar-by-event-type/1370" class="text-sm text-gov-blue font-semibold hover:underline">All meetings →</a>
+            </div>
+            <ul class="space-y-3" aria-label="Upcoming public meetings">
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/city-clerk/events/41126" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-navy text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-70 uppercase">Jun</span>
+                    <span class="text-lg font-bold">24</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">City Council Meeting</div>
+                    <div class="text-xs text-slate-500 mt-0.5">Council Chambers</div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/city-clerk/events/41491" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-navy text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-70 uppercase">Jun</span>
+                    <span class="text-lg font-bold">25</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">Planning Commission Meeting</div>
+                    <div class="text-xs text-slate-500 mt-0.5">Council Chambers</div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/city-clerk/events/41611" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-navy text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-70 uppercase">Jun</span>
+                    <span class="text-lg font-bold">26</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">Economic Development Commission</div>
+                    <div class="text-xs text-slate-500 mt-0.5">Council Chambers</div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/city-clerk/events/41741" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-navy text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-70 uppercase">Jun</span>
+                    <span class="text-lg font-bold">30</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">Dept. of Public Works Meeting</div>
+                    <div class="text-xs text-slate-500 mt-0.5">2nd Floor Admin Conference Room</div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/home/events/42901" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-gov-blue text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-80 uppercase">Jul</span>
+                    <span class="text-lg font-bold">8</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">City Council Work Session</div>
+                    <div class="text-xs text-slate-500 mt-0.5">Council Chambers</div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Community Events -->
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="text-lg font-bold text-navy flex items-center gap-2">
+                <span class="w-2 h-6 bg-amber-500 rounded-full inline-block" aria-hidden="true"></span>
+                Community Events
+              </h3>
+              <a href="https://www.aberdeenmd.gov/calendar-by-event-type/1367%2B1368%2B1369" class="text-sm text-gov-blue font-semibold hover:underline">All events →</a>
+            </div>
+            <ul class="space-y-3" aria-label="Upcoming community events">
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/community-events/events/41356" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-amber-500 text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-80 uppercase">Jul</span>
+                    <span class="text-lg font-bold">12</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-amber-600 transition-colors duration-200">Tower Rocks</div>
+                    <div class="text-xs text-slate-500 mt-0.5">Aberdeen</div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/home/events/42636" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-amber-500 text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-80 uppercase">Jul</span>
+                    <span class="text-lg font-bold">4</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-amber-600 transition-colors duration-200">Aberdeen 250 — Freedom 5K Run &amp; Walk</div>
+                    <div class="text-xs text-slate-500 mt-0.5">Aberdeen Proving Ground area</div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41361" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-amber-500 text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-80 uppercase">Jul</span>
+                    <span class="text-lg font-bold">19</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-amber-600 transition-colors duration-200">Mermaid 5K &amp; Under the Sea Bash</div>
+                    <div class="text-xs text-slate-500 mt-0.5">Aberdeen Main Street</div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41371" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-amber-500 text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-80 uppercase">Oct</span>
+                    <span class="text-lg font-bold">4</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-amber-600 transition-colors duration-200">Oktoberfest</div>
+                    <div class="text-xs text-slate-500 mt-0.5">Aberdeen Main Street</div>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.aberdeenmd.gov/aberdeen-main-street/main-street-events/events/41381" class="flex items-center gap-4 bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-sm transition-all duration-200 cursor-pointer group">
+                  <div class="w-12 h-12 bg-amber-500 text-white rounded-lg flex flex-col items-center justify-center flex-shrink-0 text-center leading-none">
+                    <span class="text-xs font-semibold opacity-80 uppercase">Dec</span>
+                    <span class="text-lg font-bold">6</span>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-navy group-hover:text-amber-600 transition-colors duration-200">49th Annual Christmas Street Celebration</div>
+                    <div class="text-xs text-slate-500 mt-0.5">Aberdeen Main Street</div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DEPARTMENTS ────────────────────────── -->
+    <section id="departments" aria-labelledby="dept-heading" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="dept-heading" class="text-3xl md:text-4xl font-bold text-navy mb-3">City Departments</h2>
+          <p class="text-slate-600 text-lg max-w-xl mx-auto">Connect directly with the department that can help you.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <a href="https://www.aberdeenmd.gov/mayor-city-council" class="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group">
+            <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">Mayor &amp; City Council</div>
+              <div class="text-xs text-slate-500">(410) 272-1600</div>
+            </div>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/police-department" class="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group">
+            <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">Police Department</div>
+              <div class="text-xs text-slate-500">Non-emergency: (410) 272-2121</div>
+            </div>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/department-of-public-works" class="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group">
+            <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">Public Works</div>
+              <div class="text-xs text-slate-500"><a href="mailto:dpw@aberdeenmd.gov" class="hover:underline">dpw@aberdeenmd.gov</a></div>
+            </div>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/finance" class="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group">
+            <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">Finance &amp; Treasury</div>
+              <div class="text-xs text-slate-500">(410) 272-1600</div>
+            </div>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/planning-and-community-development" class="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group">
+            <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">Planning &amp; Community Dev.</div>
+              <div class="text-xs text-slate-500">(410) 272-1600</div>
+            </div>
+          </a>
+
+          <a href="https://www.aberdeenmd.gov/city-clerk" class="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-gov-blue hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group">
+            <div class="w-10 h-10 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0 group-hover:bg-gov-blue transition-colors duration-200" aria-hidden="true">
+              <svg class="w-5 h-5 text-gov-blue group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">City Clerk</div>
+              <div class="text-xs text-slate-500">(410) 272-1600</div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="mt-8 text-center">
+          <a href="https://www.aberdeenmd.gov/departments" class="inline-flex items-center gap-2 text-gov-blue font-semibold hover:underline cursor-pointer">
+            All departments &amp; boards
+            <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── NEWSLETTER / STAY CONNECTED ───────── -->
+    <section aria-labelledby="connect-heading" class="py-16 bg-gov-blue-light">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 id="connect-heading" class="text-3xl md:text-4xl font-bold text-navy mb-4">Stay Connected with Aberdeen</h2>
+        <p class="text-slate-600 text-lg mb-8">
+          Get city news, service alerts, and event updates — sign up for the City Newsletter.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-10">
+          <a href="https://www.aberdeenmd.gov/home/pages/city-newsletter" class="flex-1 bg-navy hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded text-sm transition-colors duration-200 cursor-pointer text-center">
+            Subscribe to City Newsletter
+          </a>
+          <a href="https://www.aberdeenmd.gov/environmental-division/pages/4-sign-up-to-receive-mass-notification-callstexts" class="flex-1 border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold px-6 py-3 rounded text-sm transition-colors duration-200 cursor-pointer text-center">
+            Sign Up for Emergency Alerts
+          </a>
+        </div>
+
+        <!-- Social + helpful links -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://www.facebook.com/cityofaberdeenmd/" class="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200 cursor-pointer" aria-label="City of Aberdeen on Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Follow on Facebook
+          </a>
+          <span aria-hidden="true" class="text-slate-300">|</span>
+          <a href="https://www.aberdeenmd.gov/city-clerk/pages/meetings" class="text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200">Watch Live Council Meetings</a>
+          <span aria-hidden="true" class="text-slate-300">|</span>
+          <a href="https://www.aberdeenmd.gov/finance/files/where-does-your-money-go-fy2026-0" class="text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200">Where Does Your Money Go?</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="bg-navy text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+
+        <!-- Brand + contact -->
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-3 mb-5">
+            <img
+              src="https://www.aberdeenmd.gov/sites/all/themes/custom/sites/aberdeenmd/vts_aberdeenmd/logo.png"
+              alt="City of Aberdeen Maryland seal"
+              class="h-12 w-auto"
+              onerror="this.style.display='none'"
+            />
+            <div>
+              <div class="text-xs text-slate-400 uppercase tracking-widest">City of</div>
+              <div class="text-white font-bold text-lg leading-none" style="font-family:'Libre Bodoni',serif;">Aberdeen, MD</div>
+            </div>
+          </div>
+          <address class="not-italic text-sm leading-loose text-slate-400">
+            60 N. Parke Street<br/>
+            Aberdeen, MD 21001<br/>
+            <a href="tel:+14102721600" class="hover:text-white transition-colors duration-200">(410) 272-1600</a><br/>
+            Fax: (410) 273-7402
+          </address>
+          <p class="text-xs text-slate-500 mt-3">Mon–Fri, 8:30 AM – 5:00 PM</p>
+        </div>
+
+        <!-- Services -->
+        <nav aria-label="Services footer links">
+          <h3 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://www.aberdeenmd.gov/finance/pages/online-payments-0" class="hover:text-white transition-colors duration-200">Pay Bills Online</a></li>
+            <li><a href="https://www.aberdeenmd.gov/planning-and-community-development/building-permit-procedure-and-documents" class="hover:text-white transition-colors duration-200">Building Permits</a></li>
+            <li><a href="https://www.aberdeenmd.gov/home/news/new-citizen-problem-reporter-makes-reporting-non-emergency-issues-easy" class="hover:text-white transition-colors duration-200">Report an Issue</a></li>
+            <li><a href="https://www.aberdeenmd.gov/home/files/trash-collection-information" class="hover:text-white transition-colors duration-200">Trash Collection Info</a></li>
+            <li><a href="https://www.aberdeenmd.gov/home/pages/job-opportunities" class="hover:text-white transition-colors duration-200">Employment</a></li>
+            <li><a href="https://www.aberdeenmd.gov/finance/pages/property-taxes" class="hover:text-white transition-colors duration-200">Property Taxes</a></li>
+          </ul>
+        </nav>
+
+        <!-- Government -->
+        <nav aria-label="Government footer links">
+          <h3 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Government</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://www.aberdeenmd.gov/mayor-city-council" class="hover:text-white transition-colors duration-200">Mayor &amp; City Council</a></li>
+            <li><a href="https://www.aberdeenmd.gov/city-clerk/pages/meetings" class="hover:text-white transition-colors duration-200">Meetings &amp; Legislation</a></li>
+            <li><a href="https://www.aberdeenmd.gov/node/2090/minutes" class="hover:text-white transition-colors duration-200">Council Minutes</a></li>
+            <li><a href="https://www.aberdeenmd.gov/finance/pages/budgets" class="hover:text-white transition-colors duration-200">City Budget</a></li>
+            <li><a href="https://www.aberdeenmd.gov/bids" class="hover:text-white transition-colors duration-200">Bids &amp; RFPs</a></li>
+            <li><a href="https://www.aberdeenmd.gov/city-clerk/pages/aberdeen-municipal-election-2023" class="hover:text-white transition-colors duration-200">Elections</a></li>
+          </ul>
+        </nav>
+
+        <!-- Connect -->
+        <nav aria-label="Connect footer links">
+          <h3 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Connect</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://www.aberdeenmd.gov/department-contacts" class="hover:text-white transition-colors duration-200">Contact Directory</a></li>
+            <li><a href="https://www.aberdeenmd.gov/home/pages/city-newsletter" class="hover:text-white transition-colors duration-200">City Newsletter</a></li>
+            <li><a href="https://www.facebook.com/cityofaberdeenmd/" class="hover:text-white transition-colors duration-200">Facebook</a></li>
+            <li><a href="https://www.aberdeenmd.gov/city-clerk/files/public-information-request-form" class="hover:text-white transition-colors duration-200">Public Records Request</a></li>
+            <li><a href="https://www.aberdeenmd.gov/environmental-division/pages/4-sign-up-to-receive-mass-notification-callstexts" class="hover:text-white transition-colors duration-200">Emergency Alerts</a></li>
+            <li><a href="https://www.aberdeenmd.gov/home/pages/2026-weekly-activity-reports" class="hover:text-white transition-colors duration-200">Weekly Activity Reports</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 City of Aberdeen, Maryland. All rights reserved.</p>
+        <nav aria-label="Legal links">
+          <ul class="flex flex-wrap gap-4 justify-center">
+            <li><a href="https://www.aberdeenmd.gov/website-disclaimer-and-privacy-policy" class="hover:text-slate-300 transition-colors duration-200">Privacy Policy &amp; Disclaimer</a></li>
+            <li><a href="https://www.aberdeenmd.gov/sitemap" class="hover:text-slate-300 transition-colors duration-200">Site Map</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(btn) {
+      const menu = document.getElementById('mobile-menu');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('hidden');
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobile-menu').classList.add('hidden');
+      const btn = document.querySelector('[aria-controls="mobile-menu"]');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+  </script>
+
+</body>
+</html>
