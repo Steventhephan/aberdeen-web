@@ -70,7 +70,7 @@ breadcrumb:
             <div class="text-xs text-slate-500">Your current elected officials</div>
           </div>
         </a>
-        <a href="/departments/city-clerk/" class="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 group">
+        <a href="{{ '/departments/city-clerk/' | url }}" class="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-gov-blue hover:shadow-sm transition-all duration-200 group">
           <svg aria-hidden="true" class="w-8 h-8 text-gov-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
           <div>
             <div class="text-sm font-bold text-navy group-hover:text-gov-blue transition-colors duration-200">City Clerk</div>
@@ -104,9 +104,9 @@ breadcrumb:
       <div>
         <h3 class="text-sm font-bold text-navy mb-3">Related</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="/boards/board-of-elections/" class="text-gov-blue hover:underline">Board of Elections</a></li>
-          <li><a href="/departments/city-clerk/" class="text-gov-blue hover:underline">City Clerk Dept.</a></li>
-          <li><a href="/departments/mayor-city-council/" class="text-gov-blue hover:underline">Mayor &amp; City Council</a></li>
+          <li><a href="{{ '/boards/board-of-elections/' | url }}" class="text-gov-blue hover:underline">Board of Elections</a></li>
+          <li><a href="{{ '/departments/city-clerk/' | url }}" class="text-gov-blue hover:underline">City Clerk Dept.</a></li>
+          <li><a href="{{ '/departments/mayor-city-council/' | url }}" class="text-gov-blue hover:underline">Mayor &amp; City Council</a></li>
         </ul>
       </div>
     </div>

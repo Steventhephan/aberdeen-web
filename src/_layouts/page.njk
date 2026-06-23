@@ -9,13 +9,13 @@ layout: base.njk
     {% if breadcrumb %}
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-sm text-slate-400">
-        <li><a href="/" class="hover:text-white transition-colors duration-200">Home</a></li>
+        <li><a href="{{ '/' | url }}" class="hover:text-white transition-colors duration-200">Home</a></li>
         {% for crumb in breadcrumb %}
         <li aria-hidden="true" class="text-slate-600">/</li>
         {% if loop.last %}
         <li class="text-slate-300" aria-current="page">{{ crumb.label }}</li>
         {% else %}
-        <li><a href="{{ crumb.url }}" class="hover:text-white transition-colors duration-200">{{ crumb.label }}</a></li>
+        <li><a href="{{ crumb.url | url }}" class="hover:text-white transition-colors duration-200">{{ crumb.label }}</a></li>
         {% endif %}
         {% endfor %}
       </ol>

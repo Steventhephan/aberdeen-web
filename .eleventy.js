@@ -1,11 +1,9 @@
 module.exports = function(eleventyConfig) {
-  // Pass through static assets
   eleventyConfig.addPassthroughCopy("src/assets");
-
-  // Add a year shortcode for the footer
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   return {
+    pathPrefix: "/aberdeen-web/",
     dir: {
       input: "src",
       output: "_site",

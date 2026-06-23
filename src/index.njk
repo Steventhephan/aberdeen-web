@@ -31,10 +31,10 @@ description: Official website of the City of Aberdeen, Maryland. Pay bills, appl
       </form>
       <div class="mt-4 flex flex-wrap gap-2 items-center">
         <span class="text-slate-400 text-xs">Popular:</span>
-        <a href="/services/pay-bills/" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Pay water bill</a>
-        <a href="/services/permits/" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Building permit</a>
-        <a href="/services/employment/" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">City jobs</a>
-        <a href="/services/trash/" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Trash pickup</a>
+        <a href="{{ '/services/pay-bills/' | url }}" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Pay water bill</a>
+        <a href="{{ '/services/permits/' | url }}" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Building permit</a>
+        <a href="{{ '/services/employment/' | url }}" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">City jobs</a>
+        <a href="{{ '/services/trash/' | url }}" class="text-xs text-blue-300 hover:text-white border border-slate-600 hover:border-gov-blue px-3 py-1 rounded-full transition-colors duration-200">Trash pickup</a>
       </div>
     </div>
   </div>
@@ -103,7 +103,7 @@ description: Official website of the City of Aberdeen, Maryland. Pay bills, appl
         <h2 id="news-heading" class="text-3xl md:text-4xl font-bold text-navy">News &amp; Announcements</h2>
         <p class="text-slate-600 mt-2">Stay informed about what's happening in Aberdeen.</p>
       </div>
-      <a href="/news/" class="text-gov-blue font-semibold hover:underline whitespace-nowrap">View all news →</a>
+      <a href="{{ '/news/' | url }}" class="text-gov-blue font-semibold hover:underline whitespace-nowrap">View all news →</a>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
       {% set featured = news | selectattr("featured") | first %}
@@ -157,7 +157,7 @@ description: Official website of the City of Aberdeen, Maryland. Pay bills, appl
             <span class="w-2 h-6 bg-gov-blue rounded-full inline-block" aria-hidden="true"></span>
             Upcoming Meetings
           </h3>
-          <a href="/services/meetings/" class="text-sm text-gov-blue font-semibold hover:underline">All meetings →</a>
+          <a href="{{ '/services/meetings/' | url }}" class="text-sm text-gov-blue font-semibold hover:underline">All meetings →</a>
         </div>
         <ul class="space-y-3" aria-label="Upcoming public meetings">
           {% for meeting in events.meetings %}
@@ -183,7 +183,7 @@ description: Official website of the City of Aberdeen, Maryland. Pay bills, appl
             <span class="w-2 h-6 bg-amber-500 rounded-full inline-block" aria-hidden="true"></span>
             Community Events
           </h3>
-          <a href="/events/" class="text-sm text-gov-blue font-semibold hover:underline">All events →</a>
+          <a href="{{ '/events/' | url }}" class="text-sm text-gov-blue font-semibold hover:underline">All events →</a>
         </div>
         <ul class="space-y-3" aria-label="Upcoming community events">
           {% for event in events.community %}
@@ -228,7 +228,7 @@ description: Official website of the City of Aberdeen, Maryland. Pay bills, appl
       {% endfor %}
     </div>
     <div class="mt-8 text-center">
-      <a href="/departments/" class="inline-flex items-center gap-2 text-gov-blue font-semibold hover:underline cursor-pointer">
+      <a href="{{ '/departments/' | url }}" class="inline-flex items-center gap-2 text-gov-blue font-semibold hover:underline cursor-pointer">
         All departments &amp; boards
         <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
@@ -242,8 +242,8 @@ description: Official website of the City of Aberdeen, Maryland. Pay bills, appl
     <h2 id="connect-heading" class="text-3xl md:text-4xl font-bold text-navy mb-4">Stay Connected with Aberdeen</h2>
     <p class="text-slate-600 text-lg mb-8">Get city news, service alerts, and event updates — sign up for the City Newsletter.</p>
     <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-10">
-      <a href="/newsletter/" class="flex-1 bg-navy hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded text-sm transition-colors duration-200 text-center">Subscribe to City Newsletter</a>
-      <a href="/emergency-alerts/" class="flex-1 border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold px-6 py-3 rounded text-sm transition-colors duration-200 text-center">Sign Up for Emergency Alerts</a>
+      <a href="{{ '/newsletter/' | url }}" class="flex-1 bg-navy hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded text-sm transition-colors duration-200 text-center">Subscribe to City Newsletter</a>
+      <a href="{{ '/emergency-alerts/' | url }}" class="flex-1 border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold px-6 py-3 rounded text-sm transition-colors duration-200 text-center">Sign Up for Emergency Alerts</a>
     </div>
     <div class="flex flex-wrap items-center justify-center gap-4">
       <a href="{{ site.facebook }}" class="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200" aria-label="City of Aberdeen on Facebook">
@@ -251,7 +251,7 @@ description: Official website of the City of Aberdeen, Maryland. Pay bills, appl
         Follow on Facebook
       </a>
       <span aria-hidden="true" class="text-slate-300">|</span>
-      <a href="/services/meetings/" class="text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200">Watch Live Council Meetings</a>
+      <a href="{{ '/services/meetings/' | url }}" class="text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200">Watch Live Council Meetings</a>
       <span aria-hidden="true" class="text-slate-300">|</span>
       <a href="https://www.aberdeenmd.gov/finance/files/where-does-your-money-go-fy2026-0" class="text-sm font-semibold text-navy hover:text-gov-blue transition-colors duration-200">Where Does Your Money Go?</a>
     </div>

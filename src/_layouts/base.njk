@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;600;700&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="stylesheet" href="{{ '/assets/style.css' | url }}" />
   <style>
     body { font-family: 'Public Sans', system-ui, sans-serif; }
     h1, h2, h3, h4 { font-family: 'Libre Bodoni', Georgia, serif; }
@@ -44,8 +44,8 @@
       <span class="hidden sm:block">Official website of the City of Aberdeen, Maryland</span>
       <nav aria-label="Utility navigation">
         <ul class="flex items-center gap-4">
-          <li><a href="/contact/" class="hover:text-white transition-colors duration-200">Contact Directory</a></li>
-          <li><a href="/services/meetings/" class="hover:text-white transition-colors duration-200">Watch Live Meetings</a></li>
+          <li><a href="{{ '/contact/' | url }}" class="hover:text-white transition-colors duration-200">Contact Directory</a></li>
+          <li><a href="{{ '/services/meetings/' | url }}" class="hover:text-white transition-colors duration-200">Watch Live Meetings</a></li>
           <li>
             <a href="tel:+14102721600" class="flex items-center gap-1 hover:text-white transition-colors duration-200">
               <svg aria-hidden="true" class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
@@ -62,7 +62,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
 
-        <a href="/" class="flex items-center gap-3 group flex-shrink-0" aria-label="City of Aberdeen Maryland — home">
+        <a href="{{ '/' | url }}" class="flex items-center gap-3 group flex-shrink-0" aria-label="City of Aberdeen Maryland — home">
           <img
             src="{{ site.logo }}"
             alt="City of Aberdeen Maryland seal"
@@ -80,12 +80,12 @@
 
         <nav aria-label="Main navigation" class="hidden lg:block">
           <ul class="flex items-center gap-1">
-            <li><a href="/#services" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">Services</a></li>
-            <li><a href="/departments/" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">Departments</a></li>
-            <li><a href="/news/" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">News</a></li>
-            <li><a href="/events/" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">Events</a></li>
+            <li><a href="{{ '/' | url }}#services" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">Services</a></li>
+            <li><a href="{{ '/departments/' | url }}" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">Departments</a></li>
+            <li><a href="{{ '/news/' | url }}" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">News</a></li>
+            <li><a href="{{ '/events/' | url }}" class="px-4 py-2 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 hover:text-navy transition-colors duration-200">Events</a></li>
             <li class="ml-2">
-              <a href="/services/pay-bills/" class="inline-flex items-center gap-2 bg-gov-blue text-white text-sm font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200">
+              <a href="{{ '/services/pay-bills/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white text-sm font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200">
                 <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
                 Pay Bills
               </a>
@@ -109,11 +109,11 @@
 
     <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white">
       <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-        <a href="/#services" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Services</a>
-        <a href="/departments/" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Departments</a>
-        <a href="/news/" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">News</a>
-        <a href="/events/" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Events</a>
-        <a href="/services/pay-bills/" class="mt-2 bg-gov-blue text-white text-sm font-semibold px-4 py-3 rounded text-center hover:bg-gov-blue-dark transition-colors duration-200">Pay Bills Online</a>
+        <a href="{{ '/' | url }}#services" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Services</a>
+        <a href="{{ '/departments/' | url }}" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Departments</a>
+        <a href="{{ '/news/' | url }}" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">News</a>
+        <a href="{{ '/events/' | url }}" onclick="closeMobileMenu()" class="px-4 py-3 text-sm font-semibold text-slate-700 rounded hover:bg-slate-100 transition-colors duration-200">Events</a>
+        <a href="{{ '/services/pay-bills/' | url }}" class="mt-2 bg-gov-blue text-white text-sm font-semibold px-4 py-3 rounded text-center hover:bg-gov-blue-dark transition-colors duration-200">Pay Bills Online</a>
       </nav>
     </div>
   </header>
@@ -148,35 +148,35 @@
         <nav aria-label="Services footer links">
           <h3 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Services</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="/services/pay-bills/" class="hover:text-white transition-colors duration-200">Pay Bills Online</a></li>
-            <li><a href="/services/permits/" class="hover:text-white transition-colors duration-200">Building Permits</a></li>
-            <li><a href="/services/report-issue/" class="hover:text-white transition-colors duration-200">Report an Issue</a></li>
-            <li><a href="/services/trash/" class="hover:text-white transition-colors duration-200">Trash Collection</a></li>
-            <li><a href="/services/employment/" class="hover:text-white transition-colors duration-200">Employment</a></li>
-            <li><a href="/services/taxes/" class="hover:text-white transition-colors duration-200">Property Taxes</a></li>
+            <li><a href="{{ '/services/pay-bills/' | url }}" class="hover:text-white transition-colors duration-200">Pay Bills Online</a></li>
+            <li><a href="{{ '/services/permits/' | url }}" class="hover:text-white transition-colors duration-200">Building Permits</a></li>
+            <li><a href="{{ '/services/report-issue/' | url }}" class="hover:text-white transition-colors duration-200">Report an Issue</a></li>
+            <li><a href="{{ '/services/trash/' | url }}" class="hover:text-white transition-colors duration-200">Trash Collection</a></li>
+            <li><a href="{{ '/services/employment/' | url }}" class="hover:text-white transition-colors duration-200">Employment</a></li>
+            <li><a href="{{ '/services/taxes/' | url }}" class="hover:text-white transition-colors duration-200">Property Taxes</a></li>
           </ul>
         </nav>
 
         <nav aria-label="Government footer links">
           <h3 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Government</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="/departments/mayor-city-council/" class="hover:text-white transition-colors duration-200">Mayor &amp; City Council</a></li>
-            <li><a href="/services/meetings/" class="hover:text-white transition-colors duration-200">Meetings &amp; Legislation</a></li>
-            <li><a href="/departments/" class="hover:text-white transition-colors duration-200">All Departments</a></li>
-            <li><a href="/budget/" class="hover:text-white transition-colors duration-200">City Budget</a></li>
-            <li><a href="/businesses/bids/" class="hover:text-white transition-colors duration-200">Bids &amp; RFPs</a></li>
-            <li><a href="/services/elections/" class="hover:text-white transition-colors duration-200">Elections</a></li>
+            <li><a href="{{ '/departments/mayor-city-council/' | url }}" class="hover:text-white transition-colors duration-200">Mayor &amp; City Council</a></li>
+            <li><a href="{{ '/services/meetings/' | url }}" class="hover:text-white transition-colors duration-200">Meetings &amp; Legislation</a></li>
+            <li><a href="{{ '/departments/' | url }}" class="hover:text-white transition-colors duration-200">All Departments</a></li>
+            <li><a href="{{ '/budget/' | url }}" class="hover:text-white transition-colors duration-200">City Budget</a></li>
+            <li><a href="{{ '/businesses/bids/' | url }}" class="hover:text-white transition-colors duration-200">Bids &amp; RFPs</a></li>
+            <li><a href="{{ '/services/elections/' | url }}" class="hover:text-white transition-colors duration-200">Elections</a></li>
           </ul>
         </nav>
 
         <nav aria-label="Connect footer links">
           <h3 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Connect</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="/contact/" class="hover:text-white transition-colors duration-200">Contact Directory</a></li>
-            <li><a href="/newsletter/" class="hover:text-white transition-colors duration-200">City Newsletter</a></li>
+            <li><a href="{{ '/contact/' | url }}" class="hover:text-white transition-colors duration-200">Contact Directory</a></li>
+            <li><a href="{{ '/newsletter/' | url }}" class="hover:text-white transition-colors duration-200">City Newsletter</a></li>
             <li><a href="{{ site.facebook }}" class="hover:text-white transition-colors duration-200">Facebook</a></li>
-            <li><a href="/services/public-records/" class="hover:text-white transition-colors duration-200">Public Records Request</a></li>
-            <li><a href="/emergency-alerts/" class="hover:text-white transition-colors duration-200">Emergency Alerts</a></li>
+            <li><a href="{{ '/services/public-records/' | url }}" class="hover:text-white transition-colors duration-200">Public Records Request</a></li>
+            <li><a href="{{ '/emergency-alerts/' | url }}" class="hover:text-white transition-colors duration-200">Emergency Alerts</a></li>
             <li><a href="https://www.aberdeenmd.gov/home/pages/2026-weekly-activity-reports" class="hover:text-white transition-colors duration-200">Weekly Activity Reports</a></li>
           </ul>
         </nav>
@@ -187,7 +187,7 @@
         <p>&copy; {% year %} City of Aberdeen, Maryland. All rights reserved.</p>
         <nav aria-label="Legal links">
           <ul class="flex flex-wrap gap-4 justify-center">
-            <li><a href="/privacy/" class="hover:text-slate-300 transition-colors duration-200">Privacy Policy &amp; Disclaimer</a></li>
+            <li><a href="{{ '/privacy/' | url }}" class="hover:text-slate-300 transition-colors duration-200">Privacy Policy &amp; Disclaimer</a></li>
             <li><a href="https://www.aberdeenmd.gov/sitemap" class="hover:text-slate-300 transition-colors duration-200">Site Map</a></li>
           </ul>
         </nav>
