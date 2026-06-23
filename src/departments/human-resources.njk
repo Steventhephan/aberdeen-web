@@ -14,19 +14,24 @@ deptRealUrl: "https://www.aberdeenmd.gov/human-resources"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Services</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Services</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {% for service in [
-        { title: "Recruitment & Hiring", desc: "Job postings, applications, and the hiring process." },
-        { title: "Benefits Administration", desc: "Health insurance, retirement plans, and leave policies." },
-        { title: "Employee Training", desc: "Professional development and required training programs." },
-        { title: "Personnel Policies", desc: "City employee handbook and HR policies." },
-        { title: "Classification & Compensation", desc: "Job classifications and salary administration." },
-        { title: "Labor Relations", desc: "Union contract administration and grievance handling." }
+        { title: "Recruitment & Hiring", desc: "Job postings, applications, and the hiring process.", icon: "M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z" },
+        { title: "Benefits Administration", desc: "Health insurance, retirement plans, and leave policies.", icon: "M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" },
+        { title: "Employee Training", desc: "Professional development and required training programs.", icon: "M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.214l4-1.5a1 1 0 11.713 1.864L8.11 8.84l2.48-1.858A1 1 0 0111 6h1v.697l-2.5 1.875a1 1 0 00-.5.866v4a1 1 0 001.5.866L14 11.43V10a1 1 0 012 0v4a1 1 0 01-1 1H5a1 1 0 01-1-1V8.618l6 2.25V6z" },
+        { title: "Personnel Policies", desc: "City employee handbook and HR policies.", icon: "M9 2a1 1 0 000 2h2a1 1 0 100-2H9zM4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" },
+        { title: "Classification & Compensation", desc: "Job classifications and salary administration.", icon: "M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" },
+        { title: "Labor Relations", desc: "Union contract administration and grievance handling.", icon: "M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" }
       ] %}
-      <div class="bg-white border border-slate-200 rounded-xl p-4">
-        <h3 class="text-sm font-bold text-navy mb-1">{{ service.title }}</h3>
-        <p class="text-xs text-slate-600">{{ service.desc }}</p>
+      <div class="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-5">
+        <div class="w-9 h-9 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0">
+          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="{{ service.icon }}" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-navy mb-1">{{ service.title }}</h3>
+          <p class="text-sm text-slate-600">{{ service.desc }}</p>
+        </div>
       </div>
       {% endfor %}
     </div>
@@ -39,7 +44,7 @@ deptRealUrl: "https://www.aberdeenmd.gov/human-resources"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Quick Links</h2>
     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "View Job Openings", url: "/services/employment/" },

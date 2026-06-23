@@ -13,27 +13,47 @@ deptRealUrl: "https://www.aberdeenmd.gov/economic-development"
     <p class="text-slate-600 leading-relaxed">The Economic Development Department works with businesses, developers, and community partners to promote a thriving business environment in Aberdeen.</p>
   </div>
 
+  <div class="grid grid-cols-3 gap-4">
+    <div class="bg-gov-blue rounded-xl p-5 text-center text-white">
+      <div class="text-3xl font-bold">26 mi</div>
+      <div class="text-sm opacity-80 mt-1">to Baltimore via I-95</div>
+    </div>
+    <div class="bg-navy rounded-xl p-5 text-center text-white">
+      <div class="text-3xl font-bold">APG</div>
+      <div class="text-sm opacity-80 mt-1">US Army Research Hub</div>
+    </div>
+    <div class="bg-gov-blue rounded-xl p-5 text-center text-white">
+      <div class="text-3xl font-bold">#1</div>
+      <div class="text-sm opacity-80 mt-1">Largest in Harford County</div>
+    </div>
+  </div>
+
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Why Aberdeen?</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Why Aberdeen?</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {% for fact in [
-        { title: "Prime Location", desc: "Minutes from Baltimore, DC, Wilmington, and Philadelphia via I-95 and MARC Rail." },
-        { title: "Aberdeen Proving Ground", desc: "Home of the US Army's foremost technology and research center." },
-        { title: "World-Class Schools", desc: "Harford County Public Schools ranked among Maryland's best." },
-        { title: "Business Incentives", desc: "State and local programs available for qualifying businesses." },
-        { title: "Transit Access", desc: "MARC commuter rail station in downtown Aberdeen." },
-        { title: "Growing Community", desc: "Largest municipality in Harford County with a growing population." }
+        { title: "Prime Location", desc: "Minutes from Baltimore, DC, Wilmington, and Philadelphia via I-95 and MARC Rail.", icon: "M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" },
+        { title: "Aberdeen Proving Ground", desc: "Home of the US Army's foremost technology and research center.", icon: "M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4z" },
+        { title: "World-Class Schools", desc: "Harford County Public Schools ranked among Maryland's best.", icon: "M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.214l4-1.5a1 1 0 11.713 1.864L8.11 8.84l2.48-1.858A1 1 0 0111 6h1v.697l-2.5 1.875a1 1 0 00-.5.866v4a1 1 0 001.5.866L14 11.43V10a1 1 0 012 0v4a1 1 0 01-1 1H5a1 1 0 01-1-1V8.618l6 2.25V6z" },
+        { title: "Business Incentives", desc: "State and local programs available for qualifying businesses.", icon: "M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267zm4-4.849a7 7 0 11-14 0 7 7 0 0114 0z" },
+        { title: "Transit Access", desc: "MARC commuter rail station in downtown Aberdeen.", icon: "M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H14a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7h1a2 2 0 012 2v3a2 2 0 01-2 2h-1V7z" },
+        { title: "Growing Community", desc: "Largest municipality in Harford County with a growing population.", icon: "M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" }
       ] %}
-      <div class="bg-white border border-slate-200 rounded-xl p-4">
-        <h3 class="text-sm font-bold text-navy mb-1">{{ fact.title }}</h3>
-        <p class="text-xs text-slate-600">{{ fact.desc }}</p>
+      <div class="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-5">
+        <div class="w-9 h-9 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0">
+          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="{{ fact.icon }}" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-navy mb-1">{{ fact.title }}</h3>
+          <p class="text-sm text-slate-600">{{ fact.desc }}</p>
+        </div>
       </div>
       {% endfor %}
     </div>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Quick Links</h2>
     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "Business Incentives & Funding", url: "/businesses/incentives/" },

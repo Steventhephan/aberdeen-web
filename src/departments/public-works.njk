@@ -15,28 +15,37 @@ deptRealUrl: "https://www.aberdeenmd.gov/department-of-public-works"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Services</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Services</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {% for service in [
-        { title: "Road Maintenance", desc: "Pothole repair, resurfacing, and street sweeping.", icon: "road" },
-        { title: "Water & Sewer", desc: "Water distribution, sewer collection, and utility repairs.", icon: "water" },
-        { title: "Trash & Bulk Pickup", desc: "Curbside collection and scheduled bulk pickup service.", icon: "trash" },
-        { title: "Stormwater Management", desc: "Drainage maintenance and illicit discharge prevention.", icon: "storm" },
-        { title: "Street Lights", desc: "Installation and repair of city street lighting.", icon: "light" },
-        { title: "Environmental Division", desc: "Recycling, environmental compliance, and sustainability.", icon: "env" }
+        { title: "Road Maintenance", desc: "Pothole repair, resurfacing, and street sweeping.", icon: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z", stroke: true },
+        { title: "Water & Sewer", desc: "Water distribution, sewer collection, and utility repairs.", icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z", stroke: true },
+        { title: "Trash & Bulk Pickup", desc: "Curbside collection and scheduled bulk pickup service.", icon: "M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z", stroke: false },
+        { title: "Stormwater Management", desc: "Drainage maintenance and illicit discharge prevention.", icon: "M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z", stroke: false },
+        { title: "Street Lights", desc: "Installation and repair of city street lighting.", icon: "M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z", stroke: false },
+        { title: "Environmental Division", desc: "Recycling, environmental compliance, and sustainability.", icon: "M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z", stroke: false }
       ] %}
-      <div class="bg-white border border-slate-200 rounded-xl p-4">
-        <h3 class="text-sm font-bold text-navy mb-1">{{ service.title }}</h3>
-        <p class="text-xs text-slate-600">{{ service.desc }}</p>
+      <div class="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-5">
+        <div class="w-9 h-9 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0">
+          {% if service.stroke %}
+          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="{{ service.icon }}"/></svg>
+          {% else %}
+          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="{{ service.icon }}" clip-rule="evenodd"/></svg>
+          {% endif %}
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-navy mb-1">{{ service.title }}</h3>
+          <p class="text-sm text-slate-600">{{ service.desc }}</p>
+        </div>
       </div>
       {% endfor %}
     </div>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Report an Issue</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Report an Issue</h2>
     <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
-      <p class="text-sm text-amber-800 mb-5">Use our new <strong>Click-2-Fix</strong> tool to report non-emergency issues and track their resolution.</p>
+      <p class="text-sm text-amber-800 mb-5">Use our <strong>Click-2-Fix</strong> tool to report non-emergency issues like potholes, street light outages, or sewer problems — and track their resolution online.</p>
       <div class="flex flex-wrap gap-3">
         <a href="{{ '/services/report-issue/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Open Click-2-Fix</a>
         <a href="mailto:dpw@aberdeenmd.gov?subject=Report%20Pothole" class="inline-flex items-center gap-2 border border-amber-400 text-amber-800 font-semibold px-4 py-2 rounded hover:bg-amber-100 transition-colors duration-200 text-sm">Email DPW</a>
@@ -45,7 +54,7 @@ deptRealUrl: "https://www.aberdeenmd.gov/department-of-public-works"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Quick Links</h2>
     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "Trash & Bulk Pickup", url: "/services/trash/" },

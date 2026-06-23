@@ -9,43 +9,48 @@ deptRealUrl: "https://www.aberdeenmd.gov/finance"
 
 <div class="space-y-10">
   <div>
-    <p class="text-slate-600 leading-relaxed mb-5">The Finance Department manages the City of Aberdeen's financial operations, including budget preparation, tax collection, accounts payable and receivable, payroll, and online payment services.</p>
+    <p class="text-slate-600 leading-relaxed">The Finance Department manages the City of Aberdeen's financial operations, including budget preparation, tax collection, accounts payable and receivable, payroll, and online payment services.</p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-4">
+    <div class="bg-gov-blue rounded-xl p-5 text-center text-white">
+      <div class="text-3xl font-bold">$0.625</div>
+      <div class="text-sm opacity-80 mt-1">per $100 assessed value</div>
+      <div class="text-xs opacity-60 mt-0.5">Current property tax rate</div>
+    </div>
+    <div class="bg-navy rounded-xl p-5 text-center text-white">
+      <div class="text-3xl font-bold">July 1</div>
+      <div class="text-sm opacity-80 mt-1">Annual tax billing date</div>
+      <div class="text-xs opacity-60 mt-0.5">Tax bills mailed each year</div>
+    </div>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Services</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Services</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {% for service in [
-        { title: "Online Bill Pay", desc: "Pay water, sewer, and property tax bills online 24/7." },
-        { title: "Property Taxes", desc: "Current rate: $0.625 per $100 of assessed value. Billed July 1." },
-        { title: "City Budget", desc: "Annual budget preparation, adoption, and reporting." },
-        { title: "Financial Reporting", desc: "Audits, financial statements, and transparency reports." },
-        { title: "Accounts Payable", desc: "Vendor payments and city procurement processing." },
-        { title: "Payroll", desc: "City employee payroll and benefits administration." }
+        { title: "Online Bill Pay", desc: "Pay water, sewer, and property tax bills online 24/7.", icon: "M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" },
+        { title: "Property Taxes", desc: "Current rate: $0.625 per $100 of assessed value. Billed July 1.", icon: "M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267zm4-4.849a7 7 0 11-14 0 7 7 0 0114 0z" },
+        { title: "City Budget", desc: "Annual budget preparation, adoption, and reporting.", icon: "M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" },
+        { title: "Financial Reporting", desc: "Audits, financial statements, and transparency reports.", icon: "M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" },
+        { title: "Accounts Payable", desc: "Vendor payments and city procurement processing.", icon: "M6 6V5a2 2 0 012-2h4a2 2 0 012 2v1m-8 0h8m-8 0H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V8a2 2 0 00-2-2h-2" },
+        { title: "Payroll", desc: "City employee payroll and benefits administration.", icon: "M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" }
       ] %}
-      <div class="bg-white border border-slate-200 rounded-xl p-4">
-        <h3 class="text-sm font-bold text-navy mb-1">{{ service.title }}</h3>
-        <p class="text-xs text-slate-600">{{ service.desc }}</p>
+      <div class="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-5">
+        <div class="w-9 h-9 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0">
+          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="{{ service.icon }}" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-navy mb-1">{{ service.title }}</h3>
+          <p class="text-sm text-slate-600">{{ service.desc }}</p>
+        </div>
       </div>
       {% endfor %}
     </div>
   </div>
 
-  <div class="grid sm:grid-cols-2 gap-4">
-    <div class="bg-gov-blue-light rounded-xl p-5 text-center">
-      <div class="text-3xl font-bold text-navy mb-1">$0.625</div>
-      <div class="text-sm text-slate-600">per $100 assessed value</div>
-      <div class="text-xs text-slate-500 mt-1">Current property tax rate</div>
-    </div>
-    <div class="bg-gov-blue-light rounded-xl p-5 text-center">
-      <div class="text-3xl font-bold text-navy mb-1">July 1</div>
-      <div class="text-sm text-slate-600">Annual tax billing date</div>
-      <div class="text-xs text-slate-500 mt-1">Tax bills mailed each year</div>
-    </div>
-  </div>
-
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Quick Links</h2>
     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "Pay Bills Online", url: "/services/pay-bills/" },

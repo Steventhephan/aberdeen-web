@@ -14,19 +14,24 @@ deptRealUrl: "https://www.aberdeenmd.gov/planning-and-community-development"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Services</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Services</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {% for service in [
-        { title: "Building Permits", desc: "Review and approval of construction and renovation projects." },
-        { title: "Zoning Administration", desc: "Zoning map interpretations, variances, and code compliance." },
-        { title: "Site Plan Review", desc: "Review of development plans for commercial and residential projects." },
-        { title: "Long-Range Planning", desc: "Comprehensive plans and Transit-Oriented Development." },
-        { title: "Code Enforcement", desc: "Property maintenance and municipal code compliance." },
-        { title: "Historic Preservation", desc: "Review of changes in historic districts." }
+        { title: "Building Permits", desc: "Review and approval of construction and renovation projects.", icon: "M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" },
+        { title: "Zoning Administration", desc: "Zoning map interpretations, variances, and code compliance.", icon: "M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" },
+        { title: "Site Plan Review", desc: "Review of development plans for commercial and residential projects.", icon: "M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" },
+        { title: "Long-Range Planning", desc: "Comprehensive plans and Transit-Oriented Development.", icon: "M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" },
+        { title: "Code Enforcement", desc: "Property maintenance and municipal code compliance.", icon: "M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0117.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" },
+        { title: "Historic Preservation", desc: "Review of changes in historic districts.", icon: "M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" }
       ] %}
-      <div class="bg-white border border-slate-200 rounded-xl p-4">
-        <h3 class="text-sm font-bold text-navy mb-1">{{ service.title }}</h3>
-        <p class="text-xs text-slate-600">{{ service.desc }}</p>
+      <div class="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-5">
+        <div class="w-9 h-9 rounded-lg bg-gov-blue-light flex items-center justify-center flex-shrink-0">
+          <svg aria-hidden="true" class="w-5 h-5 text-gov-blue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="{{ service.icon }}" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-navy mb-1">{{ service.title }}</h3>
+          <p class="text-sm text-slate-600">{{ service.desc }}</p>
+        </div>
       </div>
       {% endfor %}
     </div>
@@ -37,21 +42,27 @@ deptRealUrl: "https://www.aberdeenmd.gov/planning-and-community-development"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">How to Submit a Permit</h2>
-    <div class="space-y-3">
-      <div class="flex gap-3 bg-white border border-slate-200 rounded-xl p-4">
-        <div class="w-8 h-8 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0 text-xs">1</div>
-        <div class="text-sm text-slate-600"><strong class="text-navy">Drop-off:</strong> City Hall lobby Dropbox, 60 N. Parke Street.</div>
+    <h2 class="text-2xl font-bold text-navy mb-5">How to Submit a Permit</h2>
+    <div class="space-y-4">
+      <div class="flex gap-4 bg-white border border-slate-200 rounded-xl p-5">
+        <div class="w-10 h-10 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">1</div>
+        <div>
+          <h3 class="text-base font-bold text-navy mb-1">In-Person Drop-Off</h3>
+          <p class="text-sm text-slate-600">City Hall lobby Dropbox, 60 N. Parke Street — available during business hours, Monday–Friday 8:30 AM–5:00 PM.</p>
+        </div>
       </div>
-      <div class="flex gap-3 bg-white border border-slate-200 rounded-xl p-4">
-        <div class="w-8 h-8 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0 text-xs">2</div>
-        <div class="text-sm text-slate-600"><strong class="text-navy">Electronic:</strong> Submit permits electronically — call ext. 221 for current submission email.</div>
+      <div class="flex gap-4 bg-white border border-slate-200 rounded-xl p-5">
+        <div class="w-10 h-10 rounded-full bg-gov-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">2</div>
+        <div>
+          <h3 class="text-base font-bold text-navy mb-1">Electronic Submission</h3>
+          <p class="text-sm text-slate-600">Submit permits electronically — call <strong>ext. 221</strong> or stop by the lobby phone to get the current submission email address.</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <h2 class="text-2xl font-bold text-navy mb-5">Quick Links</h2>
     <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "Building Permits & Forms", url: "/services/permits/" },
