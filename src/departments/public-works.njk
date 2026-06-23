@@ -8,14 +8,14 @@ deptEmail: "dpw@aberdeenmd.gov"
 deptRealUrl: "https://www.aberdeenmd.gov/department-of-public-works"
 ---
 
-<div class="space-y-8">
+<div class="space-y-10">
   <div>
-    <p class="text-slate-600 leading-relaxed mb-4">The Department of Public Works is responsible for maintaining and improving the City's physical infrastructure — including roads, water and sewer systems, stormwater management, and public facilities.</p>
+    <p class="text-slate-600 leading-relaxed mb-5">The Department of Public Works is responsible for maintaining and improving the City's physical infrastructure — including roads, water and sewer systems, stormwater management, and public facilities.</p>
     <p class="text-slate-600 leading-relaxed">For non-emergency maintenance issues like potholes, sewer problems, or street light outages, use the <a href="{{ '/services/report-issue/' | url }}" class="text-gov-blue hover:underline font-semibold">Citizen Problem Reporter (Click-2-Fix)</a> or email <a href="mailto:dpw@aberdeenmd.gov" class="text-gov-blue hover:underline font-semibold">dpw@aberdeenmd.gov</a>.</p>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Services</h2>
+    <h2 class="text-xl font-bold text-navy mb-5">Services</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {% for service in [
         { title: "Road Maintenance", desc: "Pothole repair, resurfacing, and street sweeping.", icon: "road" },
@@ -34,9 +34,9 @@ deptRealUrl: "https://www.aberdeenmd.gov/department-of-public-works"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Report an Issue</h2>
+    <h2 class="text-xl font-bold text-navy mb-5">Report an Issue</h2>
     <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
-      <p class="text-sm text-amber-800 mb-4">Use our new <strong>Click-2-Fix</strong> tool to report non-emergency issues and track their resolution.</p>
+      <p class="text-sm text-amber-800 mb-5">Use our new <strong>Click-2-Fix</strong> tool to report non-emergency issues and track their resolution.</p>
       <div class="flex flex-wrap gap-3">
         <a href="{{ '/services/report-issue/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Open Click-2-Fix</a>
         <a href="mailto:dpw@aberdeenmd.gov?subject=Report%20Pothole" class="inline-flex items-center gap-2 border border-amber-400 text-amber-800 font-semibold px-4 py-2 rounded hover:bg-amber-100 transition-colors duration-200 text-sm">Email DPW</a>
@@ -45,8 +45,8 @@ deptRealUrl: "https://www.aberdeenmd.gov/department-of-public-works"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
-    <div class="grid sm:grid-cols-2 gap-3">
+    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "Trash & Bulk Pickup", url: "/services/trash/" },
         { label: "Report a Pothole", url: "mailto:dpw@aberdeenmd.gov?subject=Report%20Pothole" },
@@ -55,9 +55,9 @@ deptRealUrl: "https://www.aberdeenmd.gov/department-of-public-works"
         { label: "Trash Collection Schedule", url: "https://www.aberdeenmd.gov/home/files/trash-collection-information" },
         { label: "Bids & RFPs", url: "/businesses/bids/" }
       ] %}
-      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
-        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <a href="{{ link.url | url }}" class="flex items-center justify-between gap-3 text-sm text-slate-700 font-medium px-5 py-3 hover:text-gov-blue hover:bg-slate-50 transition-colors duration-150 group border-b border-slate-100 last:border-b-0">
         {{ link.label }}
+        <svg aria-hidden="true" class="w-4 h-4 text-slate-400 group-hover:text-gov-blue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </a>
       {% endfor %}
     </div>

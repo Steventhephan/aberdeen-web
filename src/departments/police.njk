@@ -8,7 +8,7 @@ deptEmail: ""
 deptRealUrl: "https://www.aberdeenmd.gov/police-department"
 ---
 
-<div class="space-y-8">
+<div class="space-y-10">
 
   <div class="bg-red-50 border border-red-200 rounded-xl p-5">
     <div class="flex items-center gap-3">
@@ -20,12 +20,12 @@ deptRealUrl: "https://www.aberdeenmd.gov/police-department"
   </div>
 
   <div>
-    <p class="text-slate-600 leading-relaxed mb-4">The Aberdeen Police Department is dedicated to protecting and serving the residents and visitors of Aberdeen through professional, community-oriented policing. The department employs <strong>45 sworn Law Enforcement Officers</strong> and <strong>17 civilians</strong>.</p>
+    <p class="text-slate-600 leading-relaxed mb-5">The Aberdeen Police Department is dedicated to protecting and serving the residents and visitors of Aberdeen through professional, community-oriented policing. The department employs <strong>45 sworn Law Enforcement Officers</strong> and <strong>17 civilians</strong>.</p>
     <p class="text-slate-600 leading-relaxed">Aberdeen is the largest municipality in Harford County, Maryland, located 26 miles northeast of Baltimore. The department is actively accepting applications for both <strong>Recruit</strong> and <strong>Lateral</strong> officers.</p>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Recent News</h2>
+    <h2 class="text-xl font-bold text-navy mb-5">Recent News</h2>
     <div class="space-y-3">
       {% for item in [
         { title: "Officer and Good Samaritans Help Family of Geese to Safety", date: "June 2, 2026" },
@@ -42,8 +42,8 @@ deptRealUrl: "https://www.aberdeenmd.gov/police-department"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Resources &amp; Services</h2>
-    <div class="grid sm:grid-cols-2 gap-3">
+    <h2 class="text-xl font-bold text-navy mb-5">Resources &amp; Services</h2>
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "Public Information Request", url: "/services/public-records/" },
         { label: "Refuse to be a Victim", url: "https://www.aberdeenmd.gov/police-department" },
@@ -52,9 +52,9 @@ deptRealUrl: "https://www.aberdeenmd.gov/police-department"
         { label: "Parking & Traffic Citations", url: "https://www.aberdeenmd.gov/police-department" },
         { label: "Employment — Join APD", url: "/services/employment/" }
       ] %}
-      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
-        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <a href="{{ link.url | url }}" class="flex items-center justify-between gap-3 text-sm text-slate-700 font-medium px-5 py-3 hover:text-gov-blue hover:bg-slate-50 transition-colors duration-150 group border-b border-slate-100 last:border-b-0">
         {{ link.label }}
+        <svg aria-hidden="true" class="w-4 h-4 text-slate-400 group-hover:text-gov-blue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </a>
       {% endfor %}
     </div>
@@ -62,7 +62,7 @@ deptRealUrl: "https://www.aberdeenmd.gov/police-department"
 
   <div class="bg-navy rounded-xl p-6 text-white">
     <h2 class="text-lg font-bold mb-2">We're Hiring — Join APD</h2>
-    <p class="text-slate-300 text-sm mb-4">The Aberdeen Police Department is accepting applications for Recruit and Lateral officers. Serve your community and build a rewarding career in law enforcement.</p>
+    <p class="text-slate-300 text-sm mb-5">The Aberdeen Police Department is accepting applications for Recruit and Lateral officers. Serve your community and build a rewarding career in law enforcement.</p>
     <a href="{{ '/services/employment/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">View Open Positions</a>
   </div>
 

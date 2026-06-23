@@ -10,11 +10,11 @@ breadcrumb:
 ---
 
 <div class="grid lg:grid-cols-3 gap-10">
-  <div class="lg:col-span-2 space-y-8">
+  <div class="lg:col-span-2 space-y-10">
     <p class="text-slate-600 leading-relaxed">Aberdeen and the State of Maryland offer a range of financial incentives, tax credits, and funding programs designed to attract new businesses and support the growth of existing ones. Contact the Economic Development Department to find out which programs apply to your business.</p>
 
     <div>
-      <h2 class="text-xl font-bold text-navy mb-4">Available Programs</h2>
+      <h2 class="text-xl font-bold text-navy mb-5">Available Programs</h2>
       <div class="space-y-4">
         {% for prog in [
           { title: "Maryland Enterprise Zone Tax Credit", desc: "Properties and businesses within designated Enterprise Zones may qualify for real property and income tax credits to offset the costs of hiring and improving property.", tag: "State" },
@@ -25,7 +25,7 @@ breadcrumb:
           { title: "Aberdeen Economic Development Commission", desc: "The City's own Economic Development Commission advises on local incentives and can connect businesses with available programs.", tag: "Local" }
         ] %}
         <div class="bg-white border border-slate-200 rounded-xl p-5">
-          <div class="flex items-start gap-3">
+          <div class="flex items-start gap-4">
             <div class="flex-1">
               <div class="flex items-center gap-2 mb-1">
                 <h3 class="text-sm font-bold text-navy">{{ prog.title }}</h3>
@@ -41,7 +41,7 @@ breadcrumb:
 
     <div class="bg-navy rounded-xl p-6 text-white">
       <h2 class="text-lg font-bold mb-2">Not Sure Where to Start?</h2>
-      <p class="text-slate-300 text-sm mb-4">Contact Aberdeen's Economic Development Department. We'll help identify the right programs for your business and connect you with state and federal resources.</p>
+      <p class="text-slate-300 text-sm mb-5">Contact Aberdeen's Economic Development Department. We'll help identify the right programs for your business and connect you with state and federal resources.</p>
       <a href="{{ '/departments/economic-development/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Contact Economic Development</a>
     </div>
   </div>

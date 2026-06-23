@@ -10,12 +10,12 @@ breadcrumb:
 ---
 
 <div class="grid lg:grid-cols-3 gap-10">
-  <div class="lg:col-span-2 space-y-8">
+  <div class="lg:col-span-2 space-y-10">
     <p class="text-slate-600 leading-relaxed">The City of Aberdeen regularly issues Invitations for Bids (IFBs) and Requests for Proposals (RFPs) for goods, services, and construction projects. All current opportunities are posted on the official city website.</p>
 
     <div class="bg-gov-blue rounded-xl p-6 text-white">
       <h2 class="text-xl font-bold mb-2">View Current Bids &amp; RFPs</h2>
-      <p class="text-blue-100 text-sm mb-4">All active procurement opportunities are listed on aberdeenmd.gov. Check regularly for new postings.</p>
+      <p class="text-blue-100 text-sm mb-5">All active procurement opportunities are listed on aberdeenmd.gov. Check regularly for new postings.</p>
       <a href="https://www.aberdeenmd.gov/bids" class="inline-flex items-center gap-2 bg-white text-gov-blue font-semibold px-5 py-2.5 rounded hover:bg-slate-100 transition-colors duration-200 text-sm">
         View Active Bids on aberdeenmd.gov
         <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
@@ -23,7 +23,7 @@ breadcrumb:
     </div>
 
     <div>
-      <h2 class="text-xl font-bold text-navy mb-4">How the Bidding Process Works</h2>
+      <h2 class="text-xl font-bold text-navy mb-5">How the Bidding Process Works</h2>
       <div class="space-y-3">
         {% for step in [
           { n: "1", title: "Monitor Postings", desc: "Check aberdeenmd.gov/bids regularly for new Invitations for Bids and Requests for Proposals." },
@@ -43,7 +43,7 @@ breadcrumb:
     </div>
 
     <div>
-      <h2 class="text-xl font-bold text-navy mb-4">Bid Types</h2>
+      <h2 class="text-xl font-bold text-navy mb-5">Bid Types</h2>
       <div class="grid sm:grid-cols-3 gap-4">
         {% for t in [
           { title: "Invitation for Bids (IFB)", desc: "Competitive sealed bids for goods and construction. Awarded to lowest responsive, responsible bidder." },

@@ -7,14 +7,14 @@ deptPhone: "(410) 272-1600 ext. 216"
 deptRealUrl: "https://www.aberdeenmd.gov/economic-development"
 ---
 
-<div class="space-y-8">
+<div class="space-y-10">
   <div>
-    <p class="text-slate-600 leading-relaxed mb-4">Aberdeen is your <strong>Home of Opportunity</strong> — located in the prime Mid-Atlantic region, minutes from Baltimore, Washington DC, Wilmington, and Philadelphia. With world-class schools, fast rail and highway access, and home of Aberdeen Proving Ground, the City actively works to attract and retain businesses that strengthen our local economy.</p>
+    <p class="text-slate-600 leading-relaxed mb-5">Aberdeen is your <strong>Home of Opportunity</strong> — located in the prime Mid-Atlantic region, minutes from Baltimore, Washington DC, Wilmington, and Philadelphia. With world-class schools, fast rail and highway access, and home of Aberdeen Proving Ground, the City actively works to attract and retain businesses that strengthen our local economy.</p>
     <p class="text-slate-600 leading-relaxed">The Economic Development Department works with businesses, developers, and community partners to promote a thriving business environment in Aberdeen.</p>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Why Aberdeen?</h2>
+    <h2 class="text-xl font-bold text-navy mb-5">Why Aberdeen?</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {% for fact in [
         { title: "Prime Location", desc: "Minutes from Baltimore, DC, Wilmington, and Philadelphia via I-95 and MARC Rail." },
@@ -33,8 +33,8 @@ deptRealUrl: "https://www.aberdeenmd.gov/economic-development"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
-    <div class="grid sm:grid-cols-2 gap-3">
+    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "Business Incentives & Funding", url: "/businesses/incentives/" },
         { label: "How to Apply for a Permit", url: "/services/permits/" },
@@ -43,9 +43,9 @@ deptRealUrl: "https://www.aberdeenmd.gov/economic-development"
         { label: "Transit-Oriented Development Plan", url: "/businesses/tod-plan/" },
         { label: "Economic Development Commission", url: "/boards/economic-development-commission/" }
       ] %}
-      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
-        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <a href="{{ link.url | url }}" class="flex items-center justify-between gap-3 text-sm text-slate-700 font-medium px-5 py-3 hover:text-gov-blue hover:bg-slate-50 transition-colors duration-150 group border-b border-slate-100 last:border-b-0">
         {{ link.label }}
+        <svg aria-hidden="true" class="w-4 h-4 text-slate-400 group-hover:text-gov-blue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </a>
       {% endfor %}
     </div>
@@ -53,7 +53,7 @@ deptRealUrl: "https://www.aberdeenmd.gov/economic-development"
 
   <div class="bg-navy rounded-xl p-6 text-white">
     <h2 class="text-lg font-bold mb-2">Ready to Do Business in Aberdeen?</h2>
-    <p class="text-slate-300 text-sm mb-4">Contact our Economic Development office to learn about incentives, site selection assistance, and how Aberdeen can work with your business.</p>
+    <p class="text-slate-300 text-sm mb-5">Contact our Economic Development office to learn about incentives, site selection assistance, and how Aberdeen can work with your business.</p>
     <a href="{{ '/contact/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Contact Economic Development</a>
   </div>
 </div>

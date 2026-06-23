@@ -7,13 +7,13 @@ deptPhone: "(410) 272-1600 ext. 211"
 deptRealUrl: "https://www.aberdeenmd.gov/city-clerk"
 ---
 
-<div class="space-y-8">
+<div class="space-y-10">
   <div>
     <p class="text-slate-600 leading-relaxed">The City Clerk serves as the official keeper of City records, manages City Council meeting logistics including agendas and minutes, administers municipal elections, and processes Maryland Public Information Act requests.</p>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Services</h2>
+    <h2 class="text-xl font-bold text-navy mb-5">Services</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {% for service in [
         { title: "Meeting Agendas & Minutes", desc: "All Council and board meeting documents, past and present." },
@@ -32,7 +32,7 @@ deptRealUrl: "https://www.aberdeenmd.gov/city-clerk"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Upcoming Meetings</h2>
+    <h2 class="text-xl font-bold text-navy mb-5">Upcoming Meetings</h2>
     <ul class="space-y-3">
       {% for meeting in events.meetings %}
       <li>
@@ -52,8 +52,8 @@ deptRealUrl: "https://www.aberdeenmd.gov/city-clerk"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
-    <div class="grid sm:grid-cols-2 gap-3">
+    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "Meetings & Agendas", url: "/services/meetings/" },
         { label: "Public Records Request", url: "/services/public-records/" },
@@ -62,9 +62,9 @@ deptRealUrl: "https://www.aberdeenmd.gov/city-clerk"
         { label: "Frequently Requested Docs", url: "https://www.aberdeenmd.gov/city-clerk/pages/meetings" },
         { label: "Watch Live Meetings", url: "https://www.aberdeenmd.gov/city-clerk/pages/meetings" }
       ] %}
-      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
-        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <a href="{{ link.url | url }}" class="flex items-center justify-between gap-3 text-sm text-slate-700 font-medium px-5 py-3 hover:text-gov-blue hover:bg-slate-50 transition-colors duration-150 group border-b border-slate-100 last:border-b-0">
         {{ link.label }}
+        <svg aria-hidden="true" class="w-4 h-4 text-slate-400 group-hover:text-gov-blue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </a>
       {% endfor %}
     </div>

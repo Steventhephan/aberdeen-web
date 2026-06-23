@@ -7,14 +7,14 @@ deptPhone: "(410) 272-1600 ext. 207"
 deptRealUrl: "https://www.aberdeenmd.gov/human-resources"
 ---
 
-<div class="space-y-8">
+<div class="space-y-10">
   <div>
-    <p class="text-slate-600 leading-relaxed mb-4">The Human Resources Department manages all aspects of employment for the City of Aberdeen — from recruiting and hiring to benefits administration, employee training, and personnel policy compliance.</p>
+    <p class="text-slate-600 leading-relaxed mb-5">The Human Resources Department manages all aspects of employment for the City of Aberdeen — from recruiting and hiring to benefits administration, employee training, and personnel policy compliance.</p>
     <p class="text-slate-600 leading-relaxed">Working for the City of Aberdeen offers <strong>greater job security and benefits</strong> than the private sector, along with the opportunity to make a meaningful difference in your community every day.</p>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Services</h2>
+    <h2 class="text-xl font-bold text-navy mb-5">Services</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {% for service in [
         { title: "Recruitment & Hiring", desc: "Job postings, applications, and the hiring process." },
@@ -34,22 +34,22 @@ deptRealUrl: "https://www.aberdeenmd.gov/human-resources"
 
   <div class="bg-navy rounded-xl p-6 text-white">
     <h2 class="text-lg font-bold mb-2">We Are Hiring</h2>
-    <p class="text-slate-300 text-sm mb-4">The City of Aberdeen regularly posts open positions across all departments. A career with the City offers stability, benefits, and the chance to serve your neighbors.</p>
+    <p class="text-slate-300 text-sm mb-5">The City of Aberdeen regularly posts open positions across all departments. A career with the City offers stability, benefits, and the chance to serve your neighbors.</p>
     <a href="{{ '/services/employment/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-5 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">View Current Openings</a>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
-    <div class="grid sm:grid-cols-2 gap-3">
+    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "View Job Openings", url: "/services/employment/" },
         { label: "City Benefits Overview", url: "https://www.aberdeenmd.gov/human-resources" },
         { label: "Employee Forms", url: "https://www.aberdeenmd.gov/human-resources" },
         { label: "Contact HR", url: "/contact/" }
       ] %}
-      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
-        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <a href="{{ link.url | url }}" class="flex items-center justify-between gap-3 text-sm text-slate-700 font-medium px-5 py-3 hover:text-gov-blue hover:bg-slate-50 transition-colors duration-150 group border-b border-slate-100 last:border-b-0">
         {{ link.label }}
+        <svg aria-hidden="true" class="w-4 h-4 text-slate-400 group-hover:text-gov-blue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </a>
       {% endfor %}
     </div>

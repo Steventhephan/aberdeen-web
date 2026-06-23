@@ -7,14 +7,14 @@ deptPhone: "(410) 272-1600"
 deptRealUrl: "https://www.aberdeenmd.gov/city-manager"
 ---
 
-<div class="space-y-8">
+<div class="space-y-10">
   <div>
-    <p class="text-slate-600 leading-relaxed mb-4">The City Manager is the chief administrative officer of the City of Aberdeen, appointed by the Mayor and City Council. The City Manager is responsible for the overall management of City departments and implements the policies, programs, and priorities established by the elected City Council.</p>
+    <p class="text-slate-600 leading-relaxed mb-5">The City Manager is the chief administrative officer of the City of Aberdeen, appointed by the Mayor and City Council. The City Manager is responsible for the overall management of City departments and implements the policies, programs, and priorities established by the elected City Council.</p>
     <p class="text-slate-600 leading-relaxed">The City Manager's office serves as the administrative hub connecting all City departments and ensuring efficient, effective delivery of services to Aberdeen residents.</p>
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Responsibilities</h2>
+    <h2 class="text-xl font-bold text-navy mb-5">Responsibilities</h2>
     <ul class="space-y-3">
       {% for item in [
         "Oversee the day-to-day operations of all City departments",
@@ -34,8 +34,8 @@ deptRealUrl: "https://www.aberdeenmd.gov/city-manager"
   </div>
 
   <div>
-    <h2 class="text-xl font-bold text-navy mb-4">Quick Links</h2>
-    <div class="grid sm:grid-cols-2 gap-3">
+    <h2 class="text-xl font-bold text-navy mb-5">Quick Links</h2>
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
       {% for link in [
         { label: "Mayor & City Council", url: "/departments/mayor-city-council/" },
         { label: "All Departments", url: "/departments/" },
@@ -44,9 +44,9 @@ deptRealUrl: "https://www.aberdeenmd.gov/city-manager"
         { label: "Bids & RFPs", url: "/businesses/bids/" },
         { label: "Contact City Hall", url: "/contact/" }
       ] %}
-      <a href="{{ link.url | url }}" class="flex items-center gap-2 text-sm text-gov-blue hover:text-navy font-medium hover:underline py-1">
-        <svg aria-hidden="true" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <a href="{{ link.url | url }}" class="flex items-center justify-between gap-3 text-sm text-slate-700 font-medium px-5 py-3 hover:text-gov-blue hover:bg-slate-50 transition-colors duration-150 group border-b border-slate-100 last:border-b-0">
         {{ link.label }}
+        <svg aria-hidden="true" class="w-4 h-4 text-slate-400 group-hover:text-gov-blue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </a>
       {% endfor %}
     </div>

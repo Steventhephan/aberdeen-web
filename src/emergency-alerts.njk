@@ -8,10 +8,10 @@ breadcrumb:
 ---
 
 <div class="grid lg:grid-cols-3 gap-10">
-  <div class="lg:col-span-2 space-y-8">
+  <div class="lg:col-span-2 space-y-10">
 
     <div class="bg-red-50 border border-red-200 rounded-xl p-5">
-      <div class="flex items-start gap-3">
+      <div class="flex items-start gap-4">
         <svg aria-hidden="true" class="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
         <div>
           <p class="text-sm font-bold text-red-800 mb-1">For life-threatening emergencies, always call 911.</p>
@@ -21,8 +21,8 @@ breadcrumb:
     </div>
 
     <div>
-      <h2 class="text-xl font-bold text-navy mb-4">Sign Up for Mass Notifications</h2>
-      <p class="text-slate-600 leading-relaxed mb-4">The City of Aberdeen uses a mass notification system to alert residents about emergencies and important public information. Sign up to receive calls and/or texts directly to your phone.</p>
+      <h2 class="text-xl font-bold text-navy mb-5">Sign Up for Mass Notifications</h2>
+      <p class="text-slate-600 leading-relaxed mb-5">The City of Aberdeen uses a mass notification system to alert residents about emergencies and important public information. Sign up to receive calls and/or texts directly to your phone.</p>
       <p class="text-slate-600 leading-relaxed mb-6">Registration is free and takes only a few minutes. Your information is used solely for emergency and public safety notifications.</p>
       <a href="https://www.aberdeenmd.gov/environmental-division/pages/4-sign-up-to-receive-mass-notification-callstexts" class="inline-flex items-center gap-2 bg-red-600 text-white font-semibold px-6 py-3 rounded hover:bg-red-700 transition-colors duration-200 text-sm">
         <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zm0 16a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
@@ -31,7 +31,7 @@ breadcrumb:
     </div>
 
     <div>
-      <h2 class="text-xl font-bold text-navy mb-4">What You'll Be Notified About</h2>
+      <h2 class="text-xl font-bold text-navy mb-5">What You'll Be Notified About</h2>
       <div class="grid sm:grid-cols-2 gap-4">
         {% for item in [
           { title: "Weather Emergencies", desc: "Severe storms, flooding, snow emergencies, and evacuation orders." },
@@ -39,7 +39,7 @@ breadcrumb:
           { title: "Public Safety Notices", desc: "Boil-water advisories, hazmat incidents, and public health alerts." },
           { title: "City Service Changes", desc: "Emergency changes to trash pickup, City Hall hours, or other services." }
         ] %}
-        <div class="bg-white border border-slate-200 rounded-xl p-4 flex items-start gap-3">
+        <div class="bg-white border border-slate-200 rounded-xl p-4 flex items-start gap-4">
           <svg aria-hidden="true" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zm0 16a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
           <div>
             <h3 class="text-sm font-bold text-navy mb-0.5">{{ item.title }}</h3>

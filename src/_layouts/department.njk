@@ -3,9 +3,9 @@ layout: base.njk
 ---
 
 {# ── PAGE HERO ── #}
-<section class="bg-navy" aria-label="{{ title }}">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
-    <nav aria-label="Breadcrumb" class="mb-4">
+<section class="bg-navy pb-8 border-b-4 border-gov-blue" aria-label="{{ title }}">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+    <nav aria-label="Breadcrumb" class="mb-5">
       <ol class="flex items-center gap-2 text-sm text-slate-400">
         <li><a href="{{ '/' | url }}" class="hover:text-white transition-colors duration-200">Home</a></li>
         <li aria-hidden="true" class="text-slate-600">/</li>
@@ -14,21 +14,16 @@ layout: base.njk
         <li class="text-slate-300" aria-current="page">{{ title }}</li>
       </ol>
     </nav>
-    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">{{ title }}</h1>
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">{{ title }}</h1>
     {% if subtitle %}
-    <p class="text-slate-300 text-lg max-w-2xl">{{ subtitle }}</p>
+    <p class="text-slate-300 text-lg max-w-2xl leading-relaxed">{{ subtitle }}</p>
     {% endif %}
-  </div>
-  <div aria-hidden="true">
-    <svg viewBox="0 0 1440 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full text-slate-50" preserveAspectRatio="none">
-      <path d="M0 32L720 0L1440 32H0Z" fill="currentColor"/>
-    </svg>
   </div>
 </section>
 
 {# ── TWO-COLUMN LAYOUT ── #}
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <div class="grid lg:grid-cols-3 gap-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <div class="grid lg:grid-cols-3 gap-12">
 
     {# Main content #}
     <div class="lg:col-span-2">
@@ -38,8 +33,8 @@ layout: base.njk
     {# Contact sidebar #}
     <aside aria-label="Department contact information">
       <div class="bg-white border border-slate-200 rounded-xl p-6 sticky top-24">
-        <h2 class="text-base font-bold text-navy mb-4 pb-3 border-b border-slate-100">Contact Information</h2>
-        <dl class="space-y-4 text-sm">
+        <h2 class="text-base font-bold text-navy mb-5 pb-3 border-b border-slate-100">Contact Information</h2>
+        <dl class="space-y-5 text-sm">
           <div>
             <dt class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Department</dt>
             <dd class="text-slate-900 font-semibold">{{ title }}</dd>
@@ -65,7 +60,7 @@ layout: base.njk
             <dd class="text-slate-700">60 N. Parke Street<br/>Aberdeen, MD 21001</dd>
           </div>
         </dl>
-        <div class="mt-6 space-y-2">
+        <div class="mt-7 space-y-2">
           <a href="{{ '/contact/' | url }}" class="block w-full text-center bg-gov-blue text-white text-sm font-semibold py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200">Full Contact Directory</a>
           {% if deptRealUrl %}
           <a href="{{ deptRealUrl }}" class="block w-full text-center border border-slate-200 text-slate-700 text-sm font-semibold py-2.5 rounded hover:border-gov-blue hover:text-gov-blue transition-colors duration-200">Official City Page</a>

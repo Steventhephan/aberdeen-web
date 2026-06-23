@@ -11,11 +11,11 @@ breadcrumb:
 
   <div class="grid md:grid-cols-2 gap-8">
     <div>
-      <p class="text-slate-600 leading-relaxed mb-4">Aberdeen Main Street is a comprehensive downtown revitalization program dedicated to preserving and enhancing the historic character of Aberdeen's downtown commercial district, while supporting economic vitality and community pride.</p>
+      <p class="text-slate-600 leading-relaxed mb-5">Aberdeen Main Street is a comprehensive downtown revitalization program dedicated to preserving and enhancing the historic character of Aberdeen's downtown commercial district, while supporting economic vitality and community pride.</p>
       <p class="text-slate-600 leading-relaxed">The program focuses on four pillars: <strong>Economic Vitality</strong>, <strong>Design</strong>, <strong>Promotion</strong>, and <strong>Organization</strong> — working together to create a thriving, welcoming downtown for businesses, residents, and visitors.</p>
     </div>
     <div class="bg-navy rounded-xl p-6 text-white">
-      <h2 class="text-lg font-bold mb-4">Four Pillars</h2>
+      <h2 class="text-lg font-bold mb-5">Four Pillars</h2>
       <ul class="space-y-3 text-sm">
         {% for pillar in [
           { name: "Economic Vitality", desc: "Business recruitment, retention, and gap analysis." },
@@ -23,7 +23,7 @@ breadcrumb:
           { name: "Promotion", desc: "Events, marketing, and branding for downtown Aberdeen." },
           { name: "Organization", desc: "Volunteer coordination, partnerships, and advocacy." }
         ] %}
-        <li class="flex items-start gap-3">
+        <li class="flex items-start gap-4">
           <svg aria-hidden="true" class="w-4 h-4 text-gov-blue flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
           <div><strong>{{ pillar.name }}</strong> — {{ pillar.desc }}</div>
         </li>
@@ -58,12 +58,12 @@ breadcrumb:
   <div class="grid sm:grid-cols-2 gap-6">
     <div class="bg-white border border-slate-200 rounded-xl p-6">
       <h2 class="text-lg font-bold text-navy mb-3">Business in Downtown Aberdeen</h2>
-      <p class="text-sm text-slate-600 mb-4">Interested in opening or growing a business in Aberdeen's historic downtown? The Main Street program can connect you with resources, incentives, and technical assistance.</p>
+      <p class="text-sm text-slate-600 mb-5">Interested in opening or growing a business in Aberdeen's historic downtown? The Main Street program can connect you with resources, incentives, and technical assistance.</p>
       <a href="{{ '/businesses/incentives/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Business Incentives</a>
     </div>
     <div class="bg-white border border-slate-200 rounded-xl p-6">
       <h2 class="text-lg font-bold text-navy mb-3">Visit Aberdeen</h2>
-      <p class="text-sm text-slate-600 mb-4">Aberdeen's downtown offers dining, shops, and community events in a historic small-city setting, with easy access to I-95 and MARC rail.</p>
+      <p class="text-sm text-slate-600 mb-5">Aberdeen's downtown offers dining, shops, and community events in a historic small-city setting, with easy access to I-95 and MARC rail.</p>
       <a href="{{ '/visitors/' | url }}" class="inline-flex items-center gap-2 bg-gov-blue text-white font-semibold px-4 py-2.5 rounded hover:bg-gov-blue-dark transition-colors duration-200 text-sm">Visitor Information</a>
     </div>
   </div>
